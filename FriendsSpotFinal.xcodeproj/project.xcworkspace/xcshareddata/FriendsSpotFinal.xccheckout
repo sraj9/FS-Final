@@ -10,6 +10,8 @@
 	<string>FriendsSpotFinal</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>60B0D6AA3597F011ABC3A0CE3623916B29BA6638</key>
+		<string>https://github.com/sraj9/FS-Final.git</string>
 		<key>DBB3ADF58A68E2527165DD3CDBFAE0F394AD56E5</key>
 		<string>https://github.com/sraj9/FriendsSpot</string>
 	</dict>
@@ -17,15 +19,17 @@
 	<string>FriendsSpotFinal.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>DBB3ADF58A68E2527165DD3CDBFAE0F394AD56E5</key>
+		<key>60B0D6AA3597F011ABC3A0CE3623916B29BA6638</key>
 		<string>../..</string>
+		<key>DBB3ADF58A68E2527165DD3CDBFAE0F394AD56E5</key>
+		<string>../../../FriendsSpot</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/sraj9/FriendsSpot</string>
+	<string>https://github.com/sraj9/FS-Final.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>DBB3ADF58A68E2527165DD3CDBFAE0F394AD56E5</string>
+	<string>60B0D6AA3597F011ABC3A0CE3623916B29BA6638</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>DBB3ADF58A68E2527165DD3CDBFAE0F394AD56E5</string>
 			<key>IDESourceControlWCCName</key>
 			<string>FriendsSpot</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>60B0D6AA3597F011ABC3A0CE3623916B29BA6638</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FS%20Final%20Live</string>
 		</dict>
 	</array>
 </dict>
