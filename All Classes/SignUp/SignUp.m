@@ -31,10 +31,12 @@
 -(BOOL)textFieldShouldReturn:(UITextField *) textField{
     
      [textField resignFirstResponder];
-   
-    [self btnSubmitClicked:@""];
+    if (textField.tag==6) {
+        [self btnSubmitClicked:@""];
+    }
     
-     return YES;
+    
+        return YES;
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -191,9 +193,9 @@
                             _txtEmail.layer.borderColor=[UIColor redColor].CGColor;
                         }
                     }else if([[replay objectForKey:@"status"] isEqual:@"success"]){
-                        
-                        UIViewController *loginVC=[self.storyboard instantiateViewControllerWithIdentifier:@"loginVC"];
-                        [self.navigationController pushViewController:loginVC animated:YES];
+//                        
+//                        UIViewController *loginVC=[self.storyboard            instantiateViewControllerWithIdentifier:@"loginVC"];
+//                        [self.navigationController pushViewController:loginVC animated:YES];
                     }
                     
                     

@@ -21,6 +21,7 @@
 		A985D9531B606F4900AEF22E /* IonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = A985D94F1B606F4900AEF22E /* IonIcons.m */; };
 		A985D9541B606F4900AEF22E /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A985D9501B606F4900AEF22E /* ionicons.ttf */; };
 		A985D9581B606F7300AEF22E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A985D9571B606F7300AEF22E /* Images.xcassets */; };
+		A9ACD3661B6AF84100FBEA4A /* MesaageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A9ACD3651B6AF84100FBEA4A /* MesaageVC.m */; };
 		A9AFBA411B58554B005C08BE /* FriendsSpotFinalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AFBA401B58554B005C08BE /* FriendsSpotFinalTests.m */; };
 		A9AFBA651B588A36005C08BE /* NewFSlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9AFBA641B588A36005C08BE /* NewFSlogo.png */; };
 		A9FDBE731B5D9CF800E1A199 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE4F1B5D9CF800E1A199 /* Info.plist */; };
@@ -78,6 +79,8 @@
 		A985D94F1B606F4900AEF22E /* IonIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonIcons.m; sourceTree = "<group>"; };
 		A985D9501B606F4900AEF22E /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 		A985D9571B606F7300AEF22E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A9ACD3641B6AF84100FBEA4A /* MesaageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MesaageVC.h; sourceTree = "<group>"; };
+		A9ACD3651B6AF84100FBEA4A /* MesaageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MesaageVC.m; sourceTree = "<group>"; };
 		A9AFBA211B58554B005C08BE /* FriendsSpotFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendsSpotFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9AFBA251B58554B005C08BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9AFBA3A1B58554B005C08BE /* FriendsSpotFinalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendsSpotFinalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +175,15 @@
 			path = ionicons;
 			sourceTree = "<group>";
 		};
+		A9ACD3631B6AF7D900FBEA4A /* MessageVC */ = {
+			isa = PBXGroup;
+			children = (
+				A9ACD3641B6AF84100FBEA4A /* MesaageVC.h */,
+				A9ACD3651B6AF84100FBEA4A /* MesaageVC.m */,
+			);
+			path = MessageVC;
+			sourceTree = "<group>";
+		};
 		A9AFBA181B58554B005C08BE = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				A985D8FF1B606B0300AEF22E /* DropDownMenu */,
+				A9ACD3631B6AF7D900FBEA4A /* MessageVC */,
 				A9FDBE861B5D9F5C00E1A199 /* ForgotPassword */,
 				A9FDBE571B5D9CF800E1A199 /* Extra */,
 				A9FDBE621B5D9CF800E1A199 /* Login */,
@@ -460,6 +473,7 @@
 				A97C562C1B670E2800BDAC16 /* TPKeyboardAvoidingTableView.m in Sources */,
 				A9FDBE7F1B5D9CF800E1A199 /* UserHome.m in Sources */,
 				A97C562D1B670E2800BDAC16 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				A9ACD3661B6AF84100FBEA4A /* MesaageVC.m in Sources */,
 				A91E7E001B5F1C3100B933B3 /* ForgotPassword2.m in Sources */,
 				A985D9531B606F4900AEF22E /* IonIcons.m in Sources */,
 				A9FDBE7C1B5D9CF800E1A199 /* ViewController.m in Sources */,
