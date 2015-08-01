@@ -8,12 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MesaageVC : UIViewController
+@interface MesaageVC : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
 
+@property (weak, nonatomic) IBOutlet UITableView *TableView;
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
-
-@property (weak, nonatomic) IBOutlet UIButton *btngo;
-
 @end
