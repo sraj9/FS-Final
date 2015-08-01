@@ -70,10 +70,11 @@
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6) {
         if (!iconColor) { iconColor = [UIColor blackColor]; }
         
+        UIFont *aFont = [IonIcons fontWithSize:iconSize];
         UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0.0);
         NSAttributedString* attString = [[NSAttributedString alloc]
                                          initWithString:icon_name
-                                         attributes:@{NSFontAttributeName: [IonIcons fontWithSize:iconSize],
+                                         attributes:@{NSFontAttributeName: aFont,
                                                       NSForegroundColorAttributeName : iconColor}];
         // get the target bounding rect in order to center the icon within the UIImage:
         NSStringDrawingContext *ctx = [[NSStringDrawingContext alloc] init];

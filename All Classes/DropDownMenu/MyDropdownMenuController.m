@@ -57,7 +57,9 @@
     //[self setFadeAmountWithAlpha:0.2f];
     
     // Style menu buttons with IonIcons.
-    for (UIButton *button in self.buttons) {
+    for (UIButton *button in self.buttons)
+    {
+        
         if ([button.titleLabel.text isEqual: @"Profile"]) {
             [IonIcons label:button.titleLabel setIcon:icon_navicon_round size:15.0f color:[UIColor whiteColor] sizeToFit:NO];
             [button setImage:[IonIcons imageWithIcon:icon_person size:20.0f color:[UIColor whiteColor]] forState:UIControlStateNormal];

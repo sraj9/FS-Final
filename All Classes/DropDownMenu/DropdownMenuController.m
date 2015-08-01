@@ -46,12 +46,14 @@ CAShapeLayer *closedMenuShape;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     shouldDisplayDropShape = YES;
     fadeAlpha = 0.5f;
     trianglePlacement = 0.87f;
 }
 
 - (void) viewDidAppear:(BOOL)animated {
+    
     [super viewDidAppear:animated];
     
     // Set the current view controller to the one embedded (in the storyboard).
@@ -204,7 +206,7 @@ CAShapeLayer *closedMenuShape;
     int width = self.menubar.frame.size.width;
     int triangleDirection = 1; // 1 for down, -1 for up.
     int triangleSize =  8;
-    int trianglePosition = trianglePlacement*width;
+    int trianglePosition = trianglePlacement*width-250;
     
     // The path for the triangle (showing that the menu is open).
     UIBezierPath *triangleShape = [[UIBezierPath alloc] init];
