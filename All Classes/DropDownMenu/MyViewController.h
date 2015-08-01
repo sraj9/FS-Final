@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyViewController : UIViewController
+@interface MyViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 

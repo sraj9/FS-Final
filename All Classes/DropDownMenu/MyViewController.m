@@ -44,4 +44,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma TableView
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 2;
+}
+
+
+
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    
+//   
+//}
+
+
 @end

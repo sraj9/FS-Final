@@ -55,7 +55,7 @@ CAShapeLayer *closedMenuShape;
 - (void) viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
-    
+    _menuButton.selected = NO;
     // Set the current view controller to the one embedded (in the storyboard).
     self.currentViewController = self.childViewControllers.firstObject;
     
