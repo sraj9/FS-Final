@@ -9,7 +9,11 @@
 #import "MyViewController.h"
 #import "MyDropdownMenuController.h"
 
+<<<<<<< HEAD
+@interface MyViewController () 
+=======
 @interface MyViewController ()<UITableViewDataSource,UITableViewDelegate>
+>>>>>>> b3a92c7e0e27a4ae4d3174d43459b272843bbb50
 
 @end
 
@@ -46,7 +50,7 @@
 
 #pragma TableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    return 10;
 }
 
 
