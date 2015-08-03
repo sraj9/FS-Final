@@ -9,7 +9,11 @@
 #import "MyViewController.h"
 #import "MyDropdownMenuController.h"
 
+<<<<<<< HEAD
 @interface MyViewController () 
+=======
+@interface MyViewController ()<UITableViewDataSource,UITableViewDelegate>
+>>>>>>> b3a92c7e0e27a4ae4d3174d43459b272843bbb50
 
 @end
 
@@ -51,10 +55,11 @@
 
 
 
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    
-//   
-//}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cellone"];
+    return cell;
+   
+}
 
 
 @end

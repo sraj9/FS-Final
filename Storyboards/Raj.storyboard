@@ -24,7 +24,7 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2sL-4h-5bD" userLabel="Menu">
-                                <rect key="frame" x="0.0" y="-180" width="320" height="212"/>
+                                <rect key="frame" x="0.0" y="-280" width="320" height="212"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4N-yq-As3" userLabel="Button - Home">
                                         <rect key="frame" x="0.0" y="62" width="320" height="50"/>
@@ -69,7 +69,7 @@
                                         </state>
                                         <connections>
                                             <action selector="listButtonAction:" destination="yUa-IH-jsZ" eventType="touchUpInside" id="f4b-yN-jza"/>
-                                            <segue destination="pcR-g6-UiN" kind="custom" identifier="viewController2" customClass="DropdownMenuSegue" id="ABg-Yj-R3H"/>
+                                            <segue destination="pcR-g6-UiN" kind="custom" customClass="DropdownMenuSegue" id="VYt-HL-t67"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dO-pu-bKM" userLabel="Button - Photos">
@@ -225,10 +225,10 @@
             </objects>
             <point key="canvasLocation" x="837" y="-488.5"/>
         </scene>
-        <!--My View Controller-->
+        <!--View Controller-->
         <scene sceneID="nmR-tv-WCi">
             <objects>
-                <viewController wantsFullScreenLayout="YES" id="pcR-g6-UiN" customClass="MyViewController" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="pcR-g6-UiN" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uSt-qN-6bD"/>
                         <viewControllerLayoutGuide type="bottom" id="nPj-wF-Lcp"/>
@@ -246,13 +246,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.231372565" green="0.52549022440000004" blue="0.52549022440000004" alpha="1" colorSpace="deviceRGB"/>
                     </view>
-                    <connections>
-                        <outlet property="titleLabel" destination="MFC-bG-xgq" id="BYx-ud-Ng6"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r45-ax-ICk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="837" y="174"/>
+            <point key="canvasLocation" x="701" y="139"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VM3-lG-M5s">
@@ -280,10 +277,10 @@
             </objects>
             <point key="canvasLocation" x="381" y="851"/>
         </scene>
-        <!--My View Controller-->
+        <!--View Controller-->
         <scene sceneID="PBe-JG-aiy">
             <objects>
-                <viewController id="ON5-2a-5le" customClass="MyViewController" sceneMemberID="viewController">
+                <viewController id="ON5-2a-5le" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YHm-qd-yyZ"/>
                         <viewControllerLayoutGuide type="bottom" id="9Yf-MS-BvV"/>
@@ -301,13 +298,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.47450983520000001" green="0.74117648599999997" blue="0.60392159219999997" alpha="1" colorSpace="deviceRGB"/>
                     </view>
-                    <connections>
-                        <outlet property="titleLabel" destination="HFx-H7-ZyV" id="mz5-28-FFC"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qp2-UU-cII" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="837" y="839"/>
+            <point key="canvasLocation" x="678" y="702"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="CwO-pS-7b4">
@@ -333,7 +327,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6j-op-ggA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="745" y="612"/>
+            <point key="canvasLocation" x="157" y="690"/>
         </scene>
     </scenes>
     <resources>
