@@ -8,15 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MesaageVC : UIViewController <UITableViewDataSource,UITableViewDelegate>
-{
-
-}
-
-@property (weak, nonatomic) IBOutlet UITableView *TableView;
+@interface MesaageVC : UIViewController 
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
-
 @property (weak, nonatomic) IBOutlet UIButton *btnSendclicked;
-
+@property (strong,nonatomic) NSArray *arr;
 @end
