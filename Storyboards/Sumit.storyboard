@@ -21,7 +21,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyE-fX-h2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1275" y="-436"/>
+            <point key="canvasLocation" x="-1929" y="-566"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="yp9-hR-1J5">
@@ -284,7 +284,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BKe-Va-vJq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-776" y="-394"/>
+            <point key="canvasLocation" x="-1532" y="-606"/>
         </scene>
         <!--MesaageVC-->
         <scene sceneID="wYL-fo-DwN">
@@ -326,10 +326,6 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="RNJ-I0-Fkv" id="EuQ-qS-vxW"/>
-                                    <outlet property="delegate" destination="RNJ-I0-Fkv" id="huh-gR-1zB"/>
-                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8W9-hI-VuJ">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -344,14 +340,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="xN3-AS-TcJ"/>
                     <connections>
-                        <outlet property="TableView" destination="cQR-PZ-nUr" id="4z2-6r-8UU"/>
                         <outlet property="btnSendclicked" destination="zzl-Qs-DwB" id="oeq-qw-4Pm"/>
                         <outlet property="textView" destination="QKo-SQ-cte" id="hgT-O2-3kz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gu1-zE-Jxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-961" y="274"/>
+            <point key="canvasLocation" x="-1139" y="47"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
