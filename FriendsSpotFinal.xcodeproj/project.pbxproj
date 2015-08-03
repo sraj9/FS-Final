@@ -27,6 +27,7 @@
 		A9AF40C81B6C4C840055B0F7 /* MesaageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AF40C71B6C4C840055B0F7 /* MesaageVC.m */; };
 		A9AFBA411B58554B005C08BE /* FriendsSpotFinalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AFBA401B58554B005C08BE /* FriendsSpotFinalTests.m */; };
 		A9AFBA651B588A36005C08BE /* NewFSlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9AFBA641B588A36005C08BE /* NewFSlogo.png */; };
+		A9D11F331B70332100E6291B /* FriendsListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D11F321B70332100E6291B /* FriendsListVC.m */; };
 		A9FDBE731B5D9CF800E1A199 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE4F1B5D9CF800E1A199 /* Info.plist */; };
 		A9FDBE751B5D9CF800E1A199 /* NewFSlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE511B5D9CF800E1A199 /* NewFSlogo.png */; };
 		A9FDBE761B5D9CF800E1A199 /* Govind.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE531B5D9CF800E1A199 /* Govind.storyboard */; };
@@ -94,6 +95,8 @@
 		A9AFBA3F1B58554B005C08BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9AFBA401B58554B005C08BE /* FriendsSpotFinalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendsSpotFinalTests.m; sourceTree = "<group>"; };
 		A9AFBA641B588A36005C08BE /* NewFSlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewFSlogo.png; sourceTree = "<group>"; };
+		A9D11F311B70332100E6291B /* FriendsListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendsListVC.h; path = ionicons/FriendsListVC.h; sourceTree = "<group>"; };
+		A9D11F321B70332100E6291B /* FriendsListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsListVC.m; path = ionicons/FriendsListVC.m; sourceTree = "<group>"; };
 		A9FDBE4F1B5D9CF800E1A199 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9FDBE511B5D9CF800E1A199 /* NewFSlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewFSlogo.png; sourceTree = "<group>"; };
 		A9FDBE531B5D9CF800E1A199 /* Govind.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Govind.storyboard; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 				A985D9411B606EEB00AEF22E /* DropdownMenuController.m */,
 				A985D9421B606EEB00AEF22E /* DropdownMenuSegue.h */,
 				A985D9431B606EEB00AEF22E /* DropdownMenuSegue.m */,
+				A9D11F311B70332100E6291B /* FriendsListVC.h */,
+				A9D11F321B70332100E6291B /* FriendsListVC.m */,
 			);
 			path = DropDownMenu;
 			sourceTree = "<group>";
@@ -498,6 +503,7 @@
 				A985D94B1B606F3100AEF22E /* MyViewController.m in Sources */,
 				A985D94A1B606F3100AEF22E /* MyDropdownMenuController.m in Sources */,
 				A9FDBE7E1B5D9CF800E1A199 /* SignUp.m in Sources */,
+				A9D11F331B70332100E6291B /* FriendsListVC.m in Sources */,
 				A985D9451B606EEB00AEF22E /* DropdownMenuSegue.m in Sources */,
 				A985D9441B606EEB00AEF22E /* DropdownMenuController.m in Sources */,
 				A9FDBE891B5D9F7900E1A199 /* ForgotPassword.m in Sources */,
