@@ -10,6 +10,7 @@
 		A91938C11B71717D00DF12B5 /* Security.m in Sources */ = {isa = PBXBuildFile; fileRef = A91938C01B71717D00DF12B5 /* Security.m */; };
 		A91938C41B71719000DF12B5 /* Blocking.m in Sources */ = {isa = PBXBuildFile; fileRef = A91938C31B71719000DF12B5 /* Blocking.m */; };
 		A91938C71B7171CB00DF12B5 /* ChangePassword.m in Sources */ = {isa = PBXBuildFile; fileRef = A91938C61B7171CB00DF12B5 /* ChangePassword.m */; };
+		A91938CA1B7172DF00DF12B5 /* EditProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = A91938C91B7172DF00DF12B5 /* EditProfile.m */; };
 		A91E7DF61B5F0E3400B933B3 /* main 16-30-32-750.m in Sources */ = {isa = PBXBuildFile; fileRef = A91E7DF51B5F0E3400B933B3 /* main 16-30-32-750.m */; };
 		A91E7E001B5F1C3100B933B3 /* ForgotPassword2.m in Sources */ = {isa = PBXBuildFile; fileRef = A91E7DFF1B5F1C3100B933B3 /* ForgotPassword2.m */; };
 		A97C56201B66FC5100BDAC16 /* XT_problem.png in Resources */ = {isa = PBXBuildFile; fileRef = A97C561F1B66FC5100BDAC16 /* XT_problem.png */; };
@@ -70,6 +71,8 @@
 		A91938C31B71719000DF12B5 /* Blocking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Blocking.m; sourceTree = "<group>"; };
 		A91938C51B7171CB00DF12B5 /* ChangePassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePassword.h; sourceTree = "<group>"; };
 		A91938C61B7171CB00DF12B5 /* ChangePassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePassword.m; sourceTree = "<group>"; };
+		A91938C81B7172DF00DF12B5 /* EditProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfile.h; sourceTree = "<group>"; };
+		A91938C91B7172DF00DF12B5 /* EditProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfile.m; sourceTree = "<group>"; };
 		A91E7DF51B5F0E3400B933B3 /* main 16-30-32-750.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "main 16-30-32-750.m"; path = "FriendsSpotFinal/main 16-30-32-750.m"; sourceTree = "<group>"; };
 		A91E7DFE1B5F1C3100B933B3 /* ForgotPassword2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPassword2.h; sourceTree = "<group>"; };
 		A91E7DFF1B5F1C3100B933B3 /* ForgotPassword2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPassword2.m; sourceTree = "<group>"; };
@@ -290,6 +293,8 @@
 				A91938C31B71719000DF12B5 /* Blocking.m */,
 				A91938C51B7171CB00DF12B5 /* ChangePassword.h */,
 				A91938C61B7171CB00DF12B5 /* ChangePassword.m */,
+				A91938C81B7172DF00DF12B5 /* EditProfile.h */,
+				A91938C91B7172DF00DF12B5 /* EditProfile.m */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -533,6 +538,7 @@
 				A97C562D1B670E2800BDAC16 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				A9AF40C81B6C4C840055B0F7 /* MesaageVC.m in Sources */,
 				A91E7E001B5F1C3100B933B3 /* ForgotPassword2.m in Sources */,
+				A91938CA1B7172DF00DF12B5 /* EditProfile.m in Sources */,
 				A985D9531B606F4900AEF22E /* IonIcons.m in Sources */,
 				A9D11F371B703E9600E6291B /* GeneralSetting.m in Sources */,
 				A9FDBE7C1B5D9CF800E1A199 /* ViewController.m in Sources */,
