@@ -8,6 +8,8 @@
 
 #import "SignUp.h"
 
+NSArray *arrayFieldNames;
+
 @interface SignUp ()
 
 @end

@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-NSArray *arrayField;
-NSArray *arrayFieldNames;
+
+
 @interface SignUp : UIViewController<UITextFieldDelegate>
+{
+    NSArray *arrayField;
+    NSArray *arrayFieldNames;
+}
 @property (weak, nonatomic) IBOutlet UIScrollView *scroll_View;
 
 
