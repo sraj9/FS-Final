@@ -154,7 +154,7 @@
         NSURL *aURL = [NSURL URLWithString:@"http://friendsgrs.net46.net"];
         
         NSMutableDictionary *aDict = [[NSMutableDictionary alloc]init];
-        NSArray *keys=[[NSArray alloc]initWithObjects:@"fname",@"lname",@"contact",@"country",@"state",@"city", @"email",@"uName",@"password",nil];
+        NSArray *keys=[[NSArray alloc]initWithObjects:@"fname",@"lname",@"contact",@"country",@"state",@"city",@"email",@"uName",@"password",nil];
         
         for (int i=0;i<(arrayField.count-1); i++)
         {
@@ -165,6 +165,7 @@
          {[aDict setValue:@"Male" forKey:@"gender"];}
          else
          {[aDict setValue:@"Female" forKey:@"gender"];}
+        [aDict setValue:@"singup" forKey:@"action"];
         
         NSData *aData = [NSJSONSerialization dataWithJSONObject:aDict options:NSJSONWritingPrettyPrinted error:nil];
         
