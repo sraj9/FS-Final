@@ -183,7 +183,7 @@
                  if (data.length > 0 && connectionError == nil)
                 {
                     NSDictionary *replay=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-                    NSLog(@"%@",replay);
+                    NSLog(@"replay=%@",replay);
                    
                     
                     

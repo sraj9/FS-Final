@@ -28,6 +28,9 @@
 		A9AFBA411B58554B005C08BE /* FriendsSpotFinalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AFBA401B58554B005C08BE /* FriendsSpotFinalTests.m */; };
 		A9AFBA651B588A36005C08BE /* NewFSlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9AFBA641B588A36005C08BE /* NewFSlogo.png */; };
 		A9D11F331B70332100E6291B /* FriendsListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D11F321B70332100E6291B /* FriendsListVC.m */; };
+		A9D11F371B703E9600E6291B /* GeneralSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D11F361B703E9600E6291B /* GeneralSetting.m */; };
+		A9D11F3A1B703F1C00E6291B /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D11F391B703F1C00E6291B /* Setting.m */; };
+		A9D11F3C1B70422900E6291B /* HomeImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D11F3B1B70422900E6291B /* HomeImage.png */; };
 		A9FDBE731B5D9CF800E1A199 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE4F1B5D9CF800E1A199 /* Info.plist */; };
 		A9FDBE751B5D9CF800E1A199 /* NewFSlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE511B5D9CF800E1A199 /* NewFSlogo.png */; };
 		A9FDBE761B5D9CF800E1A199 /* Govind.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE531B5D9CF800E1A199 /* Govind.storyboard */; };
@@ -97,6 +100,11 @@
 		A9AFBA641B588A36005C08BE /* NewFSlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewFSlogo.png; sourceTree = "<group>"; };
 		A9D11F311B70332100E6291B /* FriendsListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendsListVC.h; path = ionicons/FriendsListVC.h; sourceTree = "<group>"; };
 		A9D11F321B70332100E6291B /* FriendsListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsListVC.m; path = ionicons/FriendsListVC.m; sourceTree = "<group>"; };
+		A9D11F351B703E9600E6291B /* GeneralSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralSetting.h; sourceTree = "<group>"; };
+		A9D11F361B703E9600E6291B /* GeneralSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralSetting.m; sourceTree = "<group>"; };
+		A9D11F381B703F1C00E6291B /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
+		A9D11F391B703F1C00E6291B /* Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
+		A9D11F3B1B70422900E6291B /* HomeImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HomeImage.png; path = ../HomeImage.png; sourceTree = "<group>"; };
 		A9FDBE4F1B5D9CF800E1A199 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9FDBE511B5D9CF800E1A199 /* NewFSlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewFSlogo.png; sourceTree = "<group>"; };
 		A9FDBE531B5D9CF800E1A199 /* Govind.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Govind.storyboard; sourceTree = "<group>"; };
@@ -260,6 +268,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A9D11F341B703E6C00E6291B /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				A9D11F351B703E9600E6291B /* GeneralSetting.h */,
+				A9D11F361B703E9600E6291B /* GeneralSetting.m */,
+				A9D11F381B703F1C00E6291B /* Setting.h */,
+				A9D11F391B703F1C00E6291B /* Setting.m */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		A9FDBE4E1B5D9CF800E1A199 /* FriendsSpotFinal */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +301,7 @@
 		A9FDBE561B5D9CF800E1A199 /* All Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A9D11F341B703E6C00E6291B /* Setting */,
 				A9AF40C51B6C4C840055B0F7 /* MessageVC */,
 				A985D8FF1B606B0300AEF22E /* DropDownMenu */,
 				A9FDBE861B5D9F5C00E1A199 /* ForgotPassword */,
@@ -346,6 +366,7 @@
 				A97C561F1B66FC5100BDAC16 /* XT_problem.png */,
 				A9FDBE6C1B5D9CF800E1A199 /* FacebookButton.png */,
 				A9FDBE6D1B5D9CF800E1A199 /* FS Logo.png */,
+				A9D11F3B1B70422900E6291B /* HomeImage.png */,
 				A9FDBE6E1B5D9CF800E1A199 /* New.png */,
 			);
 			path = Images;
@@ -453,6 +474,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D11F3C1B70422900E6291B /* HomeImage.png in Resources */,
 				A985D9541B606F4900AEF22E /* ionicons.ttf in Resources */,
 				A97C56201B66FC5100BDAC16 /* XT_problem.png in Resources */,
 				A9FDBE751B5D9CF800E1A199 /* NewFSlogo.png in Resources */,
@@ -495,12 +517,14 @@
 				A9AF40C81B6C4C840055B0F7 /* MesaageVC.m in Sources */,
 				A91E7E001B5F1C3100B933B3 /* ForgotPassword2.m in Sources */,
 				A985D9531B606F4900AEF22E /* IonIcons.m in Sources */,
+				A9D11F371B703E9600E6291B /* GeneralSetting.m in Sources */,
 				A9FDBE7C1B5D9CF800E1A199 /* ViewController.m in Sources */,
 				A91E7DF61B5F0E3400B933B3 /* main 16-30-32-750.m in Sources */,
 				A97C562B1B670E2800BDAC16 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				A97C562A1B670E2800BDAC16 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				A9FDBE791B5D9CF800E1A199 /* AppDelegate.m in Sources */,
 				A985D94B1B606F3100AEF22E /* MyViewController.m in Sources */,
+				A9D11F3A1B703F1C00E6291B /* Setting.m in Sources */,
 				A985D94A1B606F3100AEF22E /* MyDropdownMenuController.m in Sources */,
 				A9FDBE7E1B5D9CF800E1A199 /* SignUp.m in Sources */,
 				A9D11F331B70332100E6291B /* FriendsListVC.m in Sources */,
