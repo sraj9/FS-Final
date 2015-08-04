@@ -11,11 +11,9 @@
 @interface MesaageVC () <UITableViewDataSource,UITableViewDelegate>{
       NSMutableArray *mutArrDatasource ;
      UIRefreshControl *refreshControl;
+
 }
-
-
 @end
-
 @implementation MesaageVC
 
 - (void)viewDidLoad {
@@ -37,7 +35,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 
 #pragma mark - Navigation
