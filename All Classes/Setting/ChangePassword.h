@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-NSArray *fieldArray;
-NSArray *arrayFieldNames;
-
 @interface ChangePassword : UIViewController
+{
+    NSArray *fieldArray;
+    NSArray *arrayFieldNames;
+}
 @property (weak, nonatomic) IBOutlet UITextField *txtOldpass;
 @property (weak, nonatomic) IBOutlet UITextField *txtNewpass;
 @property (weak, nonatomic) IBOutlet UITextField *txtconfpass;
