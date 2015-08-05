@@ -17,12 +17,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
-    [dic setObject:@"uId" forKey:@"87"];
-    [dic setObject:@"action" forKey:@"loadHome"];
+//    [dic setObject:@"govind300" forKey:@"uName"];
+//    [dic setObject:@"login" forKey:@"action"];
+//    [dic setObject:@"1dfds" forKey:@"password"];
     
-    NSArray *responce=[[NSArray alloc]initWithArray:[self GovindPlzcallWebServiceWithURLString: @"http://friendsgrs.net46.net" ArgumentsDictionary:dic]];
-    NSLog(@"responce=%@",responce);
-    NSLog(@"responce=");
+       [dic setObject:@"87" forKey:@"uId"];
+       [dic setObject:@"loadHome" forKey:@"action"];
+    
+//        [dic setObject:@"87" forKey:@"uId"];
+//        [dic setObject:@"newActivity" forKey:@"action"];
+//        [dic setObject:@"text" forKey:@"type"];
+//        [dic setObject:@"lovely day" forKey:@"discription"];
+    
+    
+//    NSArray *responce=[[NSArray alloc]initWithArray:];
+    NSLog(@"responce=%@",[self GovindPlzcallWebServiceWithURLString: @"http://friendsgrs.net46.net/" ArgumentsDictionary:dic]);
 
 }
 
@@ -44,15 +53,20 @@
     [aMutRequest setHTTPBody:aData];
     [aMutRequest setValue:[NSString stringWithFormat:@"%lu",(unsigned long)[aData length]] forHTTPHeaderField:@"Content-Length"];
     
-    NSMutableArray *returnArr;
+   returnArr =[[NSMutableArray alloc]init];
 //    [self.actLoading startAnimating];
     [NSURLConnection sendAsynchronousRequest:aMutRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
           {
               if (data.length > 0 && connectionError == nil)
               {
-                 [returnArr addObject:[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil] ];
+                  
+                  NSDictionary *Asd= [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil] ;
+//                  [returnArr addObjectsFromArray:[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil] ];
+                  
+                  NSLog(@"%@",[NSString stringWithFormat:@"%@",[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil]]);
 //                     [self.actLoading stopAnimating];
               }
+              
           }];
     return returnArr;
 
