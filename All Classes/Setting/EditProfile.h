@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface EditProfile : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *txtname;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnEditclick;
+@property (weak, nonatomic) IBOutlet UIButton *btnDoneclick;
+@property (weak, nonatomic) IBOutlet UILabel *lblFname;
 
 @end

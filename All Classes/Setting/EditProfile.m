@@ -16,6 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.txtname.hidden=YES;
+    self.btnDoneclick.hidden=YES;
+    
     // Do any additional setup after loading the view.
 }
 
@@ -33,5 +37,20 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)btneditclick:(id)sender {
+    self.lblFname.hidden=YES;
+    self.txtname.hidden=NO;
+    self.btnDoneclick.hidden=NO;
+    self.btnEditclick.hidden=YES;
+    
+}
+- (IBAction)btnDoneclick:(id)sender {
+    self.txtname.hidden=YES;
+    self.lblFname.hidden=NO;
+    self.btnDoneclick.hidden=YES;
+    self.btnEditclick.hidden=NO;
+    
+}
 
 @end
