@@ -7,7 +7,7 @@
 //
 
 #import "UserHome.h"
-
+#import "service.h"
 @interface UserHome ()
 
 @end
@@ -29,9 +29,12 @@
 //        [dic setObject:@"text" forKey:@"type"];
 //        [dic setObject:@"lovely day" forKey:@"discription"];
     
+   
+    service *service1=[service new];
     
-//    NSArray *responce=[[NSArray alloc]initWithArray:];
-    NSLog(@"responce=%@",[self GovindPlzcallWebServiceWithURLString: @"http://friendsgrs.net46.net/" ArgumentsDictionary:dic]);
+    NSMutableDictionary *dic1=[[NSMutableDictionary alloc]initWithDictionary:[service1 FSPlzcallWebServiceWithURLString: @"http://friendsgrs.net46.net/" ArgumentsDictionary:dic]];
+
+    NSLog(@"responce=%@",dic1);
 
 }
 
@@ -40,37 +43,6 @@
     // Dispose of any resources that can be recreated.
 }
 
--(NSMutableArray*)GovindPlzcallWebServiceWithURLString:(NSString*)url ArgumentsDictionary:(NSDictionary*)arguments
-{
-    NSLog(@"vfkv");
-    NSURL *aURL = [NSURL URLWithString:url];
-    
-    NSData *aData = [NSJSONSerialization dataWithJSONObject:arguments options:NSJSONWritingPrettyPrinted error:nil];
-    
-    NSMutableURLRequest *aMutRequest = [[NSMutableURLRequest alloc]initWithURL:aURL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:20.0];
-    [aMutRequest setHTTPMethod:@"POST"];
-    [aMutRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [aMutRequest setHTTPBody:aData];
-    [aMutRequest setValue:[NSString stringWithFormat:@"%lu",(unsigned long)[aData length]] forHTTPHeaderField:@"Content-Length"];
-    
-   returnArr =[[NSMutableArray alloc]init];
-//    [self.actLoading startAnimating];
-    [NSURLConnection sendAsynchronousRequest:aMutRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
-          {
-              if (data.length > 0 && connectionError == nil)
-              {
-                  
-                  NSDictionary *Asd= [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil] ;
-//                  [returnArr addObjectsFromArray:[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil] ];
-                  
-                  NSLog(@"%@",[NSString stringWithFormat:@"%@",[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil]]);
-//                     [self.actLoading stopAnimating];
-              }
-              
-          }];
-    return returnArr;
-
-}
 
 #pragma TableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

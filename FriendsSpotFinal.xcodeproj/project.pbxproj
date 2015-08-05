@@ -32,6 +32,7 @@
 		A9AF40C81B6C4C840055B0F7 /* MesaageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AF40C71B6C4C840055B0F7 /* MesaageVC.m */; };
 		A9AFBA411B58554B005C08BE /* FriendsSpotFinalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AFBA401B58554B005C08BE /* FriendsSpotFinalTests.m */; };
 		A9AFBA651B588A36005C08BE /* NewFSlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9AFBA641B588A36005C08BE /* NewFSlogo.png */; };
+		A9BB57FE1B719256009E43C5 /* service.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BB57FD1B719256009E43C5 /* service.m */; };
 		A9D11F331B70332100E6291B /* FriendsListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D11F321B70332100E6291B /* FriendsListVC.m */; };
 		A9D11F371B703E9600E6291B /* GeneralSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D11F361B703E9600E6291B /* GeneralSetting.m */; };
 		A9D11F3A1B703F1C00E6291B /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D11F391B703F1C00E6291B /* Setting.m */; };
@@ -113,6 +114,8 @@
 		A9AFBA3F1B58554B005C08BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9AFBA401B58554B005C08BE /* FriendsSpotFinalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendsSpotFinalTests.m; sourceTree = "<group>"; };
 		A9AFBA641B588A36005C08BE /* NewFSlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewFSlogo.png; sourceTree = "<group>"; };
+		A9BB57FC1B719256009E43C5 /* service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = service.h; sourceTree = "<group>"; };
+		A9BB57FD1B719256009E43C5 /* service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = service.m; sourceTree = "<group>"; };
 		A9D11F311B70332100E6291B /* FriendsListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendsListVC.h; path = ionicons/FriendsListVC.h; sourceTree = "<group>"; };
 		A9D11F321B70332100E6291B /* FriendsListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsListVC.m; path = ionicons/FriendsListVC.m; sourceTree = "<group>"; };
 		A9D11F351B703E9600E6291B /* GeneralSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralSetting.h; sourceTree = "<group>"; };
@@ -292,6 +295,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A9BB57FB1B719211009E43C5 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				A9BB57FC1B719256009E43C5 /* service.h */,
+				A9BB57FD1B719256009E43C5 /* service.m */,
+			);
+			name = service;
+			sourceTree = "<group>";
+		};
 		A9D11F341B703E6C00E6291B /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +345,7 @@
 		A9FDBE561B5D9CF800E1A199 /* All Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A9BB57FB1B719211009E43C5 /* service */,
 				A91938CB1B7174E600DF12B5 /* SubClasses */,
 				A9D11F341B703E6C00E6291B /* Setting */,
 				A9AF40C51B6C4C840055B0F7 /* MessageVC */,
@@ -562,6 +575,7 @@
 				A9FDBE791B5D9CF800E1A199 /* AppDelegate.m in Sources */,
 				A91938C41B71719000DF12B5 /* Blocking.m in Sources */,
 				A985D94B1B606F3100AEF22E /* MyViewController.m in Sources */,
+				A9BB57FE1B719256009E43C5 /* service.m in Sources */,
 				A9D11F3A1B703F1C00E6291B /* Setting.m in Sources */,
 				A985D94A1B606F3100AEF22E /* MyDropdownMenuController.m in Sources */,
 				A9FDBE7E1B5D9CF800E1A199 /* SignUp.m in Sources */,
