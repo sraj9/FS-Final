@@ -127,6 +127,7 @@
                     <connections>
                         <outlet property="btnForgotPassword" destination="Rn5-fi-hjY" id="PC7-ox-bpV"/>
                         <outlet property="btnLogin" destination="n71-KL-UHr" id="bwP-Tt-nb6"/>
+                        <outlet property="btnSignUp" destination="UcP-fi-KDL" id="Ucv-UM-01i"/>
                         <outlet property="imgLogo" destination="0od-I9-pC6" id="NLG-pX-sZI"/>
                         <outlet property="txtPassword" destination="sQd-9w-BU3" id="ZxO-hq-jhB"/>
                         <outlet property="txtUserName" destination="sPz-k7-4Uk" id="aMT-Mv-bl6"/>
@@ -134,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-459" y="363"/>
+            <point key="canvasLocation" x="-459" y="235"/>
         </scene>
     </scenes>
     <resources>
