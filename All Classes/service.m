@@ -7,6 +7,7 @@
 //
 
 #import "service.h"
+#import "UIImageView+WebCache.h"
 
 @implementation service
 

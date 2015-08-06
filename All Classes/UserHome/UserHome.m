@@ -16,6 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _btnPost.layer.cornerRadius=5;
+    _bViewNewActivity.frame=CGRectMake(0,510,400,58);
+    [self.view addSubview:_bViewNewActivity];
+    
     userdata=[[NSMutableDictionary alloc]init];
     NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
 //    [dic setObject:@"govind300" forKey:@"uName"];
@@ -75,6 +80,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    //changing a cell depends on activity type
     if([[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"])
     {
 UITableViewCell *cell;
@@ -95,13 +101,29 @@ UITableViewCell *cell;
        
         //NSLog(@"%@",strImg);
         
+        
         UIImageView *img=(UIImageView*)[cell viewWithTag:5];
-        img.image=[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:strImg]]];
+//        img.image=[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:strImg]]];
+        
+        
+        [img sd_setImageWithURL:[NSURL URLWithString:strImg]
+                          placeholderImage:[UIImage imageNamed:strImg]
+                                 completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL)
+        {
+            img.image=image;
+                                 }];
+        
         
         return cell;
     }
     return nil;
     
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 /*
