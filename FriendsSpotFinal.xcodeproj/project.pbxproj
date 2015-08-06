@@ -38,6 +38,7 @@
 		A9D11F3A1B703F1C00E6291B /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D11F391B703F1C00E6291B /* Setting.m */; };
 		A9D11F3C1B70422900E6291B /* HomeImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D11F3B1B70422900E6291B /* HomeImage.png */; };
 		A9EA17351B72D4AF007CFABB /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = A9EA17341B72D4AF007CFABB /* 12.png */; };
+		A9EA17381B730223007CFABB /* SDWebImage in Resources */ = {isa = PBXBuildFile; fileRef = A9EA17371B730223007CFABB /* SDWebImage */; };
 		A9FDBE731B5D9CF800E1A199 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE4F1B5D9CF800E1A199 /* Info.plist */; };
 		A9FDBE751B5D9CF800E1A199 /* NewFSlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE511B5D9CF800E1A199 /* NewFSlogo.png */; };
 		A9FDBE761B5D9CF800E1A199 /* Govind.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE531B5D9CF800E1A199 /* Govind.storyboard */; };
@@ -125,6 +126,7 @@
 		A9D11F391B703F1C00E6291B /* Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
 		A9D11F3B1B70422900E6291B /* HomeImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HomeImage.png; path = ../HomeImage.png; sourceTree = "<group>"; };
 		A9EA17341B72D4AF007CFABB /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
+		A9EA17371B730223007CFABB /* SDWebImage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SDWebImage; sourceTree = "<group>"; };
 		A9FDBE4F1B5D9CF800E1A199 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9FDBE511B5D9CF800E1A199 /* NewFSlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewFSlogo.png; sourceTree = "<group>"; };
 		A9FDBE531B5D9CF800E1A199 /* Govind.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Govind.storyboard; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 		A9FDBE561B5D9CF800E1A199 /* All Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A9EA17371B730223007CFABB /* SDWebImage */,
 				A9BB57FB1B719211009E43C5 /* service */,
 				A91938CB1B7174E600DF12B5 /* SubClasses */,
 				A9D11F341B703E6C00E6291B /* Setting */,
@@ -526,6 +529,7 @@
 				A9EA17351B72D4AF007CFABB /* 12.png in Resources */,
 				A9D11F3C1B70422900E6291B /* HomeImage.png in Resources */,
 				A985D9541B606F4900AEF22E /* ionicons.ttf in Resources */,
+				A9EA17381B730223007CFABB /* SDWebImage in Resources */,
 				A97C56201B66FC5100BDAC16 /* XT_problem.png in Resources */,
 				A9FDBE751B5D9CF800E1A199 /* NewFSlogo.png in Resources */,
 				A9FDBE731B5D9CF800E1A199 /* Info.plist in Resources */,

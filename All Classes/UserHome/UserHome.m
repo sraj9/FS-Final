@@ -39,7 +39,7 @@
         if(responce)
         {
             [userdata setValuesForKeysWithDictionary:responce];
-//            NSLog(@"%@",userdata);
+            NSLog(@"%@",userdata);
 //            NSLog(@"%@",[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:2]objectForKey:@"image"]);
             [_tblViewHome reloadData];
         }
@@ -67,7 +67,7 @@
 //setting a hight of both cell differently
     float f;
     
-    f=[[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"]?306:138;
+    f=[[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"]?138:306;
     
     return f;
 }
@@ -75,7 +75,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if(![[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"])
+    if([[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"])
     {
 UITableViewCell *cell;
         cell=[tableView dequeueReusableCellWithIdentifier:@"celltwo"];
@@ -90,14 +90,10 @@ UITableViewCell *cell;
         
         UILabel *lbl=(UILabel*)[cell viewWithTag:4];
         lbl.text=[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"discription"];
-        NSLog(@"%d",indexPath.row);
-      
         
-        NSMutableString *strImg=@"http://friendsgrs.net46.net/images/activities/original/img3.jpeg";
-        // NSMutableString *strImg=[NSMutableString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"image"]];
-        NSString *st=[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"image"];
-        NSLog(@"%@",st);
-        NSLog(@"%@",strImg);
+         NSString *strImg=[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"image"]];
+       
+        //NSLog(@"%@",strImg);
         
         UIImageView *img=(UIImageView*)[cell viewWithTag:5];
         img.image=[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:strImg]]];
