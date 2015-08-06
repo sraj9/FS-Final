@@ -32,7 +32,7 @@
     
    
     service *service1=[service new];
-   [service1 FSPlzcallWebServiceWithURLString: @"http://friendsgrs.net46.net/" ArgumentsDictionary:dic];
+   [service1 FSPlzcallWebServiceWithURLString: @"FS-host" ArgumentsDictionary:dic];
     
     service1.serviceBlock=^(NSMutableDictionary* responce)
     {
