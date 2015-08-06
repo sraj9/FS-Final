@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface UserHome : UIViewController
-{ NSMutableArray *returnArr;
+{ 
 }
 @end
