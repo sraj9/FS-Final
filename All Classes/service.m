@@ -10,9 +10,8 @@
 
 @implementation service
 
--(NSMutableDictionary*)FSPlzcallWebServiceWithURLString:(NSString*)url ArgumentsDictionary:(NSMutableDictionary*)arguments
+-(void)FSPlzcallWebServiceWithURLString:(NSString*)url ArgumentsDictionary:(NSMutableDictionary*)arguments
 {
-    NSLog(@"vfkv");
     NSURL *aURL = [NSURL URLWithString:url];
     
     NSData *aData = [NSJSONSerialization dataWithJSONObject:arguments options:NSJSONWritingPrettyPrinted error:nil];
@@ -24,13 +23,7 @@
     [aMutRequest setValue:[NSString stringWithFormat:@"%lu",(unsigned long)[aData length]] forHTTPHeaderField:@"Content-Length"];
     
     NSMutableDictionary *returnDic =[[NSMutableDictionary alloc]init];
-    //    [self.actLoading startAnimating];
-    
-    //Create Object
-    //Set Block
-    //    {
-    //        ///Code
-    //    }
+   
     [NSURLConnection sendAsynchronousRequest:aMutRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
      {
          if (data.length > 0 && connectionError == nil)
@@ -39,17 +32,12 @@
              
              [returnDic setObject:[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil] forKey:@"responce"];
              
-             NSLog(@"%@",[NSString stringWithFormat:@"%@",[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil]]);
-             //                     [self.actLoading stopAnimating];
-           //@property (nonatomic, copy) returnType (^blockName)(parameterTypes);
-             
-             
+            //calling a block to send responce data to that view controller
+            self.serviceBlock(returnDic);
          }
          
      }];
     
-    
-    return returnDic;
 }
 
 

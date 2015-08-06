@@ -16,10 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    userdata=[[NSMutableDictionary alloc]init];
     NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
 //    [dic setObject:@"govind300" forKey:@"uName"];
 //    [dic setObject:@"login" forKey:@"action"];
-//    [dic setObject:@"1dfds" forKey:@"password"];
+//    [dic setObject:@"1" forKey:@"password"];
     
        [dic setObject:@"87" forKey:@"uId"];
        [dic setObject:@"loadHome" forKey:@"action"];
@@ -31,10 +32,19 @@
     
    
     service *service1=[service new];
+   [service1 FSPlzcallWebServiceWithURLString: @"http://friendsgrs.net46.net/" ArgumentsDictionary:dic];
     
-    NSMutableDictionary *dic1=[[NSMutableDictionary alloc]initWithDictionary:[service1 FSPlzcallWebServiceWithURLString: @"http://friendsgrs.net46.net/" ArgumentsDictionary:dic]];
-
-    NSLog(@"responce=%@",dic1);
+    service1.serviceBlock=^(NSMutableDictionary* responce)
+    {
+        if(responce)
+        {
+            [userdata setValuesForKeysWithDictionary:responce];
+//            NSLog(@"%@",userdata);
+//            NSLog(@"%@",[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:2]objectForKey:@"image"]);
+            [_tblViewHome reloadData];
+        }
+    };
+   
 
 }
 
@@ -46,14 +56,55 @@
 
 #pragma TableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    if(userdata)
+    {return [[[userdata objectForKey:@"responce"]objectForKey:@"activitys"] count];}
+    else
+    {return 0;}
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//setting a hight of both cell differently
+    float f;
+    
+    f=[[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"]?306:138;
+    
+    return f;
 }
 
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cellone"];
-    return cell;
+    
+    if(![[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"])
+    {
+UITableViewCell *cell;
+        cell=[tableView dequeueReusableCellWithIdentifier:@"celltwo"];
+        
+        UILabel *lbl=(UILabel*)[cell viewWithTag:14];
+        lbl.text=[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"discription"];
+        return cell;
+     }
+    else{
+        UITableViewCell *cell;
+        cell=[tableView dequeueReusableCellWithIdentifier:@"cellone"];
+        
+        UILabel *lbl=(UILabel*)[cell viewWithTag:4];
+        lbl.text=[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"discription"];
+        NSLog(@"%d",indexPath.row);
+      
+        
+        NSMutableString *strImg=@"http://friendsgrs.net46.net/images/activities/original/img3.jpeg";
+        // NSMutableString *strImg=[NSMutableString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"image"]];
+        NSString *st=[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"image"];
+        NSLog(@"%@",st);
+        NSLog(@"%@",strImg);
+        
+        UIImageView *img=(UIImageView*)[cell viewWithTag:5];
+        img.image=[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:strImg]]];
+        
+        return cell;
+    }
+    return nil;
     
 }
 

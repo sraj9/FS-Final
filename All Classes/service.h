@@ -10,8 +10,6 @@
 
 @interface service : NSObject
 
--(NSMutableDictionary*)FSPlzcallWebServiceWithURLString:(NSString*)url ArgumentsDictionary:(NSMutableDictionary*)arguments;
-@property (nonatomic, copy) NSDictionary* (^myblock)(NSString *mystr);
-
-
+-(void)FSPlzcallWebServiceWithURLString:(NSString*)url ArgumentsDictionary:(NSMutableDictionary*)arguments;
+@property (nonatomic, copy) void (^serviceBlock)(NSMutableDictionary *dictResponce);
 @end

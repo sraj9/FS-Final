@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface UserHome : UIViewController
-{ 
+{
+    NSMutableDictionary *userdata;
 }
+@property (weak, nonatomic) IBOutlet UITableView *tblViewHome;
 @end
