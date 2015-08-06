@@ -65,7 +65,7 @@
     {
         NSURL *aurl =[NSURL URLWithString:@"http://friendsgrs.net46.net"];
         
-//        /?uName=govind300&password=1&action=login
+
         NSMutableDictionary *adic=[[NSMutableDictionary alloc]initWithObjects:[NSArray arrayWithObjects:_txtUserName.text,_txtPassword.text,@"login", nil] forKeys:[NSArray arrayWithObjects:@"uName",@"password",@"action",nil]];
         
         NSData *adata=[NSJSONSerialization dataWithJSONObject:adic options:NSJSONWritingPrettyPrinted error:nil];
