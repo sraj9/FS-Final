@@ -7,8 +7,9 @@
 //
 
 #import "Login.h"
-
+#import "service.h"
 @interface Login ()
+
 
 @end
 
@@ -23,9 +24,6 @@
     _btnLogin.layer.cornerRadius=10;
     _btnForgotPassword.layer.cornerRadius=10;
     
-//    hiiii
-   
-    // Do any additional setup after loading the view.
 }
 
 
@@ -44,13 +42,18 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+  }
+
+
+
 -(void)alert:(NSString*)textfield{
     
     UIAlertView *alertview=[[UIAlertView alloc]initWithTitle:@"Alert" message:textfield delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
     [alertview show];
 }
+
+
+
 - (IBAction)btnLoginClick:(id)sender {
     if ([_txtUserName.text isEqualToString:@""] && [_txtPassword.text isEqualToString:@""]) {
         
@@ -65,47 +68,63 @@
     }
     else
     {
-        NSURL *aurl =[NSURL URLWithString:@"http://friendsgrs.net46.net"];
-        
-
-        NSMutableDictionary *adic=[[NSMutableDictionary alloc]initWithObjects:[NSArray arrayWithObjects:_txtUserName.text,_txtPassword.text,@"login", nil] forKeys:[NSArray arrayWithObjects:@"uName",@"password",@"action",nil]];
-        
-        NSData *adata=[NSJSONSerialization dataWithJSONObject:adic options:NSJSONWritingPrettyPrinted error:nil];
-        
-        NSMutableURLRequest *aMutReq=[[NSMutableURLRequest alloc]initWithURL:aurl cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
-        [aMutReq setHTTPMethod:@"POST"];
-        [aMutReq setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-        [aMutReq setHTTPBody:adata];
-        [aMutReq setValue:[NSString stringWithFormat:@"%lu",(unsigned long)[adata length]] forHTTPHeaderField:@"Content-Length"];
-        NSLog(@"Data %@",adata);
-        
-        NSString *astrdata =[[NSString alloc] initWithData:adata encoding:NSUTF8StringEncoding];
-        NSLog(@"Data String%@",astrdata);
-        
     
-
-        //Asynchronous WebCall With Blocks
-    
-    [NSURLConnection sendAsynchronousRequest:aMutReq queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
-         {
-             if (data.length > 0 && connectionError == nil)
-             {
-                NSLog(@"%@",[NSString stringWithFormat:@"%@",[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil]]);
+        service *service1=[service new];
+        NSMutableDictionary *adic = [[NSMutableDictionary alloc]init];
+        [adic setObject:_txtUserName.text forKey:@"uName"];
+        [adic setObject:_txtPassword.text forKey:@"password"];
+        [adic setObject:@"login" forKey:@"action"];
+        
+        
+        [service1 FSPlzcallWebServiceWithURLString: @"FS-host" ArgumentsDictionary:adic];
+//
+        service1.serviceBlock=^(NSMutableDictionary* responce)
+        {
+            if(responce)
+            {
+                NSLog(@"%@",responce);
+                NSLog(@"%@",[[responce objectForKey:@"responce" ] objectForKey:@"status"]);
+                
+                
+                if ([[[responce objectForKey:@"responce" ] objectForKey:@"status"] isEqualToString: @"success"]) {
+                    
+                    NSMutableDictionary *dicroot=[[NSMutableDictionary alloc]init];
+                    NSString *aSt=[[[responce objectForKey:@"responce" ] objectForKey:@"userDetail"]objectForKey:@"id"];
+                    
+                    [dicroot setObject:aSt forKey:@"id"];
+                    aSt=[[[responce objectForKey:@"responce" ] objectForKey:@"userDetail"]objectForKey:@"uName"];
+                    [dicroot setObject:aSt forKey:@"uName"];
+                    NSLog(@"%@",dicroot);
+                    
+                    [dicroot writeToFile:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"FS_PList.plist"] atomically:YES];
+//                     Do any additional setup after loading the view, typically from a nib.
+                    
                  
-             }
-         }];
+                    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"FS_PList.plist"]];
+                    NSLog(@"%@",dict);
+                    
+                    
+                    
+                }
+                
+
+                
+                else {
+                    NSLog(@"nikal");
+                }
+            }
+        };
+    
     }
     
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(NSString *)applicationDocumentsDirectory {
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+    return basePath;
+    
+    
 }
-*/
 
 @end

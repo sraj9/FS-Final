@@ -25,11 +25,11 @@
     NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
 //    [dic setObject:@"govind300" forKey:@"uName"];
 //    [dic setObject:@"login" forKey:@"action"];
-//    [dic setObject:@"1" forKey:@"password"];
-    
+//    [dic setObject:@"2" forKey:@"password"];
+//    
        [dic setObject:@"87" forKey:@"uId"];
        [dic setObject:@"loadHome" forKey:@"action"];
-    
+//
 //        [dic setObject:@"87" forKey:@"uId"];
 //        [dic setObject:@"newActivity" forKey:@"action"];
 //        [dic setObject:@"text" forKey:@"type"];
