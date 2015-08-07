@@ -14,6 +14,8 @@
 		A91938CE1B71757700DF12B5 /* ButtonLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = A91938CD1B71757700DF12B5 /* ButtonLayers.m */; };
 		A91E7DF61B5F0E3400B933B3 /* main 16-30-32-750.m in Sources */ = {isa = PBXBuildFile; fileRef = A91E7DF51B5F0E3400B933B3 /* main 16-30-32-750.m */; };
 		A91E7E001B5F1C3100B933B3 /* ForgotPassword2.m in Sources */ = {isa = PBXBuildFile; fileRef = A91E7DFF1B5F1C3100B933B3 /* ForgotPassword2.m */; };
+		A94512801B7417BF002DA50A /* selectImg.png in Resources */ = {isa = PBXBuildFile; fileRef = A945127F1B7417BF002DA50A /* selectImg.png */; };
+		A94512821B741EE8002DA50A /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A94512811B741EE8002DA50A /* user.png */; };
 		A97C56201B66FC5100BDAC16 /* XT_problem.png in Resources */ = {isa = PBXBuildFile; fileRef = A97C561F1B66FC5100BDAC16 /* XT_problem.png */; };
 		A97C562A1B670E2800BDAC16 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A97C56231B670E2800BDAC16 /* TPKeyboardAvoidingCollectionView.m */; };
 		A97C562B1B670E2800BDAC16 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A97C56251B670E2800BDAC16 /* TPKeyboardAvoidingScrollView.m */; };
@@ -37,8 +39,6 @@
 		A9D11F371B703E9600E6291B /* GeneralSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D11F361B703E9600E6291B /* GeneralSetting.m */; };
 		A9D11F3A1B703F1C00E6291B /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D11F391B703F1C00E6291B /* Setting.m */; };
 		A9D11F3C1B70422900E6291B /* HomeImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D11F3B1B70422900E6291B /* HomeImage.png */; };
-		A9DF96771B755CFA004B1D33 /* FS_PList.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9DF96761B755CFA004B1D33 /* FS_PList.plist */; };
-		A9DF96AE1B756B7E004B1D33 /* ButtonColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A9DF96AD1B756B7E004B1D33 /* ButtonColor.m */; };
 		A9EA17351B72D4AF007CFABB /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = A9EA17341B72D4AF007CFABB /* 12.png */; };
 		A9EA175D1B7306FB007CFABB /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EA173D1B7306FB007CFABB /* MKAnnotationView+WebCache.m */; };
 		A9EA175E1B7306FB007CFABB /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EA173F1B7306FB007CFABB /* NSData+ImageContentType.m */; };
@@ -99,6 +99,8 @@
 		A91E7DF51B5F0E3400B933B3 /* main 16-30-32-750.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "main 16-30-32-750.m"; path = "FriendsSpotFinal/main 16-30-32-750.m"; sourceTree = "<group>"; };
 		A91E7DFE1B5F1C3100B933B3 /* ForgotPassword2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPassword2.h; sourceTree = "<group>"; };
 		A91E7DFF1B5F1C3100B933B3 /* ForgotPassword2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPassword2.m; sourceTree = "<group>"; };
+		A945127F1B7417BF002DA50A /* selectImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectImg.png; sourceTree = "<group>"; };
+		A94512811B741EE8002DA50A /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		A97C561F1B66FC5100BDAC16 /* XT_problem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XT_problem.png; sourceTree = "<group>"; };
 		A97C56221B670E2800BDAC16 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
 		A97C56231B670E2800BDAC16 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
@@ -142,9 +144,6 @@
 		A9D11F381B703F1C00E6291B /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
 		A9D11F391B703F1C00E6291B /* Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
 		A9D11F3B1B70422900E6291B /* HomeImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HomeImage.png; path = ../HomeImage.png; sourceTree = "<group>"; };
-		A9DF96761B755CFA004B1D33 /* FS_PList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FS_PList.plist; sourceTree = "<group>"; };
-		A9DF96AC1B756B7E004B1D33 /* ButtonColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonColor.h; sourceTree = "<group>"; };
-		A9DF96AD1B756B7E004B1D33 /* ButtonColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonColor.m; sourceTree = "<group>"; };
 		A9EA17341B72D4AF007CFABB /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
 		A9EA173C1B7306FB007CFABB /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		A9EA173D1B7306FB007CFABB /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
@@ -229,8 +228,6 @@
 			children = (
 				A91938CC1B71757700DF12B5 /* ButtonLayers.h */,
 				A91938CD1B71757700DF12B5 /* ButtonLayers.m */,
-				A9DF96AC1B756B7E004B1D33 /* ButtonColor.h */,
-				A9DF96AD1B756B7E004B1D33 /* ButtonColor.m */,
 			);
 			path = SubClasses;
 			sourceTree = "<group>";
@@ -292,7 +289,6 @@
 		A9AFBA181B58554B005C08BE = {
 			isa = PBXGroup;
 			children = (
-				A9DF96761B755CFA004B1D33 /* FS_PList.plist */,
 				A97C56211B670E2800BDAC16 /* TPKeyboardAvoiding */,
 				A91E7DF51B5F0E3400B933B3 /* main 16-30-32-750.m */,
 				A9FDBE4E1B5D9CF800E1A199 /* FriendsSpotFinal */,
@@ -510,6 +506,8 @@
 		A9FDBE6B1B5D9CF800E1A199 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A94512811B741EE8002DA50A /* user.png */,
+				A945127F1B7417BF002DA50A /* selectImg.png */,
 				A97C561F1B66FC5100BDAC16 /* XT_problem.png */,
 				A9FDBE6C1B5D9CF800E1A199 /* FacebookButton.png */,
 				A9FDBE6D1B5D9CF800E1A199 /* FS Logo.png */,
@@ -627,7 +625,7 @@
 				A97C56201B66FC5100BDAC16 /* XT_problem.png in Resources */,
 				A9FDBE751B5D9CF800E1A199 /* NewFSlogo.png in Resources */,
 				A9FDBE731B5D9CF800E1A199 /* Info.plist in Resources */,
-				A9DF96771B755CFA004B1D33 /* FS_PList.plist in Resources */,
+				A94512801B7417BF002DA50A /* selectImg.png in Resources */,
 				A9FDBE801B5D9CF800E1A199 /* FacebookButton.png in Resources */,
 				A9AFBA651B588A36005C08BE /* NewFSlogo.png in Resources */,
 				A9FDBE7B1B5D9CF800E1A199 /* Main.storyboard in Resources */,
@@ -635,6 +633,7 @@
 				A9FDBE821B5D9CF800E1A199 /* New.png in Resources */,
 				A9FDBE7A1B5D9CF800E1A199 /* LaunchScreen.xib in Resources */,
 				A9FDBE811B5D9CF800E1A199 /* FS Logo.png in Resources */,
+				A94512821B741EE8002DA50A /* user.png in Resources */,
 				A985D9581B606F7300AEF22E /* Images.xcassets in Resources */,
 				A99A071A1B69AA6900ED4102 /* Default@2x.png in Resources */,
 				A9FDBE781B5D9CF800E1A199 /* Sumit.storyboard in Resources */,
@@ -666,7 +665,6 @@
 				A91938C11B71717D00DF12B5 /* Security.m in Sources */,
 				A91938C71B7171CB00DF12B5 /* ChangePassword.m in Sources */,
 				A97C562D1B670E2800BDAC16 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
-				A9DF96AE1B756B7E004B1D33 /* ButtonColor.m in Sources */,
 				A9AF40C81B6C4C840055B0F7 /* MesaageVC.m in Sources */,
 				A91E7E001B5F1C3100B933B3 /* ForgotPassword2.m in Sources */,
 				A9EA17631B7306FB007CFABB /* SDWebImageDownloaderOperation.m in Sources */,

@@ -44,6 +44,8 @@
     [textField resignFirstResponder];
     return YES;
 }
+
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     
     [self.view endEditing:YES];
@@ -57,16 +59,33 @@
     UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
     [alert show];
 }
-
-
-
-
-- (IBAction)btnSubmitClick:(id)sender {
+-(BOOL)fieldValidation{
     
+    //chacking for empty Textbox values
+    for (int i=0;i<fieldArray.count; i++)
+    {
+        UITextField *field=[fieldArray objectAtIndex:i];
+        
+        if ([field.text isEqualToString:@""])
+        {
+            NSString *strAlert=[NSString stringWithFormat:@"%@ should not remain empty.",[arrayFieldNames objectAtIndex:i]];
+            [self getAlert:strAlert];
+            return NO;
+        }
+        
+    }
     
+    if([_txtNewpass.text isEqualToString: _txtconfpass.text]){
+    }else{
+        UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 16, 16)];
+        imgView.image = [UIImage imageNamed:@"XT_problem.png"];
+        _txtconfpass.rightView = imgView;
+        _txtconfpass.rightViewMode =  UITextFieldViewModeAlways;
+        [_txtconfpass becomeFirstResponder];
+        [self getAlert:@"both password should be match each other."];
+        return NO;
+    }
     
-    
-             
     if ([_txtNewpass.text length]<=7) {
         
         UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 16, 16)];
@@ -75,20 +94,24 @@
         _txtNewpass.rightViewMode=UITextFieldViewModeAlways;
         [_txtNewpass becomeFirstResponder];
         [self getAlert:@"password should not be less then 8 in length."];
-   
-    }else
-        if([_txtNewpass.text isEqualToString: _txtconfpass.text]){
-        }else{
-            UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 16, 16)];
-            imgView.image = [UIImage imageNamed:@"XT_problem.png"];
-            _txtconfpass.rightView = imgView;
-            _txtconfpass.rightViewMode =  UITextFieldViewModeAlways;
-            [_txtconfpass becomeFirstResponder];
-            [self getAlert:@"both password should be match each other."];
-   
+        return NO;
+    }
+        return YES;
 
-
-        }
 }
 
+- (IBAction)btnSubmitClick:(id)sender {
+    
+    
+  if([self fieldValidation]){
+    NSLog(@"call the web services");
+    for (int i=0;i<fieldArray.count; i++)
+    {
+        UITextField *field=[fieldArray objectAtIndex:i];
+        NSLog(@"%@",field.text);
+    }
+
+}
+}
+        
 @end

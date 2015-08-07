@@ -12,5 +12,7 @@
 {
     NSMutableDictionary *userdata;
 }
+@property (weak, nonatomic) IBOutlet UIButton *btnPost;
+@property (strong, nonatomic) IBOutlet UIVisualEffectView *bViewNewActivity;
 @property (weak, nonatomic) IBOutlet UITableView *tblViewHome;
 @end
