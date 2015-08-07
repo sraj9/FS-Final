@@ -37,6 +37,8 @@
 		A9D11F371B703E9600E6291B /* GeneralSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D11F361B703E9600E6291B /* GeneralSetting.m */; };
 		A9D11F3A1B703F1C00E6291B /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D11F391B703F1C00E6291B /* Setting.m */; };
 		A9D11F3C1B70422900E6291B /* HomeImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D11F3B1B70422900E6291B /* HomeImage.png */; };
+		A9DF96771B755CFA004B1D33 /* FS_PList.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9DF96761B755CFA004B1D33 /* FS_PList.plist */; };
+		A9DF96AE1B756B7E004B1D33 /* ButtonColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A9DF96AD1B756B7E004B1D33 /* ButtonColor.m */; };
 		A9EA17351B72D4AF007CFABB /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = A9EA17341B72D4AF007CFABB /* 12.png */; };
 		A9EA175D1B7306FB007CFABB /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EA173D1B7306FB007CFABB /* MKAnnotationView+WebCache.m */; };
 		A9EA175E1B7306FB007CFABB /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EA173F1B7306FB007CFABB /* NSData+ImageContentType.m */; };
@@ -140,6 +142,9 @@
 		A9D11F381B703F1C00E6291B /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
 		A9D11F391B703F1C00E6291B /* Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
 		A9D11F3B1B70422900E6291B /* HomeImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HomeImage.png; path = ../HomeImage.png; sourceTree = "<group>"; };
+		A9DF96761B755CFA004B1D33 /* FS_PList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FS_PList.plist; sourceTree = "<group>"; };
+		A9DF96AC1B756B7E004B1D33 /* ButtonColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonColor.h; sourceTree = "<group>"; };
+		A9DF96AD1B756B7E004B1D33 /* ButtonColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonColor.m; sourceTree = "<group>"; };
 		A9EA17341B72D4AF007CFABB /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
 		A9EA173C1B7306FB007CFABB /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		A9EA173D1B7306FB007CFABB /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
@@ -224,6 +229,8 @@
 			children = (
 				A91938CC1B71757700DF12B5 /* ButtonLayers.h */,
 				A91938CD1B71757700DF12B5 /* ButtonLayers.m */,
+				A9DF96AC1B756B7E004B1D33 /* ButtonColor.h */,
+				A9DF96AD1B756B7E004B1D33 /* ButtonColor.m */,
 			);
 			path = SubClasses;
 			sourceTree = "<group>";
@@ -285,6 +292,7 @@
 		A9AFBA181B58554B005C08BE = {
 			isa = PBXGroup;
 			children = (
+				A9DF96761B755CFA004B1D33 /* FS_PList.plist */,
 				A97C56211B670E2800BDAC16 /* TPKeyboardAvoiding */,
 				A91E7DF51B5F0E3400B933B3 /* main 16-30-32-750.m */,
 				A9FDBE4E1B5D9CF800E1A199 /* FriendsSpotFinal */,
@@ -619,6 +627,7 @@
 				A97C56201B66FC5100BDAC16 /* XT_problem.png in Resources */,
 				A9FDBE751B5D9CF800E1A199 /* NewFSlogo.png in Resources */,
 				A9FDBE731B5D9CF800E1A199 /* Info.plist in Resources */,
+				A9DF96771B755CFA004B1D33 /* FS_PList.plist in Resources */,
 				A9FDBE801B5D9CF800E1A199 /* FacebookButton.png in Resources */,
 				A9AFBA651B588A36005C08BE /* NewFSlogo.png in Resources */,
 				A9FDBE7B1B5D9CF800E1A199 /* Main.storyboard in Resources */,
@@ -657,6 +666,7 @@
 				A91938C11B71717D00DF12B5 /* Security.m in Sources */,
 				A91938C71B7171CB00DF12B5 /* ChangePassword.m in Sources */,
 				A97C562D1B670E2800BDAC16 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				A9DF96AE1B756B7E004B1D33 /* ButtonColor.m in Sources */,
 				A9AF40C81B6C4C840055B0F7 /* MesaageVC.m in Sources */,
 				A91E7E001B5F1C3100B933B3 /* ForgotPassword2.m in Sources */,
 				A9EA17631B7306FB007CFABB /* SDWebImageDownloaderOperation.m in Sources */,

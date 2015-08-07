@@ -76,17 +76,54 @@
         [adic setObject:@"login" forKey:@"action"];
         
         
-        [service1 FSPlzcallWebServiceWithURLString: @"http://friendsgrs.net46.net/" ArgumentsDictionary:adic];
+        [service1 FSPlzcallWebServiceWithURLString: @"FS-host" ArgumentsDictionary:adic];
 //
         service1.serviceBlock=^(NSMutableDictionary* responce)
         {
             if(responce)
             {
                 NSLog(@"%@",responce);
+                NSLog(@"%@",[[responce objectForKey:@"responce" ] objectForKey:@"status"]);
+                
+                
+                if ([[[responce objectForKey:@"responce" ] objectForKey:@"status"] isEqualToString: @"success"]) {
+                    
+                    NSMutableDictionary *dicroot=[[NSMutableDictionary alloc]init];
+                    NSString *aSt=[[[responce objectForKey:@"responce" ] objectForKey:@"userDetail"]objectForKey:@"id"];
+                    
+                    [dicroot setObject:aSt forKey:@"id"];
+                    aSt=[[[responce objectForKey:@"responce" ] objectForKey:@"userDetail"]objectForKey:@"uName"];
+                    [dicroot setObject:aSt forKey:@"uName"];
+                    NSLog(@"%@",dicroot);
+                    
+                    [dicroot writeToFile:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"FS_PList.plist"] atomically:YES];
+//                     Do any additional setup after loading the view, typically from a nib.
+                    
+                 
+                    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"FS_PList.plist"]];
+                    NSLog(@"%@",dict);
+                    
+                    
+                    
+                }
+                
+
+                
+                else {
+                    NSLog(@"nikal");
+                }
             }
         };
     
     }
+    
+}
+-(NSString *)applicationDocumentsDirectory {
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+    return basePath;
+    
     
 }
 
