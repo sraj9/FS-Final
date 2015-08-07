@@ -12,6 +12,7 @@
 
 -(void)FSPlzcallWebServiceWithURLString:(NSString*)url ArgumentsDictionary:(NSMutableDictionary*)arguments
 {
+    url=[url isEqual:@"FS-host"]?@"http://friendsgrs.net46.net/":url;
     NSURL *aURL = [NSURL URLWithString:url];
     
     NSData *aData = [NSJSONSerialization dataWithJSONObject:arguments options:NSJSONWritingPrettyPrinted error:nil];
