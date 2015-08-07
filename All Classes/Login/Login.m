@@ -22,6 +22,8 @@
      _imgLogo.layer.cornerRadius=50;
     _btnLogin.layer.cornerRadius=10;
     _btnForgotPassword.layer.cornerRadius=10;
+    
+//    hiiii
    
     // Do any additional setup after loading the view.
 }
