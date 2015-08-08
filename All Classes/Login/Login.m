@@ -104,6 +104,8 @@
                     NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"FS_PList.plist"]];
                     NSLog(@"%@",dict);
                     
+                    MyDropdownMenuController *aHome = [self.storyboard instantiateViewControllerWithIdentifier:@"MyDropdownMenuController"];
+                    [self.navigationController pushViewController:aHome animated:NO];
                     
                     
                 }

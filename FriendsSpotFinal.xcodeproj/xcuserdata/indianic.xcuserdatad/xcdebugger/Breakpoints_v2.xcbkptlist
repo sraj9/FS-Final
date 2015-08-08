@@ -116,12 +116,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "All Classes/Login/Login.m"
-            timestampString = "460696164.139807"
+            timestampString = "460683797.477892"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "-applicationDocumentsDirectory"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "-btnLoginClick:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
