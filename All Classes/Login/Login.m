@@ -23,6 +23,7 @@
      _imgLogo.layer.cornerRadius=50;
     _btnLogin.layer.cornerRadius=10;
     _btnForgotPassword.layer.cornerRadius=10;
+    _lblErrorLogin.hidden=YES;
     
 }
 
@@ -103,6 +104,8 @@
                     NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"FS_PList.plist"]];
                     NSLog(@"%@",dict);
                     
+                    MyDropdownMenuController *aHome = [self.storyboard instantiateViewControllerWithIdentifier:@"MyDropdownMenuController"];
+                    [self.navigationController pushViewController:aHome animated:NO];
                     
                     
                 }
@@ -111,6 +114,28 @@
                 
                 else {
                     NSLog(@"nikal");
+                    CAKeyframeAnimation * anim = [ CAKeyframeAnimation animationWithKeyPath:@"transform" ] ;
+                    anim.values = [ NSArray arrayWithObjects:
+                                   [ NSValue valueWithCATransform3D:CATransform3DMakeTranslation(-10.0f, 0.0f, 0.0f) ],
+                                   [ NSValue valueWithCATransform3D:CATransform3DMakeTranslation(10.0f, 0.0f, 0.0f) ],
+                                   nil ] ;
+                    anim.autoreverses = YES ;
+                    anim.repeatCount = 3.0f ;
+                    anim.duration = 0.05f ;
+                    
+                    [ _txtPassword.layer addAnimation:anim forKey:nil ];
+                    CAKeyframeAnimation * anim2 = [ CAKeyframeAnimation animationWithKeyPath:@"transform" ] ;
+                    anim2.values = [ NSArray arrayWithObjects:
+                                   [ NSValue valueWithCATransform3D:CATransform3DMakeTranslation(10.0f, 0.0f, 0.0f) ],
+                                   [ NSValue valueWithCATransform3D:CATransform3DMakeTranslation(-10.0f, 0.0f, 0.0f) ],
+                                   nil ] ;
+                    anim2.autoreverses = YES ;
+                    anim2.repeatCount = 3.0f ;
+                    anim2.duration = 0.05f ;
+                    [ _txtUserName.layer addAnimation:anim2 forKey:nil ] ;
+                    _lblErrorLogin.hidden=NO;
+                    _lblErrorLogin.textColor=[UIColor redColor];
+                    _lblErrorLogin.text=[[responce objectForKey:@"responce"]objectForKey:@"reson"];
                 }
             }
         };

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MyDropdownMenuController.h"
 @interface Login : UIViewController<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgLogo;
@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;
 @property (weak, nonatomic) IBOutlet UIButton *btnLogin;
 @property (weak, nonatomic) IBOutlet UIButton *btnSignUp;
+@property (strong, nonatomic) IBOutlet UILabel *lblErrorLogin;
 
 
 @end
