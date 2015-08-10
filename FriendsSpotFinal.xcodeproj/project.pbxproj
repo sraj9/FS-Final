@@ -16,6 +16,8 @@
 		A91E7E001B5F1C3100B933B3 /* ForgotPassword2.m in Sources */ = {isa = PBXBuildFile; fileRef = A91E7DFF1B5F1C3100B933B3 /* ForgotPassword2.m */; };
 		A94512801B7417BF002DA50A /* selectImg.png in Resources */ = {isa = PBXBuildFile; fileRef = A945127F1B7417BF002DA50A /* selectImg.png */; };
 		A94512821B741EE8002DA50A /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A94512811B741EE8002DA50A /* user.png */; };
+		A94512841B7420D6002DA50A /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = A94512831B7420D6002DA50A /* loading.gif */; };
+		A94512881B742AD8002DA50A /* comments.m in Sources */ = {isa = PBXBuildFile; fileRef = A94512871B742AD8002DA50A /* comments.m */; };
 		A97C56201B66FC5100BDAC16 /* XT_problem.png in Resources */ = {isa = PBXBuildFile; fileRef = A97C561F1B66FC5100BDAC16 /* XT_problem.png */; };
 		A97C562A1B670E2800BDAC16 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A97C56231B670E2800BDAC16 /* TPKeyboardAvoidingCollectionView.m */; };
 		A97C562B1B670E2800BDAC16 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A97C56251B670E2800BDAC16 /* TPKeyboardAvoidingScrollView.m */; };
@@ -102,6 +104,9 @@
 		A91E7DFF1B5F1C3100B933B3 /* ForgotPassword2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPassword2.m; sourceTree = "<group>"; };
 		A945127F1B7417BF002DA50A /* selectImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectImg.png; sourceTree = "<group>"; };
 		A94512811B741EE8002DA50A /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		A94512831B7420D6002DA50A /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
+		A94512861B742AD8002DA50A /* comments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = comments.h; sourceTree = "<group>"; };
+		A94512871B742AD8002DA50A /* comments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = comments.m; sourceTree = "<group>"; };
 		A97C561F1B66FC5100BDAC16 /* XT_problem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XT_problem.png; sourceTree = "<group>"; };
 		A97C56221B670E2800BDAC16 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
 		A97C56231B670E2800BDAC16 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
@@ -235,6 +240,16 @@
 				A91938CD1B71757700DF12B5 /* ButtonLayers.m */,
 			);
 			path = SubClasses;
+			sourceTree = "<group>";
+		};
+		A94512851B742A9E002DA50A /* comments */ = {
+			isa = PBXGroup;
+			children = (
+				A94512861B742AD8002DA50A /* comments.h */,
+				A94512871B742AD8002DA50A /* comments.m */,
+			);
+			name = comments;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		A97C56211B670E2800BDAC16 /* TPKeyboardAvoiding */ = {
@@ -504,6 +519,7 @@
 			children = (
 				A9FDBE691B5D9CF800E1A199 /* UserHome.h */,
 				A9FDBE6A1B5D9CF800E1A199 /* UserHome.m */,
+				A94512851B742A9E002DA50A /* comments */,
 			);
 			path = UserHome;
 			sourceTree = "<group>";
@@ -511,6 +527,7 @@
 		A9FDBE6B1B5D9CF800E1A199 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A94512831B7420D6002DA50A /* loading.gif */,
 				A94512811B741EE8002DA50A /* user.png */,
 				A945127F1B7417BF002DA50A /* selectImg.png */,
 				A97C561F1B66FC5100BDAC16 /* XT_problem.png */,
@@ -633,6 +650,7 @@
 				A94512801B7417BF002DA50A /* selectImg.png in Resources */,
 				A9FDBE801B5D9CF800E1A199 /* FacebookButton.png in Resources */,
 				A9AFBA651B588A36005C08BE /* NewFSlogo.png in Resources */,
+				A94512841B7420D6002DA50A /* loading.gif in Resources */,
 				A9FDBE7B1B5D9CF800E1A199 /* Main.storyboard in Resources */,
 				A99A07191B69AA6900ED4102 /* Default.png in Resources */,
 				A9FDBE821B5D9CF800E1A199 /* New.png in Resources */,
@@ -687,6 +705,7 @@
 				A97C562B1B670E2800BDAC16 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				A97C562A1B670E2800BDAC16 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				A9FDBE791B5D9CF800E1A199 /* AppDelegate.m in Sources */,
+				A94512881B742AD8002DA50A /* comments.m in Sources */,
 				A91938C41B71719000DF12B5 /* Blocking.m in Sources */,
 				A985D94B1B606F3100AEF22E /* MyViewController.m in Sources */,
 				A9EA175F1B7306FB007CFABB /* SDImageCache.m in Sources */,
@@ -838,7 +857,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = FriendsSpotFinal/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -851,7 +870,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = FriendsSpotFinal/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

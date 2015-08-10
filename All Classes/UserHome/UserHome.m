@@ -8,6 +8,7 @@
 
 #import "UserHome.h"
 #import "service.h"
+#import "comments.h"
 @interface UserHome ()
 
 @end
@@ -83,16 +84,14 @@
     //changing a cell depends on activity type
     if([[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"])
     {
-UITableViewCell *cell;
-        cell=[tableView dequeueReusableCellWithIdentifier:@"celltwo"];
+UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"celltwo"];
         
         UILabel *lbl=(UILabel*)[cell viewWithTag:14];
         lbl.text=[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"discription"];
         return cell;
      }
     else{
-        UITableViewCell *cell;
-        cell=[tableView dequeueReusableCellWithIdentifier:@"cellone"];
+        UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cellone"];
         
         UILabel *lbl=(UILabel*)[cell viewWithTag:4];
         lbl.text=[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"discription"];
@@ -118,6 +117,21 @@ UITableViewCell *cell;
     }
     return nil;
     
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    NSMutableDictionary *dicToSend=[[NSMutableDictionary alloc]initWithDictionary:[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]];
+    
+    
+    
+    comments *commentsClass=(comments*)[self.storyboard instantiateViewControllerWithIdentifier:@"comments"];
+    
+    commentsClass.dicMutactivityData = dicToSend;
+    
+    [self.navigationController pushViewController:commentsClass animated:YES];
+  
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

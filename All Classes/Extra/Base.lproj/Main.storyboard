@@ -16,68 +16,68 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Et4-hR-9PZ"/>
+                        <segue destination="8hZ-AY-Ibx" kind="relationship" relationship="rootViewController" id="OHl-Qu-hHa"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bx5-b5-1ZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-821" y="263"/>
+            <point key="canvasLocation" x="-951" y="197"/>
         </scene>
         <!--Login-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="mf0-RM-hZ9">
             <objects>
-                <viewController storyboardIdentifier="LoginVC" id="BYZ-38-t0r" customClass="Login" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="8hZ-AY-Ibx" customClass="Login" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="C9b-9H-JTu"/>
-                        <viewControllerLayoutGuide type="bottom" id="bxS-6w-Cm1"/>
+                        <viewControllerLayoutGuide type="top" id="Afq-Rv-Yrr"/>
+                        <viewControllerLayoutGuide type="bottom" id="s4B-d4-d2n"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="hxv-sK-AFJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HomeImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="kfz-M5-GWe">
-                                <rect key="frame" x="0.0" y="93" width="320" height="413"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HomeImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vqh-4f-mJz">
+                                <rect key="frame" x="0.0" y="138" width="329" height="368"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FriendsSpot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTZ-6e-o7c">
-                                <rect key="frame" x="66" y="161" width="189" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FriendsSpot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ES-2N-2Y9">
+                                <rect key="frame" x="66" y="159" width="189" height="45"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="26"/>
                                 <color key="textColor" red="0.41002676100000002" green="0.12698011910000001" blue="0.3823777451" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sPz-k7-4Uk">
-                                <rect key="frame" x="57" y="219" width="206" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.93098362747612162" blue="0.97403017676937287" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="wnV-lH-viL"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sQd-9w-BU3">
-                                <rect key="frame" x="57" y="257" width="206" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nZc-nk-KS3">
+                                <rect key="frame" x="57" y="228" width="206" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.93098362749999997" blue="0.97403017680000004" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="FmW-w4-njk"/>
+                                    <outlet property="delegate" destination="8hZ-AY-Ibx" id="Tiv-u0-pRh"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n71-KL-UHr">
-                                <rect key="frame" x="14" y="359" width="139" height="37"/>
-                                <color key="backgroundColor" red="0.40784313725490196" green="0.082352941176470587" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGk-X6-D0l">
+                                <rect key="frame" x="57" y="266" width="206" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.93098362749999997" blue="0.97403017680000004" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8hZ-AY-Ibx" id="avY-05-fHv"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHj-KJ-pcL">
+                                <rect key="frame" x="14" y="368" width="139" height="37"/>
+                                <color key="backgroundColor" red="0.40784313729999999" green="0.08235294118" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="1" green="0.93098362749999997" blue="0.97403017680000004" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnLoginClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mNa-Je-bZ3"/>
+                                    <action selector="btnLoginClick:" destination="8hZ-AY-Ibx" eventType="touchUpInside" id="juz-Kn-zkH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcP-fi-KDL">
-                                <rect key="frame" x="166" y="359" width="139" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPZ-iD-a5W">
+                                <rect key="frame" x="166" y="368" width="139" height="37"/>
                                 <color key="backgroundColor" red="0.40784313729999999" green="0.08235294118" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="SignUp">
@@ -90,10 +90,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="btnLoginClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eEv-F2-IoO"/>
+                                    <action selector="btnLoginClick:" destination="8hZ-AY-Ibx" eventType="touchUpInside" id="cfB-Nd-ZCY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5c-HG-hYe">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dB-L9-bIX">
                                 <rect key="frame" x="11" y="541" width="143" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <size key="titleShadowOffset" width="0.5" height="0.0"/>
@@ -102,11 +102,11 @@
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NewFSlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="0od-I9-pC6">
-                                <rect key="frame" x="100" y="66" width="100" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NewFSlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="P89-8S-5Pe">
+                                <rect key="frame" x="100" y="65" width="100" height="100"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8a-uC-RUO">
-                                <rect key="frame" x="128" y="297" width="143" height="17"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iji-DD-PX1">
+                                <rect key="frame" x="128" y="306" width="143" height="17"/>
                                 <color key="backgroundColor" red="1" green="0.93098362749999997" blue="0.97403017680000004" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <size key="titleShadowOffset" width="0.5" height="0.0"/>
@@ -114,29 +114,36 @@
                                     <color key="titleColor" red="0.40784313729999999" green="0.08235294118" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_______________" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rn5-fi-hjY">
-                                <rect key="frame" x="136" y="295" width="149" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_______________" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHS-tB-PF3">
+                                <rect key="frame" x="136" y="304" width="149" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.41002676100000002" green="0.12698011910000001" blue="0.3823777451" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxf-Pi-W2m">
+                                <rect key="frame" x="57" y="206" width="206" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.93098362749999997" blue="0.97403017680000004" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.93098362749999997" blue="0.97403017680000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hsG-nb-l4b"/>
+                    <navigationItem key="navigationItem" id="Wz7-Sn-klh"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="btnForgotPassword" destination="Rn5-fi-hjY" id="PC7-ox-bpV"/>
-                        <outlet property="btnLogin" destination="n71-KL-UHr" id="bwP-Tt-nb6"/>
-                        <outlet property="btnSignUp" destination="UcP-fi-KDL" id="Ucv-UM-01i"/>
-                        <outlet property="imgLogo" destination="0od-I9-pC6" id="NLG-pX-sZI"/>
-                        <outlet property="txtPassword" destination="sQd-9w-BU3" id="ZxO-hq-jhB"/>
-                        <outlet property="txtUserName" destination="sPz-k7-4Uk" id="aMT-Mv-bl6"/>
+                        <outlet property="btnForgotPassword" destination="vHS-tB-PF3" id="00J-Z9-aEW"/>
+                        <outlet property="btnLogin" destination="CHj-KJ-pcL" id="mQS-dT-OgY"/>
+                        <outlet property="btnSignUp" destination="FPZ-iD-a5W" id="CmJ-De-Bxf"/>
+                        <outlet property="imgLogo" destination="P89-8S-5Pe" id="96Z-00-jO3"/>
+                        <outlet property="lblErrorLogin" destination="Qxf-Pi-W2m" id="4Jl-he-Trj"/>
+                        <outlet property="txtPassword" destination="aGk-X6-D0l" id="7NK-ks-AJT"/>
+                        <outlet property="txtUserName" destination="nZc-nk-KS3" id="o3H-Md-4gN"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2QE-sV-Uz7" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-459" y="235"/>
+            <point key="canvasLocation" x="-408" y="188"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UXd-QW-sKy">
