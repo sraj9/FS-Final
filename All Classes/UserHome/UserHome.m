@@ -7,8 +7,7 @@
 //
 
 #import "UserHome.h"
-#import "service.h"
-#import "comments.h"
+
 @interface UserHome ()
 
 @end
@@ -17,40 +16,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
+    ref=[[UIRefreshControl alloc]init];
+    [ref addTarget:self action:@selector(refreshHome) forControlEvents:UIControlEventValueChanged];
+    [ _tblViewHome addSubview:ref];
     
     _btnPost.layer.cornerRadius=5;
     _bViewNewActivity.frame=CGRectMake(0,510,400,58);
     [self.view addSubview:_bViewNewActivity];
     
-    userdata=[[NSMutableDictionary alloc]init];
-    NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
-//    [dic setObject:@"govind300" forKey:@"uName"];
-//    [dic setObject:@"login" forKey:@"action"];
-//    [dic setObject:@"2" forKey:@"password"];
-//    
-       [dic setObject:@"87" forKey:@"uId"];
-       [dic setObject:@"loadHome" forKey:@"action"];
-//
-//        [dic setObject:@"87" forKey:@"uId"];
-//        [dic setObject:@"newActivity" forKey:@"action"];
-//        [dic setObject:@"text" forKey:@"type"];
-//        [dic setObject:@"lovely day" forKey:@"discription"];
+    self.vcfirstLoad.frame=CGRectMake(0,0,400,600);
+    [self.view addSubview:self.vcfirstLoad];
+    
+//    [UIView animateWithDuration:2 animations:^{
+//       
+//        [UIView animateWithDuration:2 animations:^{
+//           
+//            
+//        }];
+//    }];
     
    
-    service *service1=[service new];
-   [service1 FSPlzcallWebServiceWithURLString: @"FS-host" ArgumentsDictionary:dic];
     
-    service1.serviceBlock=^(NSMutableDictionary* responce)
-    {
-        if(responce)
-        {
-            [userdata setValuesForKeysWithDictionary:responce];
-            NSLog(@"%@",userdata);
-//            NSLog(@"%@",[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:2]objectForKey:@"image"]);
-            [_tblViewHome reloadData];
-        }
-    };
-   
+    [self refreshHome];
+    
 
 }
 
@@ -98,13 +87,10 @@ UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"celltwo"];
         
          NSString *strImg=[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"image"]];
        
-        //NSLog(@"%@",strImg);
         
         
         UIImageView *img=(UIImageView*)[cell viewWithTag:5];
-//        img.image=[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:strImg]]];
-        
-        
+  
         [img sd_setImageWithURL:[NSURL URLWithString:strImg]
                           placeholderImage:[UIImage imageNamed:strImg]
                                  completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL)
@@ -138,6 +124,37 @@ UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"celltwo"];
 {
     [textField resignFirstResponder];
     return YES;
+}
+
+-(void)refreshHome
+{
+ 
+    userdata=[[NSMutableDictionary alloc]init];
+    NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
+    
+    [dic setObject:@"87" forKey:@"uId"];
+    [dic setObject:@"loadHome" forKey:@"action"];
+  
+    
+    service1=[service new];
+    [service1 FSPlzcallWebServiceWithURLString: @"FS-host" ArgumentsDictionary:dic];
+    
+    service1.serviceBlock=^(NSMutableDictionary* responce)
+    {
+        if(responce)
+        {
+            [userdata setValuesForKeysWithDictionary:responce];
+            NSLog(@"%@",userdata);
+            
+            [_tblViewHome reloadData];
+            [ref endRefreshing];
+            [self.activityfirstLoad stopAnimating];
+            [self.vcfirstLoad removeFromSuperview];
+        }
+        
+    };
+    
+   
 }
 
 /*

@@ -23,8 +23,19 @@
         [_imgImageActivity removeFromSuperview];
     }else
     {
-        _imgImageActivity.image=[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[_dicMutactivityData objectForKey:@"image"] ]]]];
         
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            
+            UIImage *img=[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[self.dicMutactivityData objectForKey:@"image"] ]]]];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                _imgImageActivity.image=img;
+            });
+        });
+        
+        
+       
     
     }
     
@@ -61,4 +72,8 @@
 }
 */
 
+- (IBAction)btnBackHandler:(id)sender {
+   
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="VXU-q6-Wsj">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
@@ -85,7 +84,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" id="dqT-HH-59Y">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rBX-uA-AMJ">
                                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -202,18 +201,18 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyA-zl-myZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="676" y="254"/>
+            <point key="canvasLocation" x="560" y="155"/>
         </scene>
         <!--User Home-->
         <scene sceneID="pLD-Hu-FUu">
             <objects>
-                <viewController wantsFullScreenLayout="YES" id="x6A-s9-9T6" customClass="UserHome" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserHome" wantsFullScreenLayout="YES" id="x6A-s9-9T6" customClass="UserHome" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q5d-tR-Xum">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <userGuides>
-                            <userLayoutGuide location="243" affinity="minY"/>
-                            <userLayoutGuide location="159" affinity="minX"/>
+                            <userLayoutGuide location="288" affinity="minY"/>
+                            <userLayoutGuide location="160" affinity="minX"/>
                         </userGuides>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="287" sectionHeaderHeight="22" sectionFooterHeight="22" id="yi7-gf-fnv">
@@ -221,7 +220,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellone" rowHeight="306" id="rtG-1t-pMn">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellone" rowHeight="306" id="rtG-1t-pMn">
                                         <rect key="frame" x="0.0" y="22" width="320" height="306"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rtG-1t-pMn" id="2K9-tr-EDo">
@@ -246,16 +245,16 @@
                                                     <rect key="frame" x="5" y="5" width="40" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="opO-AM-eGd" customClass="ButtonLayers">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="opO-AM-eGd" customClass="ButtonColor">
                                                     <rect key="frame" x="13" y="267" width="90" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.16736080073668647" green="0.31240214999734828" blue="0.91212910353535359" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.1567819369" green="0.29814735129999997" blue="0.87087673610000005" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <state key="normal" title="Like">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="udt-Op-nQf" customClass="ButtonLayers">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="udt-Op-nQf" customClass="ButtonColor">
                                                     <rect key="frame" x="222" y="267" width="90" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.15678193691679712" green="0.29814735129199277" blue="0.87087673611111116" alpha="1" colorSpace="calibratedRGB"/>
@@ -346,13 +345,26 @@
                     </view>
                     <navigationItem key="navigationItem" id="6To-5C-kp1"/>
                     <connections>
+                        <outlet property="activityfirstLoad" destination="eEK-7I-6EX" id="6Er-26-Rdj"/>
                         <outlet property="bViewNewActivity" destination="DNl-yt-V5b" id="DGF-Xz-SJg"/>
                         <outlet property="btnPost" destination="6zD-mf-uqx" id="ocL-qC-gc1"/>
                         <outlet property="tblViewHome" destination="yi7-gf-fnv" id="rZ2-Ga-utL"/>
+                        <outlet property="vcfirstLoad" destination="F2P-fZ-0Ma" id="jmK-FN-3Yd"/>
                         <segue destination="8Gu-Fg-Ut6" kind="push" id="s2N-Ms-Bhy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clk-cF-FIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view alpha="0.5" contentMode="scaleToFill" id="F2P-fZ-0Ma">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="eEK-7I-6EX">
+                            <rect key="frame" x="142" y="265" width="37" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.3294117647" green="0.047058823530000002" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" id="DNl-yt-V5b">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -390,7 +402,7 @@
                     <blurEffect style="light"/>
                 </visualEffectView>
             </objects>
-            <point key="canvasLocation" x="946" y="233"/>
+            <point key="canvasLocation" x="910" y="109"/>
         </scene>
         <!--Comments-->
         <scene sceneID="XYm-OW-Y0s">
@@ -402,7 +414,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" id="6cs-De-jfV" userLabel="ViewImage">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="114" sectionHeaderHeight="22" sectionFooterHeight="22" id="fwN-wE-dc1">
                                         <rect key="frame" x="0.0" y="380" width="320" height="188"/>
@@ -457,7 +469,7 @@
                                             <outlet property="delegate" destination="8Gu-Fg-Ut6" id="v68-fe-YUA"/>
                                         </connections>
                                     </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fVx-Xn-hC3" customClass="ButtonLayers">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fVx-Xn-hC3" customClass="ButtonColor">
                                         <rect key="frame" x="8" y="342" width="90" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.16736080070000001" green="0.31240214999999999" blue="0.91212910349999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -473,15 +485,6 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hD2-KJ-vVo">
-                                        <rect key="frame" x="8" y="17" width="50" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.3294117647" green="0.047058823530000002" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Back">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thakur Added 2 New Photos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9AD-tZ-vYm">
                                         <rect key="frame" x="59" y="73" width="261" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -491,8 +494,20 @@
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading.gif" id="BU8-Ln-hMa">
                                         <rect key="frame" x="8" y="106" width="304" height="154"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hD2-KJ-vVo">
+                                        <rect key="frame" x="8" y="18" width="36" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="39"/>
+                                        <state key="normal" title="&lt;">
+                                            <color key="titleColor" red="0.3294117647" green="0.047058823530000002" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnBackHandler:" destination="8Gu-Fg-Ut6" eventType="touchUpInside" id="oyJ-YL-qbW"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>

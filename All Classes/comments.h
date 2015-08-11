@@ -14,10 +14,11 @@
 }
 @property (weak, nonatomic) IBOutlet UIImageView *imgImageActivity;
 @property (weak, nonatomic) IBOutlet UILabel *lblImageDiscription;
-@property (strong,nonatomic)id(^myImgblock)(NSData* data);
 
 
 
+
+- (IBAction)btnBackHandler:(id)sender;
 
 @property (nonatomic,strong)NSMutableDictionary *dicMutactivityData;
 
