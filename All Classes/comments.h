@@ -14,6 +14,7 @@
 }
 @property (weak, nonatomic) IBOutlet UIImageView *imgImageActivity;
 @property (weak, nonatomic) IBOutlet UILabel *lblImageDiscription;
+@property (strong, nonatomic) IBOutlet UIVisualEffectView *viewNewComment;
 
 
 

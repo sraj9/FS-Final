@@ -70,24 +70,22 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    UITableViewCell *cell;
+    
     //changing a cell depends on activity type
     if([[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"])
     {
-UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"celltwo"];
+        cell=[tableView dequeueReusableCellWithIdentifier:@"celltwo"];
+       
         
-        UILabel *lbl=(UILabel*)[cell viewWithTag:14];
-        lbl.text=[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"discription"];
-        return cell;
      }
     else{
-        UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cellone"];
+        cell=[tableView dequeueReusableCellWithIdentifier:@"cellone"];
         
-        UILabel *lbl=(UILabel*)[cell viewWithTag:4];
-        lbl.text=[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"discription"];
+       
         
          NSString *strImg=[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"image"]];
        
-        
         
         UIImageView *img=(UIImageView*)[cell viewWithTag:5];
   
@@ -97,11 +95,44 @@ UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"celltwo"];
         {
             img.image=image;
                                  }];
+       
         
-        
-        return cell;
     }
-    return nil;
+    //number of likes
+    UILabel *lbl2=(UILabel*)[cell viewWithTag:6];
+    NSString *list =[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"likersId"];
+    NSArray *listItems = [list componentsSeparatedByString:@","];
+    int likes=([listItems count]>1)?[listItems count]:0;
+    lbl2.text=[NSString stringWithFormat:@"(%lu)",(unsigned long)likes];
+    
+    //setting discription of activity
+    UILabel *lbl=(UILabel*)[cell viewWithTag:4];
+    lbl.text=[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"discription"];
+    
+    //setting user's profile pic
+    if (![[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"image"]isEqualToString:@" "])
+    {
+        
+        UIImageView *userImg=(UIImageView*)[cell viewWithTag:1];
+        
+        NSString *uImg=[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"profilePic"]];
+        
+        [userImg sd_setImageWithURL:[NSURL URLWithString:uImg]
+                   placeholderImage:[UIImage imageNamed:uImg]
+                          completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL)
+         {
+             userImg.image=image;
+         }];
+        
+    }else
+    {
+    UIImageView *userImg=(UIImageView*)[cell viewWithTag:1];
+        
+    }
+    
+    
+
+    return cell;
     
 }
 

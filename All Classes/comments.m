@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _viewNewComment.frame=CGRectMake(0,510,400,58);
+    [self.view addSubview:_viewNewComment];
+
+    
     NSLog(@"dic--%@",_dicMutactivityData);
     if([[_dicMutactivityData objectForKey:@"type"] isEqual:@"text"])
     {
@@ -49,7 +53,10 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    if(self.dicMutactivityData){
+        return [[_dicMutactivityData objectForKey:@"comments"] count];
+    }else{
+        return 0;}
 }
 
 // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
@@ -57,8 +64,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"commentCell"];
+    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"imageCommentsCell"];
     
+    UILabel *lbl=(UILabel*)[cell viewWithTag:4];
+    lbl.text=[[[_dicMutactivityData objectForKey:@"comments"]objectAtIndex:indexPath.row]objectForKey:@"comment" ];
+   
     return cell;
 }
 
