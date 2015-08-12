@@ -37,6 +37,7 @@
 		A9AFBA411B58554B005C08BE /* FriendsSpotFinalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AFBA401B58554B005C08BE /* FriendsSpotFinalTests.m */; };
 		A9AFBA651B588A36005C08BE /* NewFSlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9AFBA641B588A36005C08BE /* NewFSlogo.png */; };
 		A9BB57FE1B719256009E43C5 /* service.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BB57FD1B719256009E43C5 /* service.m */; };
+		A9C075191B7958040011F49C /* Sumit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C075181B7958040011F49C /* Sumit.storyboard */; };
 		A9D11F331B70332100E6291B /* FriendsListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D11F321B70332100E6291B /* FriendsListVC.m */; };
 		A9D11F371B703E9600E6291B /* GeneralSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D11F361B703E9600E6291B /* GeneralSetting.m */; };
 		A9D11F3A1B703F1C00E6291B /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D11F391B703F1C00E6291B /* Setting.m */; };
@@ -63,7 +64,6 @@
 		A9FDBE751B5D9CF800E1A199 /* NewFSlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE511B5D9CF800E1A199 /* NewFSlogo.png */; };
 		A9FDBE761B5D9CF800E1A199 /* Govind.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE531B5D9CF800E1A199 /* Govind.storyboard */; };
 		A9FDBE771B5D9CF800E1A199 /* Raj.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE541B5D9CF800E1A199 /* Raj.storyboard */; };
-		A9FDBE781B5D9CF800E1A199 /* Sumit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE551B5D9CF800E1A199 /* Sumit.storyboard */; };
 		A9FDBE791B5D9CF800E1A199 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FDBE591B5D9CF800E1A199 /* AppDelegate.m */; };
 		A9FDBE7A1B5D9CF800E1A199 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE5A1B5D9CF800E1A199 /* LaunchScreen.xib */; };
 		A9FDBE7B1B5D9CF800E1A199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE5C1B5D9CF800E1A199 /* Main.storyboard */; };
@@ -143,6 +143,7 @@
 		A9AFBA641B588A36005C08BE /* NewFSlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewFSlogo.png; sourceTree = "<group>"; };
 		A9BB57FC1B719256009E43C5 /* service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = service.h; sourceTree = "<group>"; };
 		A9BB57FD1B719256009E43C5 /* service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = service.m; sourceTree = "<group>"; };
+		A9C075181B7958040011F49C /* Sumit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sumit.storyboard; sourceTree = "<group>"; };
 		A9D11F311B70332100E6291B /* FriendsListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendsListVC.h; path = ionicons/FriendsListVC.h; sourceTree = "<group>"; };
 		A9D11F321B70332100E6291B /* FriendsListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsListVC.m; path = ionicons/FriendsListVC.m; sourceTree = "<group>"; };
 		A9D11F351B703E9600E6291B /* GeneralSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralSetting.h; sourceTree = "<group>"; };
@@ -190,7 +191,6 @@
 		A9FDBE511B5D9CF800E1A199 /* NewFSlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewFSlogo.png; sourceTree = "<group>"; };
 		A9FDBE531B5D9CF800E1A199 /* Govind.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Govind.storyboard; sourceTree = "<group>"; };
 		A9FDBE541B5D9CF800E1A199 /* Raj.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Raj.storyboard; sourceTree = "<group>"; };
-		A9FDBE551B5D9CF800E1A199 /* Sumit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sumit.storyboard; sourceTree = "<group>"; };
 		A9FDBE581B5D9CF800E1A199 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A9FDBE591B5D9CF800E1A199 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A9FDBE5B1B5D9CF800E1A199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -451,9 +451,9 @@
 		A9FDBE521B5D9CF800E1A199 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				A9C075181B7958040011F49C /* Sumit.storyboard */,
 				A9FDBE531B5D9CF800E1A199 /* Govind.storyboard */,
 				A9FDBE541B5D9CF800E1A199 /* Raj.storyboard */,
-				A9FDBE551B5D9CF800E1A199 /* Sumit.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -656,10 +656,10 @@
 				A9FDBE821B5D9CF800E1A199 /* New.png in Resources */,
 				A9FDBE7A1B5D9CF800E1A199 /* LaunchScreen.xib in Resources */,
 				A9FDBE811B5D9CF800E1A199 /* FS Logo.png in Resources */,
+				A9C075191B7958040011F49C /* Sumit.storyboard in Resources */,
 				A94512821B741EE8002DA50A /* user.png in Resources */,
 				A985D9581B606F7300AEF22E /* Images.xcassets in Resources */,
 				A99A071A1B69AA6900ED4102 /* Default@2x.png in Resources */,
-				A9FDBE781B5D9CF800E1A199 /* Sumit.storyboard in Resources */,
 				A9FDBE761B5D9CF800E1A199 /* Govind.storyboard in Resources */,
 				A99A07181B69AA6900ED4102 /* Default-568h@2x.png in Resources */,
 				A9FDBE771B5D9CF800E1A199 /* Raj.storyboard in Resources */,
