@@ -12,6 +12,7 @@ NSArray *arrayFieldNames;
 
 @interface SignUp ()
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *heightOfContentView;
 @end
 
 @implementation SignUp
@@ -20,6 +21,16 @@ NSArray *arrayFieldNames;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
+//                                    [UIColor whiteColor],NSForegroundColorAttributeName,
+//                                    [UIColor whiteColor],NSBackgroundColorAttributeName,nil];
+//    
+//    self.navigationController.navigationBar.titleTextAttributes = textAttributes;
+//    self.title = @"Rigister Form";
+//    
+//    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:104.0/255.0 green:21.0/255.0 blue:32.0/255.0 alpha:1.0];
+//    self.navigationController.navigationBar.translucent = NO;
+//    
     arrayField=[[NSArray alloc]initWithObjects:_txtFname,_txtLname,_txtContact,_txtCountry,_txtState,_txtCity,_txtEmail,_txtUserName,_txtPassword,_txtRpassword, nil];
     
   
@@ -28,7 +39,13 @@ NSArray *arrayFieldNames;
     
   self.scroll_View.contentSize = CGSizeMake(_scroll_View.frame.size.width, 511);
     
+    
     // Do any additional setup after loading the view.
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    _heightOfContentView.constant = _scroll_View.contentSize.height;
+
 }
 -(BOOL)textFieldShouldReturn:(UITextField *) textField{
     
