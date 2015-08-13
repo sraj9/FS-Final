@@ -37,7 +37,7 @@ NSArray *arrayFieldNames;
     arrayFieldNames=[[NSArray alloc]initWithObjects:@"Firstname",@"LastName",@"Contact",@"Country",@"State",@"City",@"Email",@"Username",@"Password",@"Rpassword", nil];
   
     
-  self.scroll_View.contentSize = CGSizeMake(_scroll_View.frame.size.width, 511);
+  self.scroll_View.contentSize = CGSizeMake(_scroll_View.frame.size.width,600);
     
     
     // Do any additional setup after loading the view.
