@@ -210,10 +210,6 @@
                     <view key="view" contentMode="scaleToFill" id="q5d-tR-Xum">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <userGuides>
-                            <userLayoutGuide location="288" affinity="minY"/>
-                            <userLayoutGuide location="160" affinity="minX"/>
-                        </userGuides>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="287" sectionHeaderHeight="22" sectionFooterHeight="22" id="yi7-gf-fnv">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
