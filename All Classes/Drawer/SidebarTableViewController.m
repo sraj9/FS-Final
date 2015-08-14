@@ -66,10 +66,14 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row==0 || indexPath.row==1 || indexPath.row==2 || indexPath.row==3) {
+    if (indexPath.row==0 ) {
         [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
-    }else{
-        [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    } if ( indexPath.row==1 ) {
+        [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+    } if ( indexPath.row==2 ) {
+        [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+    }if ( indexPath.row==3) {
+        [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
     }
     NSLog(@"%ld", indexPath.row);
 }

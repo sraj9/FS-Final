@@ -7,7 +7,7 @@
 //
 
 #import "UserHome.h"
-
+#import "SWRevealViewController.h"
 @interface UserHome ()
 
 @end
@@ -16,6 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sidebarButton setTarget: self.revealViewController];
+        [self.sidebarButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
    
     ref=[[UIRefreshControl alloc]init];
     [ref addTarget:self action:@selector(refreshHome) forControlEvents:UIControlEventValueChanged];
@@ -176,7 +186,6 @@
     [textField resignFirstResponder];
     return YES;
 }
-
 -(void)refreshHome
 {
  
