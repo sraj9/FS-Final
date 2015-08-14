@@ -98,6 +98,7 @@
        
         
     }
+    
     //number of likes
     UILabel *lbl2=(UILabel*)[cell viewWithTag:6];
     NSString *list =[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"likersId"];
@@ -108,12 +109,22 @@
     //setting discription of activity
     UILabel *lbl=(UILabel*)[cell viewWithTag:4];
     lbl.text=[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"discription"];
+    //setting user name
+    UILabel *lbl3=(UILabel*)[cell viewWithTag:2];
+    NSString *fullname=[NSString stringWithFormat:@"%@ %@",[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"fName"],[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"lName"]];
+        lbl3.text=fullname;
+    
+    //setting date
+    UILabel *lbl4=(UILabel*)[cell viewWithTag:3];
+  
+    lbl4.text=[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"date"];
     
     //setting user's profile pic
-    if (![[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"image"]isEqualToString:@" "])
+  
+    UIImageView *userImg=(UIImageView*)[cell viewWithTag:1];
+    userImg.layer.cornerRadius=20;
+    if (![[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"profilePic"] isEqualToString:@""] )
     {
-        
-        UIImageView *userImg=(UIImageView*)[cell viewWithTag:1];
         
         NSString *uImg=[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"profilePic"]];
         
@@ -126,8 +137,7 @@
         
     }else
     {
-    UIImageView *userImg=(UIImageView*)[cell viewWithTag:1];
-        
+        userImg.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"user" ofType:@"png"]];
     }
     
     

@@ -527,8 +527,8 @@
 		A9FDBE6B1B5D9CF800E1A199 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				A94512831B7420D6002DA50A /* loading.gif */,
 				A94512811B741EE8002DA50A /* user.png */,
+				A94512831B7420D6002DA50A /* loading.gif */,
 				A945127F1B7417BF002DA50A /* selectImg.png */,
 				A97C561F1B66FC5100BDAC16 /* XT_problem.png */,
 				A9FDBE6C1B5D9CF800E1A199 /* FacebookButton.png */,
