@@ -102,7 +102,7 @@
     UILabel *lbl2=(UILabel*)[cell viewWithTag:6];
     NSString *list =[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"likersId"];
     NSArray *listItems = [list componentsSeparatedByString:@","];
-    int likes=([listItems count]>1)?[listItems count]:0;
+    int likes=([listItems count]>1)?(int)[listItems count]:0;
     lbl2.text=[NSString stringWithFormat:@"(%lu)",(unsigned long)likes];
     
     //setting discription of activity
