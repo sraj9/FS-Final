@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9049ACA1B7D6D1400497091 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9049AC91B7D6D1400497091 /* Images.xcassets */; };
+		A9049AD61B7D6DB200497091 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9049ACD1B7D6DB200497091 /* MainViewController.m */; };
+		A9049AD71B7D6DB200497091 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9049ACF1B7D6DB200497091 /* MapViewController.m */; };
+		A9049AD81B7D6DB200497091 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9049AD11B7D6DB200497091 /* PhotoViewController.m */; };
+		A9049AD91B7D6DB200497091 /* SidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9049AD31B7D6DB200497091 /* SidebarTableViewController.m */; };
+		A9049ADA1B7D6DB200497091 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9049AD51B7D6DB200497091 /* SWRevealViewController.m */; };
 		A91938C11B71717D00DF12B5 /* Security.m in Sources */ = {isa = PBXBuildFile; fileRef = A91938C01B71717D00DF12B5 /* Security.m */; };
 		A91938C41B71719000DF12B5 /* Blocking.m in Sources */ = {isa = PBXBuildFile; fileRef = A91938C31B71719000DF12B5 /* Blocking.m */; };
 		A91938C71B7171CB00DF12B5 /* ChangePassword.m in Sources */ = {isa = PBXBuildFile; fileRef = A91938C61B7171CB00DF12B5 /* ChangePassword.m */; };
@@ -25,13 +31,6 @@
 		A97C562B1B670E2800BDAC16 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A97C56251B670E2800BDAC16 /* TPKeyboardAvoidingScrollView.m */; };
 		A97C562C1B670E2800BDAC16 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A97C56271B670E2800BDAC16 /* TPKeyboardAvoidingTableView.m */; };
 		A97C562D1B670E2800BDAC16 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A97C56291B670E2800BDAC16 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
-		A985D9441B606EEB00AEF22E /* DropdownMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = A985D9411B606EEB00AEF22E /* DropdownMenuController.m */; };
-		A985D9451B606EEB00AEF22E /* DropdownMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = A985D9431B606EEB00AEF22E /* DropdownMenuSegue.m */; };
-		A985D94A1B606F3100AEF22E /* MyDropdownMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = A985D9471B606F3100AEF22E /* MyDropdownMenuController.m */; };
-		A985D94B1B606F3100AEF22E /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A985D9491B606F3100AEF22E /* MyViewController.m */; };
-		A985D9531B606F4900AEF22E /* IonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = A985D94F1B606F4900AEF22E /* IonIcons.m */; };
-		A985D9541B606F4900AEF22E /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A985D9501B606F4900AEF22E /* ionicons.ttf */; };
-		A985D9581B606F7300AEF22E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A985D9571B606F7300AEF22E /* Images.xcassets */; };
 		A99A07181B69AA6900ED4102 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A99A07141B69AA6900ED4102 /* Default-568h@2x.png */; };
 		A99A07191B69AA6900ED4102 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A99A07151B69AA6900ED4102 /* Default.png */; };
 		A99A071A1B69AA6900ED4102 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A99A07161B69AA6900ED4102 /* Default@2x.png */; };
@@ -40,7 +39,6 @@
 		A9AFBA651B588A36005C08BE /* NewFSlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9AFBA641B588A36005C08BE /* NewFSlogo.png */; };
 		A9BB57FE1B719256009E43C5 /* service.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BB57FD1B719256009E43C5 /* service.m */; };
 		A9C075191B7958040011F49C /* Sumit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C075181B7958040011F49C /* Sumit.storyboard */; };
-		A9D11F331B70332100E6291B /* FriendsListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D11F321B70332100E6291B /* FriendsListVC.m */; };
 		A9D11F371B703E9600E6291B /* GeneralSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D11F361B703E9600E6291B /* GeneralSetting.m */; };
 		A9D11F3A1B703F1C00E6291B /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D11F391B703F1C00E6291B /* Setting.m */; };
 		A9D11F3C1B70422900E6291B /* HomeImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D11F3B1B70422900E6291B /* HomeImage.png */; };
@@ -91,6 +89,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A9049AC91B7D6D1400497091 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A9049ACC1B7D6DB200497091 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		A9049ACD1B7D6DB200497091 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		A9049ACE1B7D6DB200497091 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		A9049ACF1B7D6DB200497091 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		A9049AD01B7D6DB200497091 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		A9049AD11B7D6DB200497091 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		A9049AD21B7D6DB200497091 /* SidebarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarTableViewController.h; sourceTree = "<group>"; };
+		A9049AD31B7D6DB200497091 /* SidebarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableViewController.m; sourceTree = "<group>"; };
+		A9049AD41B7D6DB200497091 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		A9049AD51B7D6DB200497091 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A91938BF1B71717D00DF12B5 /* Security.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Security.h; sourceTree = "<group>"; };
 		A91938C01B71717D00DF12B5 /* Security.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Security.m; sourceTree = "<group>"; };
 		A91938C21B71719000DF12B5 /* Blocking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blocking.h; sourceTree = "<group>"; };
@@ -122,19 +131,6 @@
 		A97C56271B670E2800BDAC16 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
 		A97C56281B670E2800BDAC16 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
 		A97C56291B670E2800BDAC16 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
-		A985D9401B606EEB00AEF22E /* DropdownMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropdownMenuController.h; sourceTree = "<group>"; };
-		A985D9411B606EEB00AEF22E /* DropdownMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropdownMenuController.m; sourceTree = "<group>"; };
-		A985D9421B606EEB00AEF22E /* DropdownMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropdownMenuSegue.h; sourceTree = "<group>"; };
-		A985D9431B606EEB00AEF22E /* DropdownMenuSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropdownMenuSegue.m; sourceTree = "<group>"; };
-		A985D9461B606F3100AEF22E /* MyDropdownMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDropdownMenuController.h; sourceTree = "<group>"; };
-		A985D9471B606F3100AEF22E /* MyDropdownMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDropdownMenuController.m; sourceTree = "<group>"; };
-		A985D9481B606F3100AEF22E /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		A985D9491B606F3100AEF22E /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
-		A985D94D1B606F4900AEF22E /* ionicons-codes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ionicons-codes.h"; sourceTree = "<group>"; };
-		A985D94E1B606F4900AEF22E /* IonIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonIcons.h; sourceTree = "<group>"; };
-		A985D94F1B606F4900AEF22E /* IonIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonIcons.m; sourceTree = "<group>"; };
-		A985D9501B606F4900AEF22E /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
-		A985D9571B606F7300AEF22E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A99A07141B69AA6900ED4102 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A99A07151B69AA6900ED4102 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A99A07161B69AA6900ED4102 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -150,8 +146,6 @@
 		A9BB57FC1B719256009E43C5 /* service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = service.h; sourceTree = "<group>"; };
 		A9BB57FD1B719256009E43C5 /* service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = service.m; sourceTree = "<group>"; };
 		A9C075181B7958040011F49C /* Sumit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sumit.storyboard; sourceTree = "<group>"; };
-		A9D11F311B70332100E6291B /* FriendsListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendsListVC.h; path = ionicons/FriendsListVC.h; sourceTree = "<group>"; };
-		A9D11F321B70332100E6291B /* FriendsListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsListVC.m; path = ionicons/FriendsListVC.m; sourceTree = "<group>"; };
 		A9D11F351B703E9600E6291B /* GeneralSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralSetting.h; sourceTree = "<group>"; };
 		A9D11F361B703E9600E6291B /* GeneralSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralSetting.m; sourceTree = "<group>"; };
 		A9D11F381B703F1C00E6291B /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
@@ -237,6 +231,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A9049ACB1B7D6DB200497091 /* Drawer */ = {
+			isa = PBXGroup;
+			children = (
+				A9049ACC1B7D6DB200497091 /* MainViewController.h */,
+				A9049ACD1B7D6DB200497091 /* MainViewController.m */,
+				A9049ACE1B7D6DB200497091 /* MapViewController.h */,
+				A9049ACF1B7D6DB200497091 /* MapViewController.m */,
+				A9049AD01B7D6DB200497091 /* PhotoViewController.h */,
+				A9049AD11B7D6DB200497091 /* PhotoViewController.m */,
+				A9049AD21B7D6DB200497091 /* SidebarTableViewController.h */,
+				A9049AD31B7D6DB200497091 /* SidebarTableViewController.m */,
+				A9049AD41B7D6DB200497091 /* SWRevealViewController.h */,
+				A9049AD51B7D6DB200497091 /* SWRevealViewController.m */,
+			);
+			path = Drawer;
+			sourceTree = "<group>";
+		};
 		A91938CB1B7174E600DF12B5 /* SubClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,36 +295,6 @@
 			path = TPKeyboardAvoiding;
 			sourceTree = "<group>";
 		};
-		A985D8FF1B606B0300AEF22E /* DropDownMenu */ = {
-			isa = PBXGroup;
-			children = (
-				A985D94C1B606F4900AEF22E /* ionicons */,
-				A985D9461B606F3100AEF22E /* MyDropdownMenuController.h */,
-				A985D9471B606F3100AEF22E /* MyDropdownMenuController.m */,
-				A985D9481B606F3100AEF22E /* MyViewController.h */,
-				A985D9491B606F3100AEF22E /* MyViewController.m */,
-				A985D9401B606EEB00AEF22E /* DropdownMenuController.h */,
-				A985D9411B606EEB00AEF22E /* DropdownMenuController.m */,
-				A985D9421B606EEB00AEF22E /* DropdownMenuSegue.h */,
-				A985D9431B606EEB00AEF22E /* DropdownMenuSegue.m */,
-				A9D11F311B70332100E6291B /* FriendsListVC.h */,
-				A9D11F321B70332100E6291B /* FriendsListVC.m */,
-			);
-			path = DropDownMenu;
-			sourceTree = "<group>";
-		};
-		A985D94C1B606F4900AEF22E /* ionicons */ = {
-			isa = PBXGroup;
-			children = (
-				A985D9571B606F7300AEF22E /* Images.xcassets */,
-				A985D94D1B606F4900AEF22E /* ionicons-codes.h */,
-				A985D94E1B606F4900AEF22E /* IonIcons.h */,
-				A985D94F1B606F4900AEF22E /* IonIcons.m */,
-				A985D9501B606F4900AEF22E /* ionicons.ttf */,
-			);
-			path = ionicons;
-			sourceTree = "<group>";
-		};
 		A9AF40C51B6C4C840055B0F7 /* MessageVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +317,7 @@
 				A9AFBA231B58554B005C08BE /* FriendsSpotFinal */,
 				A9AFBA3D1B58554B005C08BE /* FriendsSpotFinalTests */,
 				A9AFBA221B58554B005C08BE /* Products */,
+				A9049AC91B7D6D1400497091 /* Images.xcassets */,
 				A9AFBA241B58554B005C08BE /* Supporting Files */,
 			);
 			sourceTree = "<group>";
@@ -478,13 +460,13 @@
 		A9FDBE561B5D9CF800E1A199 /* All Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A9049ACB1B7D6DB200497091 /* Drawer */,
 				A934866B1B7D3C8200BA0818 /* FindFriends */,
 				A9EA173B1B7306FB007CFABB /* SDWebImage */,
 				A9BB57FB1B719211009E43C5 /* service */,
 				A91938CB1B7174E600DF12B5 /* SubClasses */,
 				A9D11F341B703E6C00E6291B /* Setting */,
 				A9AF40C51B6C4C840055B0F7 /* MessageVC */,
-				A985D8FF1B606B0300AEF22E /* DropDownMenu */,
 				A9FDBE861B5D9F5C00E1A199 /* ForgotPassword */,
 				A9FDBE571B5D9CF800E1A199 /* Extra */,
 				A9FDBE621B5D9CF800E1A199 /* Login */,
@@ -661,7 +643,6 @@
 			files = (
 				A9EA17351B72D4AF007CFABB /* 12.png in Resources */,
 				A9D11F3C1B70422900E6291B /* HomeImage.png in Resources */,
-				A985D9541B606F4900AEF22E /* ionicons.ttf in Resources */,
 				A97C56201B66FC5100BDAC16 /* XT_problem.png in Resources */,
 				A9FDBE751B5D9CF800E1A199 /* NewFSlogo.png in Resources */,
 				A9FDBE731B5D9CF800E1A199 /* Info.plist in Resources */,
@@ -675,8 +656,8 @@
 				A9FDBE7A1B5D9CF800E1A199 /* LaunchScreen.xib in Resources */,
 				A9FDBE811B5D9CF800E1A199 /* FS Logo.png in Resources */,
 				A9C075191B7958040011F49C /* Sumit.storyboard in Resources */,
+				A9049ACA1B7D6D1400497091 /* Images.xcassets in Resources */,
 				A94512821B741EE8002DA50A /* user.png in Resources */,
-				A985D9581B606F7300AEF22E /* Images.xcassets in Resources */,
 				A99A071A1B69AA6900ED4102 /* Default@2x.png in Resources */,
 				A9FDBE761B5D9CF800E1A199 /* Govind.storyboard in Resources */,
 				A99A07181B69AA6900ED4102 /* Default-568h@2x.png in Resources */,
@@ -702,19 +683,20 @@
 				A9EA176C1B7306FB007CFABB /* UIView+WebCacheOperation.m in Sources */,
 				A9FDBE7D1B5D9CF800E1A199 /* Login.m in Sources */,
 				A97C562C1B670E2800BDAC16 /* TPKeyboardAvoidingTableView.m in Sources */,
+				A9049ADA1B7D6DB200497091 /* SWRevealViewController.m in Sources */,
 				A93486711B7D45A200BA0818 /* SearchFriends.m in Sources */,
 				A9FDBE7F1B5D9CF800E1A199 /* UserHome.m in Sources */,
 				A91938C11B71717D00DF12B5 /* Security.m in Sources */,
 				A91938C71B7171CB00DF12B5 /* ChangePassword.m in Sources */,
 				A97C562D1B670E2800BDAC16 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				A9DF96B71B757270004B1D33 /* ButtonColor.m in Sources */,
+				A9049AD81B7D6DB200497091 /* PhotoViewController.m in Sources */,
 				A9AF40C81B6C4C840055B0F7 /* MesaageVC.m in Sources */,
 				A91E7E001B5F1C3100B933B3 /* ForgotPassword2.m in Sources */,
 				A9EA17631B7306FB007CFABB /* SDWebImageDownloaderOperation.m in Sources */,
 				A9EA17651B7306FB007CFABB /* SDWebImagePrefetcher.m in Sources */,
 				A91938CA1B7172DF00DF12B5 /* EditProfile.m in Sources */,
 				A91938CE1B71757700DF12B5 /* ButtonLayers.m in Sources */,
-				A985D9531B606F4900AEF22E /* IonIcons.m in Sources */,
 				A9EA17681B7306FB007CFABB /* UIImage+MultiFormat.m in Sources */,
 				A9D11F371B703E9600E6291B /* GeneralSetting.m in Sources */,
 				A9FDBE7C1B5D9CF800E1A199 /* ViewController.m in Sources */,
@@ -724,22 +706,20 @@
 				A97C562B1B670E2800BDAC16 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				A97C562A1B670E2800BDAC16 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				A9FDBE791B5D9CF800E1A199 /* AppDelegate.m in Sources */,
+				A9049AD91B7D6DB200497091 /* SidebarTableViewController.m in Sources */,
 				A94512881B742AD8002DA50A /* comments.m in Sources */,
+				A9049AD61B7D6DB200497091 /* MainViewController.m in Sources */,
 				A91938C41B71719000DF12B5 /* Blocking.m in Sources */,
-				A985D94B1B606F3100AEF22E /* MyViewController.m in Sources */,
 				A9EA175F1B7306FB007CFABB /* SDImageCache.m in Sources */,
 				A9BB57FE1B719256009E43C5 /* service.m in Sources */,
 				A9EA17641B7306FB007CFABB /* SDWebImageManager.m in Sources */,
 				A9EA17691B7306FB007CFABB /* UIImage+WebP.m in Sources */,
 				A9D11F3A1B703F1C00E6291B /* Setting.m in Sources */,
-				A985D94A1B606F3100AEF22E /* MyDropdownMenuController.m in Sources */,
 				A9FDBE7E1B5D9CF800E1A199 /* SignUp.m in Sources */,
-				A9D11F331B70332100E6291B /* FriendsListVC.m in Sources */,
 				A9EA176B1B7306FB007CFABB /* UIImageView+WebCache.m in Sources */,
 				A9EA17621B7306FB007CFABB /* SDWebImageDownloader.m in Sources */,
-				A985D9451B606EEB00AEF22E /* DropdownMenuSegue.m in Sources */,
 				A9EA175D1B7306FB007CFABB /* MKAnnotationView+WebCache.m in Sources */,
-				A985D9441B606EEB00AEF22E /* DropdownMenuController.m in Sources */,
+				A9049AD71B7D6DB200497091 /* MapViewController.m in Sources */,
 				A9EA17611B7306FB007CFABB /* SDWebImageDecoder.m in Sources */,
 				A9EA17601B7306FB007CFABB /* SDWebImageCompat.m in Sources */,
 				A9EA176A1B7306FB007CFABB /* UIImageView+HighlightedWebCache.m in Sources */,
