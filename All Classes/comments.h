@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIImageView+WebCache.h"
 
 @interface comments : UIViewController
 {
@@ -15,6 +16,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgImageActivity;
 @property (weak, nonatomic) IBOutlet UILabel *lblImageDiscription;
 @property (strong, nonatomic) IBOutlet UIVisualEffectView *viewNewComment;
+@property (weak, nonatomic) IBOutlet UIImageView *imgUserPic;
+@property (weak, nonatomic) IBOutlet UILabel *lblUserName;
+@property (weak, nonatomic) IBOutlet UILabel *lblActivityLikes;
+@property (weak, nonatomic) IBOutlet UILabel *lblDate;
 
 
 
