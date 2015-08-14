@@ -105,14 +105,13 @@
     }
       UILabel *lbl=(UILabel*)[cell viewWithTag:11];
     
-      NSString *fullname=[NSString stringWithFormat:@"%@ %@",[[[[[searchResult objectForKey:@"responce"]objectForKey:@"searchResult"]objectAtIndex: indexPath.row]objectForKey:@"fName"] objectForKey:@"lName"]];
+      NSString *fullname=[NSString stringWithFormat:@"%@ %@",[[[[searchResult objectForKey:@"responce"]objectForKey:@"searchResult"]objectAtIndex: indexPath.row]objectForKey:@"fName"],
+        [[[[searchResult objectForKey:@"responce"]objectForKey:@"searchResult"]objectAtIndex: indexPath.row] objectForKey:@"lName"]];
     
     lbl.text=fullname;
     
     
-    
-    
-    return cell;
+ return cell;
  }
 
 
