@@ -62,7 +62,7 @@
 #pragma TableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if(userdata)
-    {return [[[userdata objectForKey:@"responce"]objectForKey:@"activitys"] count];}
+    {return [[[userdata objectForKey:@"responce"]objectForKey:@"activitys"] count]+1;}
     else
     {return 0;}
 }
@@ -71,9 +71,12 @@
 {
 //setting a hight of both cell differently
     float f;
-    
-    f=[[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"]?138:306;
-    
+    if([[[userdata objectForKey:@"responce"]objectForKey:@"activitys"] count]>indexPath.row){
+        f=[[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"]?138:306;}
+    else{
+        f=57;
+    }
+   
     return f;
 }
 
@@ -82,6 +85,8 @@
     
     UITableViewCell *cell;
     
+    if([[[userdata objectForKey:@"responce"]objectForKey:@"activitys"] count]>indexPath.row)
+    {
     //changing a cell depends on activity type
     if([[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"])
     {
@@ -113,7 +118,7 @@
     UILabel *lbl2=(UILabel*)[cell viewWithTag:6];
     NSString *list =[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"likersId"];
     NSArray *listItems = [list componentsSeparatedByString:@","];
-    int likes=([listItems count]>1)?[listItems count]:0;
+    int likes=([listItems count]>1)?(int)[listItems count]:0;
     lbl2.text=[NSString stringWithFormat:@"(%lu)",(unsigned long)likes];
     
     //setting discription of activity
@@ -149,7 +154,12 @@
     {
         userImg.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"user" ofType:@"png"]];
     }
-    
+    }else
+    {
+    cell=[tableView dequeueReusableCellWithIdentifier:@"emptyCell"];
+        UIImageView *img=[[UIImageView alloc]init];
+        img.image=[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"bottom cell" ofType:@"png"]];
+    }
     
 
     return cell;

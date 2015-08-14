@@ -19,12 +19,6 @@
     searchResult=[[NSMutableDictionary alloc]init];
     _searchbar.delegate=self;
  
-
-    
-    
-
-
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,23 +47,26 @@
             [searchResult setValuesForKeysWithDictionary:responce];
             NSLog(@"%@",searchResult);
             }
+        [_tableView reloadData];
        };
+    
+
+
 
 }
 
-
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 { if(searchResult)
-    {return [[[searchResult objectForKey:@"responce"]objectForKey:@"searchResult"] count];}
+    {return [[[searchResult objectForKey:@"responce"] objectForKey:@"searchResult"] count];}
     else
-    {return 0;}
+    {return 0;
+    }
     
     }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cellone"];
+   // UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cellone"];
     
 //       //changing a cell depends on activity type
 //        if([[[[[searchResult objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"])
@@ -83,11 +80,12 @@
 //        else{
     
     
-//            UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cellone"];
-//            
-//            UILabel *lbl=(UILabel*)[cell viewWithTag:4];
-//            lbl.text=[[[[searchResult objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"discription"];
     
+            UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cellone"];
+    
+            UILabel *lbl=(UILabel*)[cell viewWithTag:11];
+            lbl.text=[[[[searchResult objectForKey:@"responce"]objectForKey:@"searchResult"]objectAtIndex:indexPath.row]objectForKey:@"fName"];
+       
             NSString *strImg=[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[searchResult objectForKey:@"responce"]objectForKey:@"searchResult"]objectAtIndex:indexPath.row]objectForKey:@"profilePic"]];
             
             
@@ -99,6 +97,7 @@
                           completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL)
              {
                  img1.image=image;
+                 
              }];
             
             
