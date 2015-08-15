@@ -23,6 +23,8 @@
 
 
 
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
+
 
 - (IBAction)btnBackHandler:(id)sender;
 

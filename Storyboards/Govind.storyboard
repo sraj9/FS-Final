@@ -203,7 +203,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyA-zl-myZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="834" y="107"/>
+            <point key="canvasLocation" x="639" y="120"/>
         </scene>
         <!--AV Player View Controller-->
         <scene sceneID="aze-Wi-kxG">
@@ -430,7 +430,7 @@
                     <blurEffect style="light"/>
                 </visualEffectView>
             </objects>
-            <point key="canvasLocation" x="1116" y="58"/>
+            <point key="canvasLocation" x="1040" y="33"/>
         </scene>
         <!--Comments-->
         <scene sceneID="lVD-gJ-8Eh">
