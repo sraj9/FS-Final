@@ -18,7 +18,6 @@
     [super viewDidLoad];
 
     
-    
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
@@ -216,8 +215,15 @@
     
    
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+   // [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
 
-/*
+-(void)viewDidLoad:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+}/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation

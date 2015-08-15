@@ -1130,21 +1130,21 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ooj-aQ-7Vh">
-                                <rect key="frame" x="0.0" y="113" width="320" height="455"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ooj-aQ-7Vh">
+                                <rect key="frame" x="0.0" y="108" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell tag="6" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellone" rowHeight="80" id="hMD-RM-Pbu">
+                                    <tableViewCell tag="6" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellone" rowHeight="73" id="hMD-RM-Pbu">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hMD-RM-Pbu" id="uuI-EL-RhF">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="12.png" translatesAutoresizingMaskIntoConstraints="NO" id="h19-mc-3hp">
-                                                    <rect key="frame" x="8" y="8" width="82" height="63"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h19-mc-3hp">
+                                                    <rect key="frame" x="8" y="8" width="60" height="60"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xuq-0g-7z6">
-                                                    <rect key="frame" x="223" y="23" width="85" height="33"/>
+                                                    <rect key="frame" x="224" y="23" width="84" height="26"/>
                                                     <color key="backgroundColor" red="0.3294117647" green="0.047058823530000002" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="Add Friends">
                                                         <color key="titleColor" red="0.8980392157" green="0.81960784310000001" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -1152,7 +1152,7 @@
                                                     </state>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ah-9e-ixE">
-                                                    <rect key="frame" x="103" y="24" width="104" height="32"/>
+                                                    <rect key="frame" x="94" y="24" width="113" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1162,7 +1162,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="vEc-y8-9wQ" id="xgg-lu-oca"/>
+                                    <outlet property="dataSource" destination="vEc-y8-9wQ" id="1t0-bD-mEG"/>
                                     <outlet property="delegate" destination="vEc-y8-9wQ" id="Ug2-B0-7mH"/>
                                 </connections>
                             </tableView>
@@ -1180,9 +1180,6 @@
             <point key="canvasLocation" x="-1061" y="66"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="12.png" width="220" height="274"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

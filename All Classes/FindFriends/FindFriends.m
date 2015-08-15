@@ -66,45 +66,41 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   // UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cellone"];
     
-//       //changing a cell depends on activity type
-//        if([[[[[searchResult objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"])
-//        {
-//            UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"celltwo"];
-//            
-//            UILabel *lbl=(UILabel*)[cell viewWithTag:14];
-//            lbl.text=[[[[searchResult objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"discription"];
-//            return cell;
-//        }
-//        else{
+            UITableViewCell *cell;
     
+        cell=[tableView dequeueReusableCellWithIdentifier:@"cellone"];
+           UIImageView *img1=(UIImageView*)[cell viewWithTag:10];
     
-    
-            UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cellone"];
-    
-            UILabel *lbl=(UILabel*)[cell viewWithTag:11];
-            lbl.text=[[[[searchResult objectForKey:@"responce"]objectForKey:@"searchResult"]objectAtIndex:indexPath.row]objectForKey:@"fName"];
-       
-            NSString *strImg=[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[searchResult objectForKey:@"responce"]objectForKey:@"searchResult"]objectAtIndex:indexPath.row]objectForKey:@"profilePic"]];
-            
-            
-            
-            UIImageView *img1=(UIImageView*)[cell viewWithTag:10];
-            
-            [img1 sd_setImageWithURL:[NSURL URLWithString:strImg]
+    if (![[[[[searchResult objectForKey:@"responce"]objectForKey:@"searchResult"]objectAtIndex:indexPath.row]objectForKey:@"profilePic"]isEqualToString:@""]) {
+        img1.layer.cornerRadius=30;
+   
+    NSString *strImg=[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[searchResult objectForKey:@"responce"]objectForKey:@"searchResult"]objectAtIndex:indexPath.row]objectForKey:@"profilePic"]];
+        
+              [img1 sd_setImageWithURL:[NSURL URLWithString:strImg]
                    placeholderImage:[UIImage imageNamed:strImg]
                           completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL)
              {
                  img1.image=image;
-                 
-             }];
-            
-            
-            return cell;
- 
+               }];
+    
+    }else{
         
-}
+        
+         img1.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"user" ofType:@"png"]];
+        
+        
+    }
+      UILabel *lbl=(UILabel*)[cell viewWithTag:11];
+    
+      NSString *fullname=[NSString stringWithFormat:@"%@ %@",[[[[searchResult objectForKey:@"responce"]objectForKey:@"searchResult"]objectAtIndex: indexPath.row]objectForKey:@"fName"],
+        [[[[searchResult objectForKey:@"responce"]objectForKey:@"searchResult"]objectAtIndex: indexPath.row] objectForKey:@"lName"]];
+    
+    lbl.text=fullname;
+    
+    
+ return cell;
+ }
 
 
 
