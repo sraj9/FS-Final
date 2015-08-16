@@ -43,6 +43,8 @@
 		A9D11F371B703E9600E6291B /* GeneralSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D11F361B703E9600E6291B /* GeneralSetting.m */; };
 		A9D11F3A1B703F1C00E6291B /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D11F391B703F1C00E6291B /* Setting.m */; };
 		A9D11F3C1B70422900E6291B /* HomeImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D11F3B1B70422900E6291B /* HomeImage.png */; };
+		A9D4C4291B7EBE6700B2B199 /* comment29.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D4C4281B7EBE6700B2B199 /* comment29.png */; };
+		A9D4C42B1B7ED38500B2B199 /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D4C42A1B7ED38500B2B199 /* Back.png */; };
 		A9DF96B71B757270004B1D33 /* ButtonColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A9DF96B61B757270004B1D33 /* ButtonColor.m */; };
 		A9EA17351B72D4AF007CFABB /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = A9EA17341B72D4AF007CFABB /* 12.png */; };
 		A9EA175D1B7306FB007CFABB /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EA173D1B7306FB007CFABB /* MKAnnotationView+WebCache.m */; };
@@ -152,6 +154,8 @@
 		A9D11F381B703F1C00E6291B /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
 		A9D11F391B703F1C00E6291B /* Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
 		A9D11F3B1B70422900E6291B /* HomeImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HomeImage.png; path = ../HomeImage.png; sourceTree = "<group>"; };
+		A9D4C4281B7EBE6700B2B199 /* comment29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comment29.png; sourceTree = "<group>"; };
+		A9D4C42A1B7ED38500B2B199 /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back.png; sourceTree = "<group>"; };
 		A9DF96B51B757270004B1D33 /* ButtonColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonColor.h; sourceTree = "<group>"; };
 		A9DF96B61B757270004B1D33 /* ButtonColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonColor.m; sourceTree = "<group>"; };
 		A9EA17341B72D4AF007CFABB /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
@@ -535,6 +539,8 @@
 		A9FDBE6B1B5D9CF800E1A199 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A9D4C42A1B7ED38500B2B199 /* Back.png */,
+				A9D4C4281B7EBE6700B2B199 /* comment29.png */,
 				A94512811B741EE8002DA50A /* user.png */,
 				A94512831B7420D6002DA50A /* loading.gif */,
 				A91B13AA1B7EB0E50074B5C4 /* Like1.png */,
@@ -651,9 +657,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D4C42B1B7ED38500B2B199 /* Back.png in Resources */,
 				A9EA17351B72D4AF007CFABB /* 12.png in Resources */,
 				A9D11F3C1B70422900E6291B /* HomeImage.png in Resources */,
 				A97C56201B66FC5100BDAC16 /* XT_problem.png in Resources */,
+				A9D4C4291B7EBE6700B2B199 /* comment29.png in Resources */,
 				A9FDBE751B5D9CF800E1A199 /* NewFSlogo.png in Resources */,
 				A9FDBE731B5D9CF800E1A199 /* Info.plist in Resources */,
 				A94512801B7417BF002DA50A /* selectImg.png in Resources */,
