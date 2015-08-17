@@ -13,6 +13,7 @@
 @end
 
 @implementation FindFriends
+UILabel *lbl;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,6 +26,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+    [self.view endEditing:YES];
+    
+    
+}
+
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
@@ -47,11 +55,14 @@
             [searchResult setValuesForKeysWithDictionary:responce];
             NSLog(@"%@",searchResult);
             }
-        [_tableView reloadData];
+        else{
+            
+            
+        }
+          [_tableView reloadData];
        };
     
-
-
+      [searchBar resignFirstResponder];
 
 }
 
@@ -90,7 +101,7 @@
         
         
     }
-      UILabel *lbl=(UILabel*)[cell viewWithTag:11];
+     lbl=(UILabel*)[cell viewWithTag:11];
     
       NSString *fullname=[NSString stringWithFormat:@"%@ %@",[[[[searchResult objectForKey:@"responce"]objectForKey:@"searchResult"]objectAtIndex: indexPath.row]objectForKey:@"fName"],
         [[[[searchResult objectForKey:@"responce"]objectForKey:@"searchResult"]objectAtIndex: indexPath.row] objectForKey:@"lName"]];

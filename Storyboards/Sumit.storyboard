@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -21,7 +22,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyE-fX-h2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2348" y="-574"/>
+            <point key="canvasLocation" x="-2348" y="-573.99999999999989"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="yp9-hR-1J5">
@@ -39,7 +40,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIE-Ya-6pn">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="682"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Conform Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Ez-7B-eFm">
                                                 <rect key="frame" x="104" y="466" width="202" height="30"/>
@@ -135,9 +136,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2J-ZX-45c">
-                                                <rect key="frame" x="8" y="391" width="82" height="21"/>
+                                                <rect key="frame" x="8" y="391" width="88" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="rk8-sd-ObO"/>
+                                                    <constraint firstAttribute="height" constant="20" id="rk8-sd-ObO"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.40784313729999999" green="0.08235294118" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -232,7 +233,7 @@
                                                 <color key="textColor" red="0.40784313729999999" green="0.08235294118" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Your State" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ch2-ba-On4">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="275" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Your State" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ch2-ba-On4">
                                                 <rect key="frame" x="104" y="271" width="202" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="6fH-Hf-6ay"/>
@@ -306,7 +307,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.8980392157" green="0.81960784310000001" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.98463147100000004" green="0.91134309309999995" blue="0.96630937650000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="v90-zr-NpA" firstAttribute="leading" secondItem="bIE-Ya-6pn" secondAttribute="leading" constant="9" id="0co-AY-hgy"/>
                                             <constraint firstItem="uTe-Cl-DLK" firstAttribute="centerY" secondItem="3UJ-zh-b9D" secondAttribute="centerY" constant="-1" id="0r7-gR-fTj"/>
@@ -336,7 +337,7 @@
                                             <constraint firstAttribute="trailing" secondItem="NJc-h8-1IQ" secondAttribute="trailing" constant="241" id="L3z-xW-HQF"/>
                                             <constraint firstAttribute="trailing" secondItem="iuQ-8J-giG" secondAttribute="trailing" constant="264" id="LTp-sU-NVk"/>
                                             <constraint firstAttribute="trailing" secondItem="3UJ-zh-b9D" secondAttribute="trailing" constant="14" id="MHU-xE-x44"/>
-                                            <constraint firstAttribute="trailing" secondItem="J2J-ZX-45c" secondAttribute="trailing" constant="230" id="N1X-Hm-UaE"/>
+                                            <constraint firstAttribute="trailing" secondItem="J2J-ZX-45c" secondAttribute="trailing" constant="224" id="N1X-Hm-UaE"/>
                                             <constraint firstAttribute="trailing" secondItem="Hdo-oi-acm" secondAttribute="trailing" constant="14" id="OHc-iz-Wqe"/>
                                             <constraint firstAttribute="trailing" secondItem="jXm-Cx-BwE" secondAttribute="trailing" constant="14" id="OLa-gl-rYm"/>
                                             <constraint firstItem="FtC-me-JV3" firstAttribute="leading" secondItem="mJX-iq-1dI" secondAttribute="trailing" constant="46" id="P9Y-bF-XRu"/>
@@ -369,7 +370,7 @@
                                             <constraint firstItem="8rn-yx-BBA" firstAttribute="centerY" secondItem="B4w-9V-Gsq" secondAttribute="centerY" constant="0.5" id="o5M-BK-okP"/>
                                             <constraint firstItem="iuQ-8J-giG" firstAttribute="leading" secondItem="bIE-Ya-6pn" secondAttribute="leading" constant="9" id="pxM-J3-ahe"/>
                                             <constraint firstAttribute="trailing" secondItem="4DI-Gc-jbV" secondAttribute="trailing" constant="14" id="qVQ-YA-TYS"/>
-                                            <constraint firstItem="uTe-Cl-DLK" firstAttribute="top" secondItem="J2J-ZX-45c" secondAttribute="bottom" constant="17" id="rOe-dq-yuM"/>
+                                            <constraint firstItem="uTe-Cl-DLK" firstAttribute="top" secondItem="J2J-ZX-45c" secondAttribute="bottom" constant="18" id="rOe-dq-yuM"/>
                                             <constraint firstItem="12t-nK-HOg" firstAttribute="leading" secondItem="bIE-Ya-6pn" secondAttribute="leading" id="rqQ-Hq-Dzz"/>
                                             <constraint firstItem="FtC-me-JV3" firstAttribute="width" secondItem="mJX-iq-1dI" secondAttribute="width" id="st8-In-8kH"/>
                                             <constraint firstAttribute="trailing" secondItem="FN4-aF-N6T" secondAttribute="trailing" constant="265" id="sy4-Kx-wFj"/>
@@ -389,7 +390,7 @@
                                 <color key="backgroundColor" red="0.8980392157" green="0.81960784310000001" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="bIE-Ya-6pn" firstAttribute="top" secondItem="568-7n-1aC" secondAttribute="top" id="01f-G4-KeY"/>
-                                    <constraint firstItem="bIE-Ya-6pn" firstAttribute="height" secondItem="568-7n-1aC" secondAttribute="height" id="6Vc-1K-bib"/>
+                                    <constraint firstItem="bIE-Ya-6pn" firstAttribute="height" secondItem="568-7n-1aC" secondAttribute="height" multiplier="1.2" id="6Vc-1K-bib"/>
                                     <constraint firstItem="bIE-Ya-6pn" firstAttribute="width" secondItem="568-7n-1aC" secondAttribute="width" id="JjX-Ke-dyv"/>
                                     <constraint firstItem="bIE-Ya-6pn" firstAttribute="leading" secondItem="568-7n-1aC" secondAttribute="leading" id="Tdq-nD-YEG"/>
                                     <constraint firstAttribute="trailing" secondItem="bIE-Ya-6pn" secondAttribute="trailing" constant="-2" id="pDz-7w-wrg"/>
@@ -626,7 +627,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gu1-zE-Jxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1576" y="-579"/>
+            <point key="canvasLocation" x="-1576" y="-578.99999999999989"/>
         </scene>
         <!--Blocking-->
         <scene sceneID="pDi-ew-txC">
@@ -959,7 +960,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Py-C8-TnK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1921" y="78"/>
+            <point key="canvasLocation" x="-1921" y="77.999999999999986"/>
         </scene>
         <!--Password-->
         <scene sceneID="GF5-wE-HWf">
@@ -1105,7 +1106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xy6-Rf-7mi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1516" y="78"/>
+            <point key="canvasLocation" x="-1516" y="77.999999999999986"/>
         </scene>
         <!--Find Friends-->
         <scene sceneID="GHK-JQ-ZS2">
@@ -1134,7 +1135,7 @@
                                 <rect key="frame" x="0.0" y="108" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell tag="6" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellone" rowHeight="73" id="hMD-RM-Pbu">
+                                    <tableViewCell userInteractionEnabled="NO" tag="6" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellone" rowHeight="73" id="hMD-RM-Pbu">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hMD-RM-Pbu" id="uuI-EL-RhF">

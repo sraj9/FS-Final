@@ -65,7 +65,6 @@
 		A9EA176C1B7306FB007CFABB /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EA175C1B7306FB007CFABB /* UIView+WebCacheOperation.m */; };
 		A9FDBE731B5D9CF800E1A199 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE4F1B5D9CF800E1A199 /* Info.plist */; };
 		A9FDBE751B5D9CF800E1A199 /* NewFSlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE511B5D9CF800E1A199 /* NewFSlogo.png */; };
-		A9FDBE761B5D9CF800E1A199 /* Govind.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE531B5D9CF800E1A199 /* Govind.storyboard */; };
 		A9FDBE771B5D9CF800E1A199 /* Raj.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE541B5D9CF800E1A199 /* Raj.storyboard */; };
 		A9FDBE791B5D9CF800E1A199 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FDBE591B5D9CF800E1A199 /* AppDelegate.m */; };
 		A9FDBE7A1B5D9CF800E1A199 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE5A1B5D9CF800E1A199 /* LaunchScreen.xib */; };
@@ -194,7 +193,6 @@
 		A9EA175C1B7306FB007CFABB /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		A9FDBE4F1B5D9CF800E1A199 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9FDBE511B5D9CF800E1A199 /* NewFSlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewFSlogo.png; sourceTree = "<group>"; };
-		A9FDBE531B5D9CF800E1A199 /* Govind.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Govind.storyboard; sourceTree = "<group>"; };
 		A9FDBE541B5D9CF800E1A199 /* Raj.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Raj.storyboard; sourceTree = "<group>"; };
 		A9FDBE581B5D9CF800E1A199 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A9FDBE591B5D9CF800E1A199 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -464,7 +462,6 @@
 			isa = PBXGroup;
 			children = (
 				A9C075181B7958040011F49C /* Sumit.storyboard */,
-				A9FDBE531B5D9CF800E1A199 /* Govind.storyboard */,
 				A9FDBE541B5D9CF800E1A199 /* Raj.storyboard */,
 			);
 			path = Storyboards;
@@ -679,7 +676,6 @@
 				A94512821B741EE8002DA50A /* user.png in Resources */,
 				A91B13AC1B7EB0E50074B5C4 /* Like1.png in Resources */,
 				A99A071A1B69AA6900ED4102 /* Default@2x.png in Resources */,
-				A9FDBE761B5D9CF800E1A199 /* Govind.storyboard in Resources */,
 				A99A07181B69AA6900ED4102 /* Default-568h@2x.png in Resources */,
 				A9FDBE771B5D9CF800E1A199 /* Raj.storyboard in Resources */,
 				A9FDBE851B5D9CF800E1A199 /* Info.plist in Resources */,
