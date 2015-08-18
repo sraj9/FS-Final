@@ -19,6 +19,7 @@
     int i;
 }
 -(void)refreshHome;
+@property NSInteger uId;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (weak, nonatomic) IBOutlet UIView *vcfirstLoad;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityfirstLoad;
