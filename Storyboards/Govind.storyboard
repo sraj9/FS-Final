@@ -203,11 +203,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyA-zl-myZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="727" y="-70"/>
-=======
-            <point key="canvasLocation" x="639" y="120"/>
->>>>>>> 81d256a7d5ff18029d7beed29d68adc0232fc340
         </scene>
         <!--AV Player View Controller-->
         <scene sceneID="aze-Wi-kxG">
