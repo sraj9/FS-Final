@@ -24,6 +24,36 @@
     _btnLogin.layer.cornerRadius=10;
     _btnForgotPassword.layer.cornerRadius=10;
     _lblErrorLogin.hidden=YES;
+      NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"FS_PList.plist"]];
+    if (![[dict objectForKey:@"id"]isEqual:@""]) {
+        
+        
+
+        service *service1=[service new];
+        NSMutableDictionary *adic = [[NSMutableDictionary alloc]init];
+        [adic setObject:[dict objectForKey:@"id"] forKey:@"uId"] ;
+        [adic setObject:@"loadHome" forKey:@"action"];
+        
+        
+        
+        [service1 FSPlzcallWebServiceWithURLString: @"FS-host" ArgumentsDictionary:adic];
+        service1.serviceBlock=^(NSMutableDictionary* responce)
+        {
+            if(responce)
+            {
+                NSLog(@"%@",responce);
+                NSDictionary *adicUser = [[NSDictionary alloc]initWithDictionary:responce];
+                UIViewController *user=[self.storyboard instantiateViewControllerWithIdentifier:@"UserHome"];
+                UserHome *obj=[UserHome new];
+                obj.userdata=[[NSMutableDictionary alloc]initWithDictionary:adicUser];
+                [self.navigationController pushViewController:user animated:YES];
+                
+            
+            
+               
+            }
+        };
+    }
     
 }
 

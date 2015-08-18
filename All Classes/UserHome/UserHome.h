@@ -13,7 +13,7 @@
 
 @interface UserHome : UIViewController
 {
-    NSMutableDictionary *userdata;
+   
     service *service1;
     UIRefreshControl *ref;
     int i;
@@ -25,4 +25,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnPost;
 @property (strong, nonatomic) IBOutlet UIVisualEffectView *bViewNewActivity;
 @property (weak, nonatomic) IBOutlet UITableView *tblViewHome;
+@property (strong, nonatomic) NSMutableDictionary *userdata;
+
 @end

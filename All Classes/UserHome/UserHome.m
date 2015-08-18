@@ -60,8 +60,8 @@
 
 #pragma TableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if(userdata)
-    {return [[[userdata objectForKey:@"responce"]objectForKey:@"activitys"] count]+1;}
+    if(_userdata)
+    {return [[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"] count]+1;}
     else
     {return 0;}
 }
@@ -70,8 +70,8 @@
 {
 //setting a hight of both cell differently
     float f;
-    if([[[userdata objectForKey:@"responce"]objectForKey:@"activitys"] count]>indexPath.row){
-        f=[[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"]?138:306;}
+    if([[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"] count]>indexPath.row){
+        f=[[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"]?138:306;}
     else{
         f=57;
     }
@@ -84,10 +84,10 @@
     
     UITableViewCell *cell;
     
-    if([[[userdata objectForKey:@"responce"]objectForKey:@"activitys"] count]>indexPath.row)
+    if([[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"] count]>indexPath.row)
     {
     //changing a cell depends on activity type
-    if([[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"])
+    if([[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"])
     {
         cell=[tableView dequeueReusableCellWithIdentifier:@"celltwo"];
        
@@ -98,7 +98,7 @@
         
        
         
-         NSString *strImg=[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"image"]];
+         NSString *strImg=[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"image"]];
        
         
         UIImageView *img=(UIImageView*)[cell viewWithTag:5];
@@ -115,32 +115,32 @@
     
     //number of likes
     UILabel *lbl2=(UILabel*)[cell viewWithTag:6];
-    NSString *list =[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"likersId"];
+    NSString *list =[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"likersId"];
     NSArray *listItems = [list componentsSeparatedByString:@","];
     int likes=([listItems count]>1)?(int)[listItems count]:0;
     lbl2.text=[NSString stringWithFormat:@"(%lu)",(unsigned long)likes];
     
     //setting discription of activity
     UILabel *lbl=(UILabel*)[cell viewWithTag:4];
-    lbl.text=[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"discription"];
+    lbl.text=[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"discription"];
     //setting user name
     UILabel *lbl3=(UILabel*)[cell viewWithTag:2];
-    NSString *fullname=[NSString stringWithFormat:@"%@ %@",[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"fName"],[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"lName"]];
+    NSString *fullname=[NSString stringWithFormat:@"%@ %@",[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"fName"],[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"lName"]];
         lbl3.text=fullname;
     
     //setting date
     UILabel *lbl4=(UILabel*)[cell viewWithTag:3];
   
-    lbl4.text=[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"date"];
+    lbl4.text=[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"date"];
     
     //setting user's profile pic
   
     UIImageView *userImg=(UIImageView*)[cell viewWithTag:1];
     userImg.layer.cornerRadius=20;
-    if (![[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"profilePic"] isEqualToString:@""] )
+    if (![[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"profilePic"] isEqualToString:@""] )
     {
         
-        NSString *uImg=[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"profilePic"]];
+        NSString *uImg=[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"profilePic"]];
         
         [userImg sd_setImageWithURL:[NSURL URLWithString:uImg]
                    placeholderImage:[UIImage imageNamed:uImg]
@@ -168,7 +168,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
-    NSMutableDictionary *dicToSend=[[NSMutableDictionary alloc]initWithDictionary:[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]];
+    NSMutableDictionary *dicToSend=[[NSMutableDictionary alloc]initWithDictionary:[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]];
     
     
     
@@ -188,7 +188,7 @@
 -(void)refreshHome
 {
  
-    userdata=[[NSMutableDictionary alloc]init];
+    _userdata=[[NSMutableDictionary alloc]init];
     NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
     
     [dic setObject:@"87" forKey:@"uId"];
@@ -202,8 +202,8 @@
     {
         if(responce)
         {
-            [userdata setValuesForKeysWithDictionary:responce];
-            NSLog(@"%@",userdata);
+            [_userdata setValuesForKeysWithDictionary:responce];
+            NSLog(@"%@",_userdata);
             
             [_tblViewHome reloadData];
             [ref endRefreshing];
