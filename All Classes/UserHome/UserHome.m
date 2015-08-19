@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
@@ -25,7 +25,7 @@
         [self.sidebarButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
-   
+    
     ref=[[UIRefreshControl alloc]init];
     [ref addTarget:self action:@selector(refreshHome) forControlEvents:UIControlEventValueChanged];
     [ _tblViewHome addSubview:ref];
@@ -37,19 +37,19 @@
     self.vcfirstLoad.frame=CGRectMake(0,0,400,600);
     [self.view addSubview:self.vcfirstLoad];
     
-//    [UIView animateWithDuration:2 animations:^{
-//       
-//        [UIView animateWithDuration:2 animations:^{
-//           
-//            
-//        }];
-//    }];
+    //    [UIView animateWithDuration:2 animations:^{
+    //
+    //        [UIView animateWithDuration:2 animations:^{
+    //
+    //
+    //        }];
+    //    }];
     
-   
+    
     
     [self refreshHome];
     
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,22 +60,22 @@
 
 #pragma TableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if(userdata)
-    {return [[[userdata objectForKey:@"responce"]objectForKey:@"activitys"] count]+1;}
+    if(_userdata)
+    {return [[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"] count]+1;}
     else
     {return 0;}
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//setting a hight of both cell differently
+    //setting a hight of both cell differently
     float f;
-    if([[[userdata objectForKey:@"responce"]objectForKey:@"activitys"] count]>indexPath.row){
-        f=[[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"]?138:306;}
+    if([[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"] count]>indexPath.row){
+        f=[[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"]?138:306;}
     else{
         f=57;
     }
-   
+    
     return f;
 }
 
@@ -84,83 +84,83 @@
     
     UITableViewCell *cell;
     
-    if([[[userdata objectForKey:@"responce"]objectForKey:@"activitys"] count]>indexPath.row)
+    if([[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"] count]>indexPath.row)
     {
-    //changing a cell depends on activity type
-    if([[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"])
-    {
-        cell=[tableView dequeueReusableCellWithIdentifier:@"celltwo"];
-       
-        
-     }
-    else{
-        cell=[tableView dequeueReusableCellWithIdentifier:@"cellone"];
-        
-       
-        
-         NSString *strImg=[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"image"]];
-       
-        
-        UIImageView *img=(UIImageView*)[cell viewWithTag:5];
-  
-        [img sd_setImageWithURL:[NSURL URLWithString:strImg]
-                          placeholderImage:[UIImage imageNamed:strImg]
-                                 completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL)
+        //changing a cell depends on activity type
+        if([[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"type"] isEqual:@"text"])
         {
-            img.image=image;
-                                 }];
-       
-        
-    }
-    
-    //number of likes
-    UILabel *lbl2=(UILabel*)[cell viewWithTag:6];
-    NSString *list =[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"likersId"];
-    NSArray *listItems = [list componentsSeparatedByString:@","];
-    int likes=([listItems count]>1)?(int)[listItems count]:0;
-    lbl2.text=[NSString stringWithFormat:@"(%lu)",(unsigned long)likes];
-    
-    //setting discription of activity
-    UILabel *lbl=(UILabel*)[cell viewWithTag:4];
-    lbl.text=[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"discription"];
-    //setting user name
-    UILabel *lbl3=(UILabel*)[cell viewWithTag:2];
-    NSString *fullname=[NSString stringWithFormat:@"%@ %@",[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"fName"],[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"lName"]];
-        lbl3.text=fullname;
-    
-    //setting date
-    UILabel *lbl4=(UILabel*)[cell viewWithTag:3];
-  
-    lbl4.text=[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"date"];
-    
-    //setting user's profile pic
-  
-    UIImageView *userImg=(UIImageView*)[cell viewWithTag:1];
-    userImg.layer.cornerRadius=20;
-    if (![[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"profilePic"] isEqualToString:@""] )
-    {
-        
-        NSString *uImg=[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"profilePic"]];
-        
-        [userImg sd_setImageWithURL:[NSURL URLWithString:uImg]
-                   placeholderImage:[UIImage imageNamed:uImg]
+            cell=[tableView dequeueReusableCellWithIdentifier:@"celltwo"];
+            
+            
+        }
+        else{
+            cell=[tableView dequeueReusableCellWithIdentifier:@"cellone"];
+            
+            
+            
+            NSString *strImg=[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"image"]];
+            
+            
+            UIImageView *img=(UIImageView*)[cell viewWithTag:5];
+            
+            [img sd_setImageWithURL:[NSURL URLWithString:strImg]
+                   placeholderImage:[UIImage imageNamed:strImg]
                           completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL)
-         {
-             userImg.image=image;
-         }];
+             {
+                 img.image=image;
+             }];
+            
+            
+        }
         
+        //number of likes
+        UILabel *lbl2=(UILabel*)[cell viewWithTag:6];
+        NSString *list =[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"likersId"];
+        NSArray *listItems = [list componentsSeparatedByString:@","];
+        int likes=([listItems count]>1)?(int)[listItems count]:0;
+        lbl2.text=[NSString stringWithFormat:@"(%lu)",(unsigned long)likes];
+        
+        //setting discription of activity
+        UILabel *lbl=(UILabel*)[cell viewWithTag:4];
+        lbl.text=[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"discription"];
+        //setting user name
+        UILabel *lbl3=(UILabel*)[cell viewWithTag:2];
+        NSString *fullname=[NSString stringWithFormat:@"%@ %@",[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"fName"],[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"lName"]];
+        lbl3.text=fullname;
+        
+        //setting date
+        UILabel *lbl4=(UILabel*)[cell viewWithTag:3];
+        
+        lbl4.text=[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"date"];
+        
+        //setting user's profile pic
+        
+        UIImageView *userImg=(UIImageView*)[cell viewWithTag:1];
+        userImg.layer.cornerRadius=20;
+        if (![[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"profilePic"] isEqualToString:@""] )
+        {
+            
+            NSString *uImg=[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"profilePic"]];
+            
+            [userImg sd_setImageWithURL:[NSURL URLWithString:uImg]
+                       placeholderImage:[UIImage imageNamed:uImg]
+                              completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL)
+             {
+                 userImg.image=image;
+             }];
+            
+        }else
+        {
+            userImg.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"user" ofType:@"png"]];
+        }
     }else
     {
-        userImg.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"user" ofType:@"png"]];
-    }
-    }else
-    {
-    cell=[tableView dequeueReusableCellWithIdentifier:@"emptyCell"];
+        cell=[tableView dequeueReusableCellWithIdentifier:@"emptyCell"];
         UIImageView *img=[[UIImageView alloc]init];
         img.image=[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"bottom cell" ofType:@"png"]];
     }
     
-
+    
     return cell;
     
 }
@@ -168,7 +168,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
-    NSMutableDictionary *dicToSend=[[NSMutableDictionary alloc]initWithDictionary:[[[userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]];
+    NSMutableDictionary *dicToSend=[[NSMutableDictionary alloc]initWithDictionary:[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]];
     
     
     
@@ -177,7 +177,7 @@
     commentsClass.dicMutactivityData = dicToSend;
     
     [self.navigationController pushViewController:commentsClass animated:YES];
-  
+    
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -187,13 +187,13 @@
 }
 -(void)refreshHome
 {
- 
-    userdata=[[NSMutableDictionary alloc]init];
+    
+    _userdata=[[NSMutableDictionary alloc]init];
     NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
     
     [dic setObject:@"87" forKey:@"uId"];
     [dic setObject:@"loadHome" forKey:@"action"];
-  
+    
     
     service1=[service new];
     [service1 FSPlzcallWebServiceWithURLString: @"FS-host" ArgumentsDictionary:dic];
@@ -202,8 +202,8 @@
     {
         if(responce)
         {
-            [userdata setValuesForKeysWithDictionary:responce];
-            NSLog(@"%@",userdata);
+            [_userdata setValuesForKeysWithDictionary:responce];
+            NSLog(@"%@",_userdata);
             
             [_tblViewHome reloadData];
             [ref endRefreshing];
@@ -213,24 +213,24 @@
         
     };
     
-   
+    
 }
 -(void)viewWillAppear:(BOOL)animated
 {
-   // [self.navigationController setNavigationBarHidden:YES animated:NO];
+    // [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 -(void)viewDidLoad:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:YES animated:NO];
 }/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+  #pragma mark - Navigation
+  
+  // In a storyboard-based application, you will often want to do a little preparation before navigation
+  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  // Get the new view controller using [segue destinationViewController].
+  // Pass the selected object to the new view controller.
+  }
+  */
 
 @end
