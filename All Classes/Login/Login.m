@@ -19,40 +19,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
-     _imgLogo.layer.cornerRadius=50;
+    
+    _imgLogo.layer.cornerRadius=50;
     _btnLogin.layer.cornerRadius=10;
     _btnForgotPassword.layer.cornerRadius=10;
     _lblErrorLogin.hidden=YES;
-      NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"FS_PList.plist"]];
-    if (![[dict objectForKey:@"id"]isEqual:@""]) {
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithContentsOfFile:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"FS_PList.plist"]];
+    
+    if ([dict objectForKey:@"id"] && ![[dict objectForKey:@"id"] isEqual:@""]) {
+        
+        UserHome *objHome = [UserHome new];
+        objHome.uId = [[dict objectForKey:@"id"] integerValue];
+        UIViewController *user=[self.storyboard instantiateViewControllerWithIdentifier:@"RevealHome"];
+        [self.navigationController pushViewController:user animated:NO];
         
         
-
-        service *service1=[service new];
-        NSMutableDictionary *adic = [[NSMutableDictionary alloc]init];
-        [adic setObject:[dict objectForKey:@"id"] forKey:@"uId"] ;
-        [adic setObject:@"loadHome" forKey:@"action"];
-        
-        
-        
-        [service1 FSPlzcallWebServiceWithURLString: @"FS-host" ArgumentsDictionary:adic];
-        service1.serviceBlock=^(NSMutableDictionary* responce)
-        {
-            if(responce)
-            {
-                NSLog(@"%@",responce);
-                NSDictionary *adicUser = [[NSDictionary alloc]initWithDictionary:responce];
-                UIViewController *user=[self.storyboard instantiateViewControllerWithIdentifier:@"UserHome"];
-                UserHome *obj=[UserHome new];
-                obj.userdata=[[NSMutableDictionary alloc]initWithDictionary:adicUser];
-                [self.navigationController pushViewController:user animated:YES];
-                
-            
-            
-               
-            }
-        };
     }
     
 }
@@ -73,7 +54,7 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-  }
+}
 
 
 
@@ -99,7 +80,7 @@
     }
     else
     {
-    
+        
         service *service1=[service new];
         NSMutableDictionary *adic = [[NSMutableDictionary alloc]init];
         [adic setObject:_txtUserName.text forKey:@"uName"];
@@ -108,7 +89,7 @@
         
         
         [service1 FSPlzcallWebServiceWithURLString: @"FS-host" ArgumentsDictionary:adic];
-//
+        //
         service1.serviceBlock=^(NSMutableDictionary* responce)
         {
             if(responce)
@@ -128,21 +109,21 @@
                     NSLog(@"%@",dicroot);
                     
                     [dicroot writeToFile:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"FS_PList.plist"] atomically:YES];
-//                     Do any additional setup after loading the view, typically from a nib.
+                    //                     Do any additional setup after loading the view, typically from a nib.
                     
-                 
+                    
                     NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"FS_PList.plist"]];
                     NSLog(@"%@",dict);
-//                    
-//                    MyDropdownMenuController *aHome = [self.storyboard instantiateViewControllerWithIdentifier:@"MyDropdownMenuController"];
-//                    [self.navigationController pushViewController:aHome animated:NO];
-//
+                    //
+                    //                    MyDropdownMenuController *aHome = [self.storyboard instantiateViewControllerWithIdentifier:@"MyDropdownMenuController"];
+                    //                    [self.navigationController pushViewController:aHome animated:NO];
+                    //
                     UIViewController *home=[self.storyboard instantiateViewControllerWithIdentifier:@"RevealHome"];
                     [self.navigationController pushViewController:home animated:YES];
                     
                 }
                 
-
+                
                 
                 else {
                     NSLog(@"nikal");
@@ -158,9 +139,9 @@
                     [ _txtPassword.layer addAnimation:anim forKey:nil ];
                     CAKeyframeAnimation * anim2 = [ CAKeyframeAnimation animationWithKeyPath:@"transform" ] ;
                     anim2.values = [ NSArray arrayWithObjects:
-                                   [ NSValue valueWithCATransform3D:CATransform3DMakeTranslation(10.0f, 0.0f, 0.0f) ],
-                                   [ NSValue valueWithCATransform3D:CATransform3DMakeTranslation(-10.0f, 0.0f, 0.0f) ],
-                                   nil ] ;
+                                    [ NSValue valueWithCATransform3D:CATransform3DMakeTranslation(10.0f, 0.0f, 0.0f) ],
+                                    [ NSValue valueWithCATransform3D:CATransform3DMakeTranslation(-10.0f, 0.0f, 0.0f) ],
+                                    nil ] ;
                     anim2.autoreverses = YES ;
                     anim2.repeatCount = 3.0f ;
                     anim2.duration = 0.05f ;
@@ -171,7 +152,7 @@
                 }
             }
         };
-    
+        
     }
     
 }
