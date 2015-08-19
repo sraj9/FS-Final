@@ -45,23 +45,28 @@
         if(responce)
         {
             [searchResult setValuesForKeysWithDictionary:responce];
+            
             NSLog(@"%@",searchResult);
             }
         [_tableView reloadData];
        };
     
-
+    [searchBar resignFirstResponder];
 
 
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{ if(searchResult)
-    {return [[[searchResult objectForKey:@"responce"] objectForKey:@"searchResult"] count];}
+{
+    if(searchResult)
+    {
+        return [[[searchResult objectForKey:@"responce"] objectForKey:@"searchResult"] count];
+    }
     else
-    {return 0;
+    {
+        return 0;
     }
-    }
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -98,10 +103,25 @@
     lbl.text=fullname;
     
     
+    
+    UIButton *btnSendRequest=(UIButton*)[cell viewWithTag:12];
+    
+    indexpath1=indexPath;
+   
+    
+     [btnSendRequest addTarget:self action:@selector(navigatePics:) forControlEvents:UIControlEventTouchUpInside];
+    
  return cell;
  }
 
-
+-(void)navigatePics:(UIButton *)sender
+{
+    NSString *send=[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[searchResult objectForKey:@"responce"]objectForKey:@"searchResult"]objectAtIndex:indexpath1.row] objectForKey:@"id"]];
+    
+    
+    
+    
+}
 
 /*
 #pragma mark - Navigation

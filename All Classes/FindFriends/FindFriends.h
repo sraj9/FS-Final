@@ -13,9 +13,11 @@
 {
     service *service1;
     NSMutableDictionary *searchResult;
+    
+    NSIndexPath *indexpath1;
 }
 @property (weak, nonatomic) IBOutlet UISearchBar *searchbar;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UITableView *cellone;
+//@property (weak, nonatomic) IBOutlet UITableView *cellone;
 @end
