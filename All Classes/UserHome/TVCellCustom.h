@@ -9,5 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface TVCellCustom : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIButton *btnLike;
+@property (weak, nonatomic) IBOutlet UIImageView *imgUser;
+@property (weak, nonatomic) IBOutlet UILabel *lblUname;
+@property (weak, nonatomic) IBOutlet UILabel *lblDate;
+@property (weak, nonatomic) IBOutlet UILabel *lblDiscription;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imgActivity;
+@property (weak, nonatomic) IBOutlet UILabel *lblLikes;
+@property (weak, nonatomic) IBOutlet UILabel *lblComments;
 
 @end

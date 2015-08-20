@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[gblAppDel mutDictUserDetails] objectForKey:@""];
+//    [[gblAppDel mutDictUserDetails] objectForKey:@""];
 
   // Do any additional setup after loading the view, typically from a nib.
 }

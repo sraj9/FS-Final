@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    //getting userID from globle dictionary
+    userId=[[[gblAppDel mutDictUserDetails] objectForKey:@"id"] integerValue];
     
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
@@ -37,13 +38,7 @@
     self.vcfirstLoad.frame=CGRectMake(0,0,400,600);
     [self.view addSubview:self.vcfirstLoad];
     
-    //    [UIView animateWithDuration:2 animations:^{
-    //
-    //        [UIView animateWithDuration:2 animations:^{
-    //
-    //
-    //        }];
-    //    }];
+   
     
     
     
@@ -82,7 +77,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell *cell;
+    TVCellCustom *cell;
     
     if([[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"] count]>indexPath.row)
     {
@@ -101,71 +96,84 @@
             NSString *strImg=[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"image"]];
             
             
-            UIImageView *img=(UIImageView*)[cell viewWithTag:5];
             
-            [img sd_setImageWithURL:[NSURL URLWithString:strImg]
+            
+            [cell.imgActivity sd_setImageWithURL:[NSURL URLWithString:strImg]
                    placeholderImage:[UIImage imageNamed:strImg]
                           completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL)
              {
-                 img.image=image;
+                 cell.imgActivity .image=image;
              }];
             
             
         }
         
-        //number of likes
-        UILabel *lbl2=(UILabel*)[cell viewWithTag:6];
+        //number of likes and setting image
+        
         NSString *list =[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"likersId"];
+        int likes;
+        if(![list isEqualToString:@""])
+        {
         NSArray *listItems = [list componentsSeparatedByString:@","];
-        int likes=([listItems count]>1)?(int)[listItems count]:0;
-        lbl2.text=[NSString stringWithFormat:@"(%lu)",(unsigned long)likes];
+            likes=([listItems count]>1)?(int)[listItems count]:1;
+            //chack that a user currently logged in allready like activity or not
+            if ([listItems containsObject:[NSString stringWithFormat:@"%ld",(long)userId]]) {
+                [cell.btnLike setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Like1" ofType:@"png"]] forState:UIControlStateNormal];
+               
+            }else
+            {
+                
+            [cell.btnLike setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Like2" ofType:@"png"]] forState:UIControlStateNormal];
+            }
+        }else{
+                likes=0;
+            [cell.btnLike setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Like2" ofType:@"png"]] forState:UIControlStateNormal];
+            }
+        cell.lblLikes.text=[NSString stringWithFormat:@"(%lu)",(unsigned long)likes];
         
         //number of comments
-        UILabel *lblcomments=(UILabel*)[cell viewWithTag:7];
+        
         if ([[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"comments"]) {
-            lblcomments.text=[NSString stringWithFormat:@"(%lu)",(unsigned long)[[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"comments"]count]];
+            cell.lblComments.text=[NSString stringWithFormat:@"(%lu)",(unsigned long)[[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"comments"]count]];
         }
         
        
         //setting discription of activity
-        UILabel *lbl=(UILabel*)[cell viewWithTag:4];
-        lbl.text=[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"discription"];
+        
+        cell.lblDiscription.text=[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"discription"];
+        
         //setting user name
-        UILabel *lbl3=(UILabel*)[cell viewWithTag:2];
+        
         NSString *fullname=[NSString stringWithFormat:@"%@ %@",[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"fName"],[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"lName"]];
-        lbl3.text=fullname;
+        cell.lblUname.text=fullname;
         
         //setting a like button method
-        UIButton *btnLike=(UIButton*)[cell viewWithTag:8];
-        [btnLike addTarget:self action:@selector(btnLikeAction:) forControlEvents:UIControlEventTouchUpInside];
-        btnLike.tag=[[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"id"] integerValue];
-        NSLog(@"row-%ld",indexPath.row);
-        NSLog(@"tag-%ld",btnLike.tag);
-
-        //setting date
-        UILabel *lbl4=(UILabel*)[cell viewWithTag:3];
+       
+         [cell.btnLike addTarget:self action:@selector(btnLikeAction:) forControlEvents:UIControlEventTouchUpInside];
+        cell.btnLike.tag=[[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"id"] integerValue];
         
-        lbl4.text=[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"date"];
+        //setting date
+       
+        cell.lblDate.text=[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"date"];
         
         //setting user's profile pic
         
-        UIImageView *userImg=(UIImageView*)[cell viewWithTag:1];
-        userImg.layer.cornerRadius=20;
+        cell.imgUser.layer.cornerRadius=20;
         if (![[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"profilePic"] isEqualToString:@""] )
         {
             
             NSString *uImg=[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"profilePic"]];
             
-            [userImg sd_setImageWithURL:[NSURL URLWithString:uImg]
+            [cell.imgUser sd_setImageWithURL:[NSURL URLWithString:uImg]
                        placeholderImage:[UIImage imageNamed:uImg]
                               completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL)
              {
-                 userImg.image=image;
+                 cell.imgUser.image=image;
              }];
             
         }else
         {
-            userImg.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"user" ofType:@"png"]];
+            cell.imgUser.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"user" ofType:@"png"]];
         }
     }else
     {
@@ -201,10 +209,11 @@
 -(void)refreshHome
 {
     
+   
     _userdata=[[NSMutableDictionary alloc]init];
     NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
     
-    [dic setObject:@"87" forKey:@"uId"];
+    [dic setObject:[ NSNumber numberWithInt:(int)userId] forKey:@"uId"];
     [dic setObject:@"loadHome" forKey:@"action"];
     
     
@@ -240,7 +249,54 @@
 
 -(void)btnLikeAction:(UIButton*)sender
 {
-    NSLog(@"%ld",sender.tag) ;
+    NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
+    
+    [dic setObject:[NSNumber numberWithInt:(int)userId] forKey:@"uId"];
+    [dic setObject:[NSNumber numberWithInt:(int)sender.tag] forKey:@"aId"];
+    [dic setObject:@"likeActivity" forKey:@"action"];
+    
+    //service class for call web services
+    service1=[service new];
+    [service1 FSPlzcallWebServiceWithURLString: @"FS-host" ArgumentsDictionary:dic];
+    
+    //block that returns web service responce
+    service1.serviceBlock=^(NSMutableDictionary* responce)
+    {
+        if(responce)
+        {
+            if ([[[responce objectForKey:@"responce"] objectForKey:@"status"] isEqualToString:@"success"]) {
+                [sender setBackgroundImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Like1" ofType:@"png"]] forState:UIControlStateNormal];
+                TVCellCustom *ce=(TVCellCustom*)[[sender superview] superview];
+                UITableView *tb=(UITableView*)[[ce superview] superview];
+                NSIndexPath *ip=(NSIndexPath*)[tb indexPathForCell:ce];
+                //NSLog(@"%ld",ip.row);
+                
+                NSMutableString *str=[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:ip.row]objectForKey:@"likersId"];
+                int likes2;
+                NSArray *listItems = [str componentsSeparatedByString:@","];
+                
+                NSString *st=[NSString stringWithFormat:@",%ld",userId];
+                [[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:ip.row] setObject:[str stringByAppendingString:st] forKey:@"likersId"];
+                
+                str=[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:ip.row]objectForKey:@"likersId"];
+                
+                
+                if(![str isEqualToString:@""])
+                {
+                    listItems = [str componentsSeparatedByString:@","];
+                    likes2=([listItems count]>1)?(int)[listItems count]:1;
+                }else
+                {
+                    likes2=1;
+                }
+                
+                
+                ce.lblLikes.text=[NSString stringWithFormat:@"(%d)",likes2];
+                
+            }
+        }
+        
+    };
 }
 /*
   #pragma mark - Navigation
