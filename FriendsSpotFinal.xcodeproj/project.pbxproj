@@ -28,7 +28,7 @@
 		A94512821B741EE8002DA50A /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A94512811B741EE8002DA50A /* user.png */; };
 		A94512841B7420D6002DA50A /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = A94512831B7420D6002DA50A /* loading.gif */; };
 		A94512881B742AD8002DA50A /* comments.m in Sources */ = {isa = PBXBuildFile; fileRef = A94512871B742AD8002DA50A /* comments.m */; };
-		A9668DF21B8522E70060B4D7 /* TVCellCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = A9668DF11B8522E70060B4D7 /* TVCellCustom.m */; };
+		A972A5EC1B86845C00D88746 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = A972A5EB1B86845C00D88746 /* Profile.m */; };
 		A97C56201B66FC5100BDAC16 /* XT_problem.png in Resources */ = {isa = PBXBuildFile; fileRef = A97C561F1B66FC5100BDAC16 /* XT_problem.png */; };
 		A97C562A1B670E2800BDAC16 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A97C56231B670E2800BDAC16 /* TPKeyboardAvoidingCollectionView.m */; };
 		A97C562B1B670E2800BDAC16 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A97C56251B670E2800BDAC16 /* TPKeyboardAvoidingScrollView.m */; };
@@ -127,8 +127,8 @@
 		A94512831B7420D6002DA50A /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		A94512861B742AD8002DA50A /* comments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = comments.h; sourceTree = "<group>"; };
 		A94512871B742AD8002DA50A /* comments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = comments.m; sourceTree = "<group>"; };
-		A9668DF01B8522E70060B4D7 /* TVCellCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVCellCustom.h; sourceTree = "<group>"; };
-		A9668DF11B8522E70060B4D7 /* TVCellCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVCellCustom.m; sourceTree = "<group>"; };
+		A972A5EA1B86845C00D88746 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		A972A5EB1B86845C00D88746 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		A97C561F1B66FC5100BDAC16 /* XT_problem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XT_problem.png; sourceTree = "<group>"; };
 		A97C56221B670E2800BDAC16 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
 		A97C56231B670E2800BDAC16 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
@@ -273,6 +273,8 @@
 				A93486731B7D465600BA0818 /* FindFriends.m */,
 				A934866F1B7D45A200BA0818 /* SearchFriends.h */,
 				A93486701B7D45A200BA0818 /* SearchFriends.m */,
+				A972A5EA1B86845C00D88746 /* Profile.h */,
+				A972A5EB1B86845C00D88746 /* Profile.m */,
 			);
 			path = FindFriends;
 			sourceTree = "<group>";
@@ -535,8 +537,6 @@
 				A9FDBE691B5D9CF800E1A199 /* UserHome.h */,
 				A9FDBE6A1B5D9CF800E1A199 /* UserHome.m */,
 				A94512851B742A9E002DA50A /* comments */,
-				A9668DF01B8522E70060B4D7 /* TVCellCustom.h */,
-				A9668DF11B8522E70060B4D7 /* TVCellCustom.m */,
 			);
 			path = UserHome;
 			sourceTree = "<group>";
@@ -718,6 +718,7 @@
 				A9049AD81B7D6DB200497091 /* PhotoViewController.m in Sources */,
 				A9AF40C81B6C4C840055B0F7 /* MesaageVC.m in Sources */,
 				A91E7E001B5F1C3100B933B3 /* ForgotPassword2.m in Sources */,
+				A972A5EC1B86845C00D88746 /* Profile.m in Sources */,
 				A9EA17631B7306FB007CFABB /* SDWebImageDownloaderOperation.m in Sources */,
 				A9EA17651B7306FB007CFABB /* SDWebImagePrefetcher.m in Sources */,
 				A91938CA1B7172DF00DF12B5 /* EditProfile.m in Sources */,
@@ -737,7 +738,6 @@
 				A91938C41B71719000DF12B5 /* Blocking.m in Sources */,
 				A9EA175F1B7306FB007CFABB /* SDImageCache.m in Sources */,
 				A9BB57FE1B719256009E43C5 /* service.m in Sources */,
-				A9668DF21B8522E70060B4D7 /* TVCellCustom.m in Sources */,
 				A9EA17641B7306FB007CFABB /* SDWebImageManager.m in Sources */,
 				A9EA17691B7306FB007CFABB /* UIImage+WebP.m in Sources */,
 				A9D11F3A1B703F1C00E6291B /* Setting.m in Sources */,
