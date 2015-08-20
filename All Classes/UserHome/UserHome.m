@@ -120,6 +120,12 @@
         int likes=([listItems count]>1)?(int)[listItems count]:0;
         lbl2.text=[NSString stringWithFormat:@"(%lu)",(unsigned long)likes];
         
+        //number of comments
+        UILabel *lblcomments=(UILabel*)[cell viewWithTag:7];
+        if ([[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"comments"]) {
+            lblcomments.text=[NSString stringWithFormat:@"(%lu)",(unsigned long)[[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"comments"]count]];
+        }
+       
         //setting discription of activity
         UILabel *lbl=(UILabel*)[cell viewWithTag:4];
         lbl.text=[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"discription"];
@@ -127,6 +133,11 @@
         UILabel *lbl3=(UILabel*)[cell viewWithTag:2];
         NSString *fullname=[NSString stringWithFormat:@"%@ %@",[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"fName"],[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"lName"]];
         lbl3.text=fullname;
+        
+        //setting a like button method
+        UIButton *btnLike=(UIButton*)[cell viewWithTag:8];
+        [btnLike addTarget:self action:@selector(btnLikeAction:) forControlEvents:UIControlEventTouchUpInside];
+        btnLike.tag=[[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"id"] integerValue];
         
         //setting date
         UILabel *lbl4=(UILabel*)[cell viewWithTag:3];
@@ -156,8 +167,7 @@
     }else
     {
         cell=[tableView dequeueReusableCellWithIdentifier:@"emptyCell"];
-        UIImageView *img=[[UIImageView alloc]init];
-        img.image=[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"bottom cell" ofType:@"png"]];
+        
     }
     
     
@@ -223,7 +233,13 @@
 -(void)viewDidLoad:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:YES animated:NO];
-}/*
+}
+
+-(void)btnLikeAction:(UIButton*)sender
+{
+    NSLog(@"%ld",sender.tag) ;
+}
+/*
   #pragma mark - Navigation
   
   // In a storyboard-based application, you will often want to do a little preparation before navigation
