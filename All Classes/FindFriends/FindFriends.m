@@ -25,7 +25,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+    [self.view endEditing:YES];
+    
+}
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     NSLog(@"%@", _searchbar.text);
@@ -68,14 +72,16 @@
     }
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
             UITableViewCell *cell;
     
-        cell=[tableView dequeueReusableCellWithIdentifier:@"cellone"];
-           UIImageView *img1=(UIImageView*)[cell viewWithTag:10];
+         cell=[tableView dequeueReusableCellWithIdentifier:@"cellone"];
     
+      //User Image
+    UIImageView *img1=(UIImageView*)[cell viewWithTag:10];
     if (![[[[[searchResult objectForKey:@"responce"]objectForKey:@"searchResult"]objectAtIndex:indexPath.row]objectForKey:@"profilePic"]isEqualToString:@""]) {
         img1.layer.cornerRadius=30;
    
@@ -95,6 +101,8 @@
         
         
     }
+      //Name label
+    
       UILabel *lbl=(UILabel*)[cell viewWithTag:11];
     
       NSString *fullname=[NSString stringWithFormat:@"%@ %@",[[[[searchResult objectForKey:@"responce"]objectForKey:@"searchResult"]objectAtIndex: indexPath.row]objectForKey:@"fName"],
@@ -102,25 +110,58 @@
     
     lbl.text=fullname;
     
-    
+    //Add Friends Clicked
     
     UIButton *btnSendRequest=(UIButton*)[cell viewWithTag:12];
     
-    indexpath1=indexPath;
-   
     
-     [btnSendRequest addTarget:self action:@selector(navigatePics:) forControlEvents:UIControlEventTouchUpInside];
+    btnSendRequest.tag=[[[[[searchResult objectForKey:@"responce"]objectForKey:@"searchResult"]objectAtIndex:indexPath.row] objectForKey:@"id"]integerValue];
+    
+    [btnSendRequest addTarget:self action:@selector(navigatePics:) forControlEvents:UIControlEventTouchUpInside];
+  
+    
     
  return cell;
  }
 
 -(void)navigatePics:(UIButton *)sender
 {
-    NSString *send=[NSString stringWithFormat:@"http://friendsgrs.net46.net/%@",[[[[searchResult objectForKey:@"responce"]objectForKey:@"searchResult"]objectAtIndex:indexpath1.row] objectForKey:@"id"]];
+    
+    NSLog(@"%ld",(long)sender.tag);
+    
+    NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
+     [dict setObject:@"87" forKey:@"senderId"];
+      [dict setObject:[NSNumber numberWithInt:(int)sender.tag] forKey:@"uId"];
+
+      [dict setObject:@"sendRequest" forKey:@"action"];
+     [dict setObject:@"Please accept requsest" forKey:@"requestMessage"];
+    
+    service1=[service new];
+    [service1 FSPlzcallWebServiceWithURLString: @"FS-host" ArgumentsDictionary:dict];
+    
+    service1.serviceBlock=^(NSMutableDictionary* responce)
+    {
+        if(responce)
+        {
+            NSLog(@"%@",responce);
+            if ([[[responce objectForKey:@"responce"] objectForKey:@"status"] isEqualToString:@"success"]) {
+                [sender setEnabled:NO];
+                [sender setTitle:@"Requested" forState:UIControlStateDisabled];
+                [sender setBackgroundColor:[UIColor colorWithRed:170.0/255 green:170.0/255 blue:170.0/255 alpha:1]];
+                
+            }
+        }
+        
+    };
+
     
     
     
     
+    
+    
+    
+
 }
 
 /*
