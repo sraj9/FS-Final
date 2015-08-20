@@ -16,6 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
     //getting userID from globle dictionary
     userId=[[[gblAppDel mutDictUserDetails] objectForKey:@"id"] integerValue];
     
@@ -213,7 +218,8 @@
     _userdata=[[NSMutableDictionary alloc]init];
     NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
     
-    [dic setObject:[ NSNumber numberWithInt:(int)userId] forKey:@"uId"];
+    //[dic setObject:[ NSNumber numberWithInt:(int)userId] forKey:@"uId"];
+    [dic setObject:@"87" forKey:@"uId"];
     [dic setObject:@"loadHome" forKey:@"action"];
     
     
@@ -296,9 +302,66 @@
 }
 
 
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+_bViewNewActivity.frame=CGRectMake(0,510,400,58);
+}
+
+- (void)keyboardWasShown:(NSNotification *)notification
+{
+    
+    // Get the size of the keyboard.
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    //Given size may not account for screen rotation
+    int height = MIN(keyboardSize.height,keyboardSize.width);
+    int width = MAX(keyboardSize.height,keyboardSize.width);
+     _bViewNewActivity.frame=CGRectMake(0,height+4,400,width);
+  
+}
+
+- (IBAction)btnPostAction:(id)sender {
+    if(![_txtPost.text isEqual:@""])
+    {
+        
+        NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
+        
+        [dic setObject:[ NSNumber numberWithInt:(int)userId] forKey:@"uId"];
+         [dic setObject:@"text" forKey:@"type"];
+         [dic setObject:_txtPost.text forKey:@"discription"];
+        [dic setObject:@"newActivity" forKey:@"action"];
+        
+        
+        service1=[service new];
+        [service1 FSPlzcallWebServiceWithURLString: @"FS-host" ArgumentsDictionary:dic];
+        
+        service1.serviceBlock=^(NSMutableDictionary* responce)
+        {
+            if(responce)
+            {
+                if ([[[responce objectForKey:@"responce"] objectForKey:@"status"] isEqualToString:@"success"]) {
+                    _txtPost.text=NULL;
+                    
+                    [self refreshHome];
+                }
+                
+            }
+            
+        };
+
+        
+    }else
+    {
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Empty text" message:@"Post should not be empty." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+}
+@end
+
+
 /*
   #pragma mark - Navigation
-  
+ 
   // In a storyboard-based application, you will often want to do a little preparation before navigation
   - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   // Get the new view controller using [segue destinationViewController].
@@ -306,4 +369,4 @@
   }
   */
 
-@end
+
