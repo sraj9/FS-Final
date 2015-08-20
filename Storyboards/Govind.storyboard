@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="dte-1v-lR6">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Forgot Password-->
@@ -73,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IE4-TR-DL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="-1287"/>
+            <point key="canvasLocation" x="432" y="-1827"/>
         </scene>
         <!--Forgot Password2-->
         <scene sceneID="tGN-35-em6">
@@ -185,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DpO-Hd-siw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="532" y="-1281"/>
+            <point key="canvasLocation" x="976" y="-1881"/>
         </scene>
         <!--Home-->
         <scene sceneID="rYp-qT-s8d">
@@ -219,7 +218,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thakur Added 2 New Photos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="O9u-92-RsC">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of activity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="O9u-92-RsC">
                                                     <rect key="frame" x="54" y="20" width="261" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -390,6 +389,7 @@
                         <outlet property="btnPost" destination="Xen-mT-e5M" id="yRo-0T-mz7"/>
                         <outlet property="sidebarButton" destination="8Ci-zr-a1R" id="KY5-ca-tUr"/>
                         <outlet property="tblViewHome" destination="emR-na-BDV" id="3Ka-fl-KEb"/>
+                        <outlet property="txtPost" destination="fdD-YJ-252" id="NEd-z0-SJV"/>
                         <outlet property="vcfirstLoad" destination="wwn-A0-5FN" id="6Oz-yn-7BM"/>
                         <segue destination="wVh-NB-EUL" kind="push" id="elZ-mr-XfN"/>
                     </connections>
@@ -429,6 +429,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnPostAction:" destination="L1U-q7-ATl" eventType="touchUpInside" id="3Mo-Kj-4ET"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Lxm-yX-7eq">
                                 <rect key="frame" x="8" y="8" width="46" height="42"/>
@@ -443,7 +446,7 @@
                 </visualEffectView>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iPA-Bt-Zsn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-326" y="-1117"/>
+            <point key="canvasLocation" x="-718" y="-1390"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="brf-5m-93Y">
@@ -461,7 +464,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Heg-bI-VPa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-705" y="-1117"/>
+            <point key="canvasLocation" x="-1141" y="-1422"/>
         </scene>
         <!--Comments-->
         <scene sceneID="tJb-9k-gsI">
@@ -633,7 +636,7 @@
                     <blurEffect style="light"/>
                 </visualEffectView>
             </objects>
-            <point key="canvasLocation" x="62" y="-1117"/>
+            <point key="canvasLocation" x="-138" y="-1133"/>
         </scene>
     </scenes>
     <resources>
@@ -646,6 +649,11 @@
         <image name="selectImg.png" width="204" height="204"/>
         <image name="user.png" width="512" height="512"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="7mL-NQ-jar"/>
     </inferredMetricsTieBreakers>

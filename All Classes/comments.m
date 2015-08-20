@@ -8,7 +8,7 @@
 
 #import "comments.h"
 
-@interface comments ()
+@interface comments ()<UITextFieldDelegate>
 
 @end
 
@@ -28,6 +28,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -156,6 +163,7 @@
     
     [self.navigationController popViewControllerAnimated:YES];
 }
+
 
 /*
  #pragma mark - Navigation
