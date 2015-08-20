@@ -326,7 +326,8 @@ _bViewNewActivity.frame=CGRectMake(0,510,400,58);
         
         NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
         
-        [dic setObject:[ NSNumber numberWithInt:(int)userId] forKey:@"uId"];
+        //[dic setObject:[ NSNumber numberWithInt:(int)userId] forKey:@"uId"];
+        [dic setObject:@"87" forKey:@"uId"];
          [dic setObject:@"text" forKey:@"type"];
          [dic setObject:_txtPost.text forKey:@"discription"];
         [dic setObject:@"newActivity" forKey:@"action"];

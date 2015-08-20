@@ -26,13 +26,13 @@
     _lblErrorLogin.hidden=YES;
     
     //setting user details in globale dictionary from plist
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithContentsOfFile:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"FS_PList.plist"]];
+    NSMutableDictionary *dictPlist = [[NSMutableDictionary alloc] initWithContentsOfFile:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"FS_PList.plist"]];
     
     
-    if ([dict objectForKey:@"id"] && ![[dict objectForKey:@"id"] isEqual:@""]) {
+    if ([dictPlist objectForKey:@"id"] && ![[dictPlist objectForKey:@"id"] isEqual:@""]) {
         
         if (![gblAppDel mutDictUserDetails]) {
-            [gblAppDel setMutDictUserDetails:[[NSMutableDictionary alloc]initWithDictionary:dict]];
+            [gblAppDel setMutDictUserDetails:[[NSMutableDictionary alloc]initWithDictionary:dictPlist]];
         }
         
         

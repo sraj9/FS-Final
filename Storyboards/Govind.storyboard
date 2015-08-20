@@ -377,6 +377,7 @@
                                         <connections>
                                             <outlet property="btnLike" destination="CT4-nR-qNC" id="pAx-H3-bLW"/>
                                             <outlet property="imgUser" destination="FzF-28-iT9" id="VfZ-PB-nbU"/>
+                                            <outlet property="lblComments" destination="Tc0-Zl-Mai" id="5gH-n1-xfO"/>
                                             <outlet property="lblDate" destination="agY-yo-HlK" id="tCr-oj-ibo"/>
                                             <outlet property="lblDiscription" destination="NmS-OE-gqi" id="7Tm-2m-bjg"/>
                                             <outlet property="lblLikes" destination="Rxs-0E-pce" id="sFg-xk-Og9"/>
@@ -384,7 +385,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="emptyCell" rowHeight="58" id="JEf-dY-NVV" customClass="TVCellCustom">
-                                        <rect key="frame" x="0.0" y="255" width="320" height="58"/>
+                                        <rect key="frame" x="0.0" y="466" width="320" height="58"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JEf-dY-NVV" id="9wh-vz-odL">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
