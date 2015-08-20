@@ -125,6 +125,7 @@
         if ([[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"comments"]) {
             lblcomments.text=[NSString stringWithFormat:@"(%lu)",(unsigned long)[[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"comments"]count]];
         }
+        
        
         //setting discription of activity
         UILabel *lbl=(UILabel*)[cell viewWithTag:4];
@@ -138,7 +139,9 @@
         UIButton *btnLike=(UIButton*)[cell viewWithTag:8];
         [btnLike addTarget:self action:@selector(btnLikeAction:) forControlEvents:UIControlEventTouchUpInside];
         btnLike.tag=[[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:indexPath.row]objectForKey:@"id"] integerValue];
-        
+        NSLog(@"row-%ld",indexPath.row);
+        NSLog(@"tag-%ld",btnLike.tag);
+
         //setting date
         UILabel *lbl4=(UILabel*)[cell viewWithTag:3];
         

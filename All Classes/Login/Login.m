@@ -25,8 +25,6 @@
     _btnForgotPassword.layer.cornerRadius=10;
     _lblErrorLogin.hidden=YES;
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithContentsOfFile:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"FS_PList.plist"]];
-//    AppDelegate *gblAppDel = [[UIApplication sharedApplication] delegate];
-//    gblAppDel.mutDictUserDetails = dict;
     if ([dict objectForKey:@"id"] && ![[dict objectForKey:@"id"] isEqual:@""]) {
         
         UserHome *objHome = [UserHome new];
