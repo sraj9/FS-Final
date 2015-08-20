@@ -204,8 +204,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyA-zl-myZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="727" y="-70"/>
-
-
         </scene>
         <!--AV Player View Controller-->
         <scene sceneID="aze-Wi-kxG">
