@@ -28,7 +28,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnPost;
 @property (strong, nonatomic) IBOutlet UIVisualEffectView *bViewNewActivity;
 @property (weak, nonatomic) IBOutlet UITableView *tblViewHome;
-@property (strong, nonatomic) NSMutableDictionary *userdata;
+@property (strong,nonatomic) NSMutableDictionary *userdata;
 
 - (IBAction)btnPostAction:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *txtPost;
