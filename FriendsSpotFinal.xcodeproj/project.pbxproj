@@ -19,7 +19,7 @@
 		A91938CE1B71757700DF12B5 /* ButtonLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = A91938CD1B71757700DF12B5 /* ButtonLayers.m */; };
 		A91B13AC1B7EB0E50074B5C4 /* Like1.png in Resources */ = {isa = PBXBuildFile; fileRef = A91B13AA1B7EB0E50074B5C4 /* Like1.png */; };
 		A91B13AD1B7EB0E50074B5C4 /* Like2.png in Resources */ = {isa = PBXBuildFile; fileRef = A91B13AB1B7EB0E50074B5C4 /* Like2.png */; };
-		A91E7DF61B5F0E3400B933B3 /* main 16-30-32-750.m in Sources */ = {isa = PBXBuildFile; fileRef = A91E7DF51B5F0E3400B933B3 /* main 16-30-32-750.m */; };
+		A91E7DF61B5F0E3400B933B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A91E7DF51B5F0E3400B933B3 /* main.m */; };
 		A91E7E001B5F1C3100B933B3 /* ForgotPassword2.m in Sources */ = {isa = PBXBuildFile; fileRef = A91E7DFF1B5F1C3100B933B3 /* ForgotPassword2.m */; };
 		A93486711B7D45A200BA0818 /* SearchFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = A93486701B7D45A200BA0818 /* SearchFriends.m */; };
 		A93486741B7D465600BA0818 /* FindFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = A93486731B7D465600BA0818 /* FindFriends.m */; };
@@ -39,7 +39,6 @@
 		A99A07191B69AA6900ED4102 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A99A07151B69AA6900ED4102 /* Default.png */; };
 		A99A071A1B69AA6900ED4102 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A99A07161B69AA6900ED4102 /* Default@2x.png */; };
 		A9AF40C81B6C4C840055B0F7 /* MesaageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AF40C71B6C4C840055B0F7 /* MesaageVC.m */; };
-		A9AFBA411B58554B005C08BE /* FriendsSpotFinalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AFBA401B58554B005C08BE /* FriendsSpotFinalTests.m */; };
 		A9AFBA651B588A36005C08BE /* NewFSlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9AFBA641B588A36005C08BE /* NewFSlogo.png */; };
 		A9BB57FE1B719256009E43C5 /* service.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BB57FD1B719256009E43C5 /* service.m */; };
 		A9C075191B7958040011F49C /* Sumit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C075181B7958040011F49C /* Sumit.storyboard */; };
@@ -66,6 +65,12 @@
 		A9EA176A1B7306FB007CFABB /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EA17581B7306FB007CFABB /* UIImageView+HighlightedWebCache.m */; };
 		A9EA176B1B7306FB007CFABB /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EA175A1B7306FB007CFABB /* UIImageView+WebCache.m */; };
 		A9EA176C1B7306FB007CFABB /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EA175C1B7306FB007CFABB /* UIView+WebCacheOperation.m */; };
+		A9F2466D1B86AF43004D6002 /* Friend Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A9F246681B86AF43004D6002 /* Friend Icon.png */; };
+		A9F2466E1B86AF43004D6002 /* Home Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A9F246691B86AF43004D6002 /* Home Icon.png */; };
+		A9F2466F1B86AF43004D6002 /* Message Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A9F2466A1B86AF43004D6002 /* Message Icon.png */; };
+		A9F246701B86AF43004D6002 /* Search Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A9F2466B1B86AF43004D6002 /* Search Icon.png */; };
+		A9F246711B86AF43004D6002 /* Settings Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A9F2466C1B86AF43004D6002 /* Settings Icon.png */; };
+		A9F246731B86B1A9004D6002 /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = A9F246721B86B1A9004D6002 /* logout.png */; };
 		A9FDBE731B5D9CF800E1A199 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE4F1B5D9CF800E1A199 /* Info.plist */; };
 		A9FDBE751B5D9CF800E1A199 /* NewFSlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE511B5D9CF800E1A199 /* NewFSlogo.png */; };
 		A9FDBE771B5D9CF800E1A199 /* Raj.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE541B5D9CF800E1A199 /* Raj.storyboard */; };
@@ -82,16 +87,6 @@
 		A9FDBE851B5D9CF800E1A199 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9FDBE721B5D9CF800E1A199 /* Info.plist */; };
 		A9FDBE891B5D9F7900E1A199 /* ForgotPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FDBE881B5D9F7900E1A199 /* ForgotPassword.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A9AFBA3B1B58554B005C08BE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A9AFBA191B58554B005C08BE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A9AFBA201B58554B005C08BE;
-			remoteInfo = FriendsSpotFinal;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A9049AC91B7D6D1400497091 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -115,7 +110,7 @@
 		A91938CD1B71757700DF12B5 /* ButtonLayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonLayers.m; sourceTree = "<group>"; };
 		A91B13AA1B7EB0E50074B5C4 /* Like1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Like1.png; sourceTree = "<group>"; };
 		A91B13AB1B7EB0E50074B5C4 /* Like2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Like2.png; sourceTree = "<group>"; };
-		A91E7DF51B5F0E3400B933B3 /* main 16-30-32-750.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "main 16-30-32-750.m"; path = "FriendsSpotFinal/main 16-30-32-750.m"; sourceTree = "<group>"; };
+		A91E7DF51B5F0E3400B933B3 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = FriendsSpotFinal/main.m; sourceTree = "<group>"; };
 		A91E7DFE1B5F1C3100B933B3 /* ForgotPassword2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPassword2.h; sourceTree = "<group>"; };
 		A91E7DFF1B5F1C3100B933B3 /* ForgotPassword2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPassword2.m; sourceTree = "<group>"; };
 		A934866F1B7D45A200BA0818 /* SearchFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchFriends.h; sourceTree = "<group>"; };
@@ -149,7 +144,6 @@
 		A9AF40C71B6C4C840055B0F7 /* MesaageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MesaageVC.m; sourceTree = "<group>"; };
 		A9AFBA211B58554B005C08BE /* FriendsSpotFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendsSpotFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9AFBA251B58554B005C08BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9AFBA3A1B58554B005C08BE /* FriendsSpotFinalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendsSpotFinalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9AFBA3F1B58554B005C08BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9AFBA401B58554B005C08BE /* FriendsSpotFinalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendsSpotFinalTests.m; sourceTree = "<group>"; };
 		A9AFBA641B588A36005C08BE /* NewFSlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewFSlogo.png; sourceTree = "<group>"; };
@@ -199,6 +193,12 @@
 		A9EA175A1B7306FB007CFABB /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		A9EA175B1B7306FB007CFABB /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		A9EA175C1B7306FB007CFABB /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		A9F246681B86AF43004D6002 /* Friend Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Friend Icon.png"; sourceTree = "<group>"; };
+		A9F246691B86AF43004D6002 /* Home Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home Icon.png"; sourceTree = "<group>"; };
+		A9F2466A1B86AF43004D6002 /* Message Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Message Icon.png"; sourceTree = "<group>"; };
+		A9F2466B1B86AF43004D6002 /* Search Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Search Icon.png"; sourceTree = "<group>"; };
+		A9F2466C1B86AF43004D6002 /* Settings Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings Icon.png"; sourceTree = "<group>"; };
+		A9F246721B86B1A9004D6002 /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
 		A9F6E4B71B840F7100CC868E /* FriendsSpotFinal-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FriendsSpotFinal-Prefix.pch"; sourceTree = "<group>"; };
 		A9FDBE4F1B5D9CF800E1A199 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9FDBE511B5D9CF800E1A199 /* NewFSlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewFSlogo.png; sourceTree = "<group>"; };
@@ -226,13 +226,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		A9AFBA1E1B58554B005C08BE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A9AFBA371B58554B005C08BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -322,7 +315,7 @@
 			children = (
 				A9F6E4B71B840F7100CC868E /* FriendsSpotFinal-Prefix.pch */,
 				A97C56211B670E2800BDAC16 /* TPKeyboardAvoiding */,
-				A91E7DF51B5F0E3400B933B3 /* main 16-30-32-750.m */,
+				A91E7DF51B5F0E3400B933B3 /* main.m */,
 				A9FDBE4E1B5D9CF800E1A199 /* FriendsSpotFinal */,
 				A9FDBE521B5D9CF800E1A199 /* Storyboards */,
 				A9FDBE561B5D9CF800E1A199 /* All Classes */,
@@ -340,7 +333,6 @@
 			isa = PBXGroup;
 			children = (
 				A9AFBA211B58554B005C08BE /* FriendsSpotFinal.app */,
-				A9AFBA3A1B58554B005C08BE /* FriendsSpotFinalTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -459,6 +451,19 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		A9F246671B86AF25004D6002 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				A9F246721B86B1A9004D6002 /* logout.png */,
+				A9F246681B86AF43004D6002 /* Friend Icon.png */,
+				A9F246691B86AF43004D6002 /* Home Icon.png */,
+				A9F2466A1B86AF43004D6002 /* Message Icon.png */,
+				A9F2466B1B86AF43004D6002 /* Search Icon.png */,
+				A9F2466C1B86AF43004D6002 /* Settings Icon.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
 		A9FDBE4E1B5D9CF800E1A199 /* FriendsSpotFinal */ = {
 			isa = PBXGroup;
 			children = (
@@ -549,6 +554,7 @@
 		A9FDBE6B1B5D9CF800E1A199 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A9F246671B86AF25004D6002 /* Icons */,
 				A9D4C42A1B7ED38500B2B199 /* Back.png */,
 				A9D4C4281B7EBE6700B2B199 /* comment29.png */,
 				A94512811B741EE8002DA50A /* user.png */,
@@ -607,24 +613,6 @@
 			productReference = A9AFBA211B58554B005C08BE /* FriendsSpotFinal.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A9AFBA391B58554B005C08BE /* FriendsSpotFinalTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A9AFBA471B58554B005C08BE /* Build configuration list for PBXNativeTarget "FriendsSpotFinalTests" */;
-			buildPhases = (
-				A9AFBA361B58554B005C08BE /* Sources */,
-				A9AFBA371B58554B005C08BE /* Frameworks */,
-				A9AFBA381B58554B005C08BE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A9AFBA3C1B58554B005C08BE /* PBXTargetDependency */,
-			);
-			name = FriendsSpotFinalTests;
-			productName = FriendsSpotFinalTests;
-			productReference = A9AFBA3A1B58554B005C08BE /* FriendsSpotFinalTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -636,10 +624,6 @@
 				TargetAttributes = {
 					A9AFBA201B58554B005C08BE = {
 						CreatedOnToolsVersion = 6.3.2;
-					};
-					A9AFBA391B58554B005C08BE = {
-						CreatedOnToolsVersion = 6.3.2;
-						TestTargetID = A9AFBA201B58554B005C08BE;
 					};
 				};
 			};
@@ -657,7 +641,6 @@
 			projectRoot = "";
 			targets = (
 				A9AFBA201B58554B005C08BE /* FriendsSpotFinal */,
-				A9AFBA391B58554B005C08BE /* FriendsSpotFinalTests */,
 			);
 		};
 /* End PBXProject section */
@@ -673,9 +656,12 @@
 				A97C56201B66FC5100BDAC16 /* XT_problem.png in Resources */,
 				A9D4C4291B7EBE6700B2B199 /* comment29.png in Resources */,
 				A9FDBE751B5D9CF800E1A199 /* NewFSlogo.png in Resources */,
+				A9F2466D1B86AF43004D6002 /* Friend Icon.png in Resources */,
 				A9FDBE731B5D9CF800E1A199 /* Info.plist in Resources */,
 				A94512801B7417BF002DA50A /* selectImg.png in Resources */,
 				A9FDBE801B5D9CF800E1A199 /* FacebookButton.png in Resources */,
+				A9F2466E1B86AF43004D6002 /* Home Icon.png in Resources */,
+				A9F2466F1B86AF43004D6002 /* Message Icon.png in Resources */,
 				A9AFBA651B588A36005C08BE /* NewFSlogo.png in Resources */,
 				A91B13AD1B7EB0E50074B5C4 /* Like2.png in Resources */,
 				A94512841B7420D6002DA50A /* loading.gif in Resources */,
@@ -687,19 +673,15 @@
 				A9C075191B7958040011F49C /* Sumit.storyboard in Resources */,
 				A9049ACA1B7D6D1400497091 /* Images.xcassets in Resources */,
 				A94512821B741EE8002DA50A /* user.png in Resources */,
+				A9F246731B86B1A9004D6002 /* logout.png in Resources */,
 				A91B13AC1B7EB0E50074B5C4 /* Like1.png in Resources */,
 				A99A071A1B69AA6900ED4102 /* Default@2x.png in Resources */,
+				A9F246711B86AF43004D6002 /* Settings Icon.png in Resources */,
 				A99A07181B69AA6900ED4102 /* Default-568h@2x.png in Resources */,
 				A9416D431B83EDBD00CCE21F /* Govind.storyboard in Resources */,
+				A9F246701B86AF43004D6002 /* Search Icon.png in Resources */,
 				A9FDBE771B5D9CF800E1A199 /* Raj.storyboard in Resources */,
 				A9FDBE851B5D9CF800E1A199 /* Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A9AFBA381B58554B005C08BE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,7 +715,7 @@
 				A9FDBE7C1B5D9CF800E1A199 /* ViewController.m in Sources */,
 				A9EA17661B7306FB007CFABB /* UIButton+WebCache.m in Sources */,
 				A9EA17671B7306FB007CFABB /* UIImage+GIF.m in Sources */,
-				A91E7DF61B5F0E3400B933B3 /* main 16-30-32-750.m in Sources */,
+				A91E7DF61B5F0E3400B933B3 /* main.m in Sources */,
 				A97C562B1B670E2800BDAC16 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				A97C562A1B670E2800BDAC16 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				A9FDBE791B5D9CF800E1A199 /* AppDelegate.m in Sources */,
@@ -760,23 +742,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9AFBA361B58554B005C08BE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A9AFBA411B58554B005C08BE /* FriendsSpotFinalTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A9AFBA3C1B58554B005C08BE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A9AFBA201B58554B005C08BE /* FriendsSpotFinal */;
-			targetProxy = A9AFBA3B1B58554B005C08BE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A9FDBE5A1B5D9CF800E1A199 /* LaunchScreen.xib */ = {
@@ -826,7 +792,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/indianic/FS-Final/FriendsSpotFinal-Prefix.pch";
+				GCC_PREFIX_HEADER = "FS Final Live/FriendsSpotFinal-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -871,7 +837,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/indianic/FS-Final/FriendsSpotFinal-Prefix.pch";
+				GCC_PREFIX_HEADER = "FS Final Live/FriendsSpotFinal-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -892,7 +858,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/indianic/FS-Final/FriendsSpotFinal-Prefix.pch";
+				GCC_PREFIX_HEADER = "/Volumes/DATA/Raj/FS Final Live/FriendsSpotFinal-Prefix.pch";
 				INFOPLIST_FILE = FriendsSpotFinal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -907,46 +873,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/indianic/FS-Final/FriendsSpotFinal-Prefix.pch";
+				GCC_PREFIX_HEADER = "/Volumes/DATA/Raj/FS Final Live/FriendsSpotFinal-Prefix.pch";
 				INFOPLIST_FILE = FriendsSpotFinal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		A9AFBA481B58554B005C08BE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = FriendsSpotFinalTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FriendsSpotFinal.app/FriendsSpotFinal";
-			};
-			name = Debug;
-		};
-		A9AFBA491B58554B005C08BE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = FriendsSpotFinalTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FriendsSpotFinal.app/FriendsSpotFinal";
 			};
 			name = Release;
 		};
@@ -967,15 +899,6 @@
 			buildConfigurations = (
 				A9AFBA451B58554B005C08BE /* Debug */,
 				A9AFBA461B58554B005C08BE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A9AFBA471B58554B005C08BE /* Build configuration list for PBXNativeTarget "FriendsSpotFinalTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A9AFBA481B58554B005C08BE /* Debug */,
-				A9AFBA491B58554B005C08BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
