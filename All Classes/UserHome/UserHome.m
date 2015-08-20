@@ -8,7 +8,7 @@
 
 #import "UserHome.h"
 #import "SWRevealViewController.h"
-@interface UserHome ()
+@interface UserHome ()<UITextFieldDelegate>
 
 @end
 
@@ -273,6 +273,8 @@
                 
                 NSMutableString *str=[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:ip.row]objectForKey:@"likersId"];
                 int likes2;
+                if(![str isEqualToString:@""])
+                {
                 NSArray *listItems = [str componentsSeparatedByString:@","];
                 
                 NSString *st=[NSString stringWithFormat:@",%ld",userId];
@@ -280,16 +282,10 @@
                 
                 str=[[[[_userdata objectForKey:@"responce"]objectForKey:@"activitys"]objectAtIndex:ip.row]objectForKey:@"likersId"];
                 
-                
-                if(![str isEqualToString:@""])
-                {
                     listItems = [str componentsSeparatedByString:@","];
                     likes2=([listItems count]>1)?(int)[listItems count]:1;
                 }else
-                {
-                    likes2=1;
-                }
-                
+                { likes2=1; }
                 
                 ce.lblLikes.text=[NSString stringWithFormat:@"(%d)",likes2];
                 
@@ -298,6 +294,8 @@
         
     };
 }
+
+
 /*
   #pragma mark - Navigation
   
