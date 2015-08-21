@@ -15,7 +15,7 @@
     service *service1;
     NSMutableDictionary *searchResult;
     NSMutableDictionary *sendRequest;
-    int u_id;
+    NSNumber *uId;
 }
 @property (weak, nonatomic) IBOutlet UISearchBar *searchbar;
 

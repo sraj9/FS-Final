@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    uId=[[NSUserDefaults standardUserDefaults]objectForKey:@"uId"];
     searchResult=[[NSMutableDictionary alloc]init];
     _searchbar.delegate=self;
  
@@ -32,11 +33,11 @@
 }
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-    NSLog(@"%@", _searchbar.text);
+    
     
     NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
     
-    [dic setObject:@"87" forKey:@"uId"];
+    [dic setObject:uId forKey:@"uId"];
     [dic setObject:_searchbar.text forKey:@"keyword"];
     [dic setObject:@"searchFriend" forKey:@"action"];
     
@@ -50,7 +51,7 @@
         {
             [searchResult setValuesForKeysWithDictionary:responce];
             
-            NSLog(@"%@",searchResult);
+            
             }
         [_tableView reloadData];
        };
@@ -140,7 +141,7 @@
     NSLog(@"%ld",(long)sender.tag);
     
     NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
-     [dict setObject:@"87" forKey:@"senderId"];
+     [dict setObject:uId forKey:@"senderId"];
       [dict setObject:[NSNumber numberWithInt:(int)sender.tag] forKey:@"uId"];
 
       [dict setObject:@"sendRequest" forKey:@"action"];
