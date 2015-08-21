@@ -175,30 +175,31 @@ NSArray *arrayFieldNames;
          {[aDict setValue:@"Male" forKey:@"gender"];}
          else
          {[aDict setValue:@"Female" forKey:@"gender"];}
-        [aDict setValue:@"singup" forKey:@"action"];
-        //
+        [aDict setValue:@"signup" forKey:@"action"];
+        //fname=hello&lname=gfdg&gender=fgf&contact=5365&country=gdfg&state=gdfg&city=gfgf&email=gfg&uName=gfg&password=fggfg&action=signup
         
         service *service1=[service new];
                [service1 FSPlzcallWebServiceWithURLString: @"FS-host" ArgumentsDictionary:aDict];
         //
+        [_activitySignup startAnimating];
         service1.serviceBlock=^(NSMutableDictionary* responce)
         {
             if(responce)
             {
-                
-                if([[responce objectForKey:@"status"] isEqual:@"fail"])
+                NSLog(@"%@",responce);
+                if([[[responce objectForKey:@"responce"] objectForKey:@"status"] isEqual:@"fail"])
                 {
                     [self getAlert:[responce objectForKey:@"responce"]];
-                    if ([[responce objectForKey:@"reson"] isEqual:@"Email already exist"]) {
+                    if ([[[responce objectForKey:@"responce"] objectForKey:@"reson"] isEqual:@"Email already exist"]) {
                         _txtEmail.layer.borderColor=[UIColor redColor].CGColor;
                     }
-                }else if([[responce objectForKey:@"status"] isEqual:@"success"]){
-                    //
-                    //                        UIViewController *loginVC=[self.storyboard            instantiateViewControllerWithIdentifier:@"loginVC"];
-                    //                        [self.navigationController pushViewController:loginVC animated:YES];
+                }else if([[[responce objectForKey:@"responce"] objectForKey:@"status"] isEqual:@"success"] || [[[responce objectForKey:@"responce"] objectForKey:@"status"] isEqual:@"Deactivated"]){
+                    
+                                            UIViewController *loginVC=[self.storyboard instantiateViewControllerWithIdentifier:@"loginVC"];
+                                            [self.navigationController pushViewController:loginVC animated:YES];
                 }
             }
-        
+        [_activitySignup stopAnimating];
         };
    
     

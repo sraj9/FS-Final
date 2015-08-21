@@ -199,7 +199,6 @@
 		A9F2466B1B86AF43004D6002 /* Search Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Search Icon.png"; sourceTree = "<group>"; };
 		A9F2466C1B86AF43004D6002 /* Settings Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings Icon.png"; sourceTree = "<group>"; };
 		A9F246721B86B1A9004D6002 /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
-		A9F6E4B71B840F7100CC868E /* FriendsSpotFinal-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FriendsSpotFinal-Prefix.pch"; sourceTree = "<group>"; };
 		A9FDBE4F1B5D9CF800E1A199 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9FDBE511B5D9CF800E1A199 /* NewFSlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewFSlogo.png; sourceTree = "<group>"; };
 		A9FDBE541B5D9CF800E1A199 /* Raj.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Raj.storyboard; sourceTree = "<group>"; };
@@ -313,7 +312,6 @@
 		A9AFBA181B58554B005C08BE = {
 			isa = PBXGroup;
 			children = (
-				A9F6E4B71B840F7100CC868E /* FriendsSpotFinal-Prefix.pch */,
 				A97C56211B670E2800BDAC16 /* TPKeyboardAvoiding */,
 				A91E7DF51B5F0E3400B933B3 /* main.m */,
 				A9FDBE4E1B5D9CF800E1A199 /* FriendsSpotFinal */,
@@ -792,7 +790,6 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/indianic/FS-Final/FriendsSpotFinal-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -837,7 +834,6 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/indianic/FS-Final/FriendsSpotFinal-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -857,8 +853,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/indianic/FS-Final/FriendsSpotFinal-Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = FriendsSpotFinal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -872,8 +868,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/indianic/FS-Final/FriendsSpotFinal-Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = FriendsSpotFinal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
