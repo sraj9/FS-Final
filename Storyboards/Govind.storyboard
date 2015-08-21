@@ -446,7 +446,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="imageCommentsCell" rowHeight="73" id="KCW-G0-wjA">
-                                                <rect key="frame" x="0.0" y="86" width="320" height="73"/>
+                                                <rect key="frame" x="0.0" y="22" width="320" height="73"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KCW-G0-wjA" id="JKs-nT-fvg">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
@@ -488,7 +488,7 @@
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="emptyCell" rowHeight="58" id="gSI-a1-p04">
-                                                <rect key="frame" x="0.0" y="159" width="320" height="58"/>
+                                                <rect key="frame" x="0.0" y="95" width="320" height="58"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gSI-a1-p04" id="0xu-3j-0nG">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
