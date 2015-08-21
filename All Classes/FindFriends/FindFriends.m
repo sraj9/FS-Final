@@ -71,6 +71,20 @@
         return 0;
     }
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    Profile *pro=(Profile*)[self.storyboard instantiateViewControllerWithIdentifier:@"profile"];
+    
+    pro.profileDetails=[[[searchResult objectForKey:@"responce"]objectForKey:@"searchResult"]objectAtIndex: indexPath.row];
+
+   [ self.navigationController pushViewController:pro animated:YES];
+    
+    
+        
+        
+  
+}
+
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

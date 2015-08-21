@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "service.h"
 #import "UIImageView+WebCache.h"
+#import "Profile.h"
 @interface FindFriends :UIViewController
 {
     service *service1;
