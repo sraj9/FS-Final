@@ -26,22 +26,20 @@
     _lblErrorLogin.hidden=YES;
     
     //setting user details in globale dictionary from plist
-    NSMutableDictionary *dictPlist = [[NSMutableDictionary alloc] initWithContentsOfFile:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"FS_PList.plist"]];
+//    NSMutableDictionary *dictPlist = [[NSMutableDictionary alloc] initWithContentsOfFile:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"FS_PList.plist"]];
+  
+    
+#pragma UserDefault
     
     
-    if ([dictPlist objectForKey:@"id"] && ![[dictPlist objectForKey:@"id"] isEqual:@""]) {
-        
-        if (![gblAppDel mutDictUserDetails]) {
-            [gblAppDel setMutDictUserDetails:[[NSMutableDictionary alloc]initWithDictionary:dictPlist]];
-        }
-        
-        
+    
+    
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"id"] && ![[[NSUserDefaults standardUserDefaults] objectForKey:@"id"] isEqual:@""]) {
+     
         UIViewController *user=[self.storyboard instantiateViewControllerWithIdentifier:@"RevealHome"];
         [self.navigationController pushViewController:user animated:NO];
-        
-        
     }
-    
 }
 
 
@@ -112,18 +110,11 @@
                     [dicroot setObject:aSt forKey:@"id"];
                     aSt=[[[responce objectForKey:@"responce" ] objectForKey:@"userDetail"]objectForKey:@"uName"];
                     [dicroot setObject:aSt forKey:@"uName"];
-                    NSLog(@"%@",dicroot);
+//                    NSLog(@"%@",dicroot);
                     
-                    [dicroot writeToFile:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"FS_PList.plist"] atomically:YES];
-                    //                     Do any additional setup after loading the view, typically from a nib.
-                    
-                    
-                    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"FS_PList.plist"]];
-                    NSLog(@"%@",dict);
-                    //
-                    //                    MyDropdownMenuController *aHome = [self.storyboard instantiateViewControllerWithIdentifier:@"MyDropdownMenuController"];
-                    //                    [self.navigationController pushViewController:aHome animated:NO];
-                    //
+#pragma Userdefault Storing Value
+                      [[NSUserDefaults standardUserDefaults] setValue:[[[responce objectForKey:@"responce" ] objectForKey:@"userDetail"] objectForKey:@"id"] forKey:@"uId"];
+                  
                     UIViewController *home=[self.storyboard instantiateViewControllerWithIdentifier:@"RevealHome"];
                     [self.navigationController pushViewController:home animated:YES];
                     

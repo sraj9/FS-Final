@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SidebarTableViewController : UITableViewController
+@interface SidebarTableViewController : UITableViewController<UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tblMenu;
 
 @end
