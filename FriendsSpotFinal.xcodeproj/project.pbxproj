@@ -202,8 +202,8 @@
 		A9FDBE4F1B5D9CF800E1A199 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9FDBE511B5D9CF800E1A199 /* NewFSlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewFSlogo.png; sourceTree = "<group>"; };
 		A9FDBE541B5D9CF800E1A199 /* Raj.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Raj.storyboard; sourceTree = "<group>"; };
-		A9FDBE581B5D9CF800E1A199 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A9FDBE591B5D9CF800E1A199 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A9FDBE581B5D9CF800E1A199 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Extra/AppDelegate.h; sourceTree = "<group>"; };
+		A9FDBE591B5D9CF800E1A199 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Extra/AppDelegate.m; sourceTree = "<group>"; };
 		A9FDBE5B1B5D9CF800E1A199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A9FDBE5D1B5D9CF800E1A199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9FDBE601B5D9CF800E1A199 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -296,7 +296,8 @@
 				A97C56281B670E2800BDAC16 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
 				A97C56291B670E2800BDAC16 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
 			);
-			path = TPKeyboardAvoiding;
+			name = TPKeyboardAvoiding;
+			path = ../../TPKeyboardAvoiding;
 			sourceTree = "<group>";
 		};
 		A9AF40C51B6C4C840055B0F7 /* MessageVC */ = {
@@ -312,7 +313,6 @@
 		A9AFBA181B58554B005C08BE = {
 			isa = PBXGroup;
 			children = (
-				A97C56211B670E2800BDAC16 /* TPKeyboardAvoiding */,
 				A91E7DF51B5F0E3400B933B3 /* main.m */,
 				A9FDBE4E1B5D9CF800E1A199 /* FriendsSpotFinal */,
 				A9FDBE521B5D9CF800E1A199 /* Storyboards */,
@@ -485,6 +485,8 @@
 		A9FDBE561B5D9CF800E1A199 /* All Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A9FDBE581B5D9CF800E1A199 /* AppDelegate.h */,
+				A9FDBE591B5D9CF800E1A199 /* AppDelegate.m */,
 				A9049ACB1B7D6DB200497091 /* Drawer */,
 				A934866B1B7D3C8200BA0818 /* FindFriends */,
 				A9EA173B1B7306FB007CFABB /* SDWebImage */,
@@ -503,8 +505,7 @@
 		A9FDBE571B5D9CF800E1A199 /* Extra */ = {
 			isa = PBXGroup;
 			children = (
-				A9FDBE581B5D9CF800E1A199 /* AppDelegate.h */,
-				A9FDBE591B5D9CF800E1A199 /* AppDelegate.m */,
+				A97C56211B670E2800BDAC16 /* TPKeyboardAvoiding */,
 				A9FDBE5E1B5D9CF800E1A199 /* Test */,
 				A9FDBE601B5D9CF800E1A199 /* ViewController.h */,
 				A9FDBE611B5D9CF800E1A199 /* ViewController.m */,
@@ -622,6 +623,7 @@
 				TargetAttributes = {
 					A9AFBA201B58554B005C08BE = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = ZXGW2J8VBR;
 					};
 				};
 			};
@@ -790,6 +792,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/indianic/FS-Final/FriendsSpotFinal-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -834,6 +837,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/indianic/FS-Final/FriendsSpotFinal-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -853,12 +857,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = FriendsSpotFinal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -868,12 +875,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = FriendsSpotFinal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

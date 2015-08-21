@@ -16,10 +16,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    uId=[[NSUserDefaults standardUserDefaults]objectForKey:@"uId"];
+    
     searchResult=[[NSMutableDictionary alloc]init];
     _searchbar.delegate=self;
  
+    
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.slideBar setTarget: self.revealViewController];
+        [self.slideBar setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,11 +43,11 @@
 }
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-    
+    NSLog(@"%@", _searchbar.text);
     
     NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
     
-    [dic setObject:uId forKey:@"uId"];
+    [dic setObject:@"87" forKey:@"uId"];
     [dic setObject:_searchbar.text forKey:@"keyword"];
     [dic setObject:@"searchFriend" forKey:@"action"];
     
@@ -51,7 +61,7 @@
         {
             [searchResult setValuesForKeysWithDictionary:responce];
             
-            
+            NSLog(@"%@",searchResult);
             }
         [_tableView reloadData];
        };
@@ -141,7 +151,7 @@
     NSLog(@"%ld",(long)sender.tag);
     
     NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
-     [dict setObject:uId forKey:@"senderId"];
+     [dict setObject:@"87" forKey:@"senderId"];
       [dict setObject:[NSNumber numberWithInt:(int)sender.tag] forKey:@"uId"];
 
       [dict setObject:@"sendRequest" forKey:@"action"];

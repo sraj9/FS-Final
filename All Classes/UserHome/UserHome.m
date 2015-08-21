@@ -14,16 +14,30 @@
 
 @implementation UserHome
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+#pragma Navigation Attributes
+    
+    NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                    [UIColor colorWithRed:104.0/255.0 green:21.0/255.0 blue:32.0/255.0 alpha:1.0],NSForegroundColorAttributeName,
+                                    [UIColor whiteColor],NSBackgroundColorAttributeName,nil];
+
+    self.navigationController.navigationBar.titleTextAttributes = textAttributes;
+
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:255.0/255.0 green:237.0/255.0 blue:248.0/255.0 alpha:1.0];
+    self.navigationController.navigationBar.translucent = YES;
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWasShown:)
                                                  name:UIKeyboardDidShowNotification
                                                object:nil];
     //getting userID from globle dictionary
-    //userId=[[[NSUserDefaults standardUserDefaults] objectForKey:@"uId"] integerValue];
-    userId=87;
+    userId=[[[NSUserDefaults standardUserDefaults] objectForKey:@"uId"] integerValue];
+    
+    
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
@@ -37,8 +51,7 @@
     [ _tblViewHome addSubview:ref];
     
     _btnPost.layer.cornerRadius=5;
-    _bViewNewActivity.frame=CGRectMake(0,510,400,58);
-    [self.view addSubview:_bViewNewActivity];
+    
     
     self.vcfirstLoad.frame=CGRectMake(0,0,400,600);
     [self.view addSubview:self.vcfirstLoad];
@@ -244,7 +257,11 @@
 }
 -(void)viewWillAppear:(BOOL)animated
 {
-    // [self.navigationController setNavigationBarHidden:YES animated:NO];
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenHeight = screenRect.size.height;
+    NSLog(@"%f",screenHeight);
+    _bViewNewActivity.frame=CGRectMake(0,screenHeight-58,400,58);
+    [self.view addSubview:_bViewNewActivity];
 }
 
 -(void)viewDidLoad:(BOOL)animated
@@ -303,7 +320,10 @@
 
 -(void)textFieldDidEndEditing:(UITextField *)textField
 {
-_bViewNewActivity.frame=CGRectMake(0,510,400,58);
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenHeight = screenRect.size.height;
+    NSLog(@"%f",screenHeight);
+    _bViewNewActivity.frame=CGRectMake(0,screenHeight-58,400,58);
 }
 
 - (void)keyboardWasShown:(NSNotification *)notification
@@ -315,7 +335,7 @@ _bViewNewActivity.frame=CGRectMake(0,510,400,58);
     //Given size may not account for screen rotation
     int height = MIN(keyboardSize.height,keyboardSize.width);
     int width = MAX(keyboardSize.height,keyboardSize.width);
-     _bViewNewActivity.frame=CGRectMake(0,height+4,400,width);
+     _bViewNewActivity.frame=CGRectMake(0,height-40,400,width);
   
 }
 
@@ -325,8 +345,8 @@ _bViewNewActivity.frame=CGRectMake(0,510,400,58);
         
         NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
         
-        //[dic setObject:[ NSNumber numberWithInt:(int)userId] forKey:@"uId"];
-        [dic setObject:@"87" forKey:@"uId"];
+        [dic setObject:[ NSNumber numberWithInt:(int)userId] forKey:@"uId"];
+//        [dic setObject:@"87" forKey:@"uId"];
          [dic setObject:@"text" forKey:@"type"];
          [dic setObject:_txtPost.text forKey:@"discription"];
         [dic setObject:@"newActivity" forKey:@"action"];

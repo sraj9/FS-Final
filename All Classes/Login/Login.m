@@ -35,7 +35,7 @@
     
     
     
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"id"] && ![[[NSUserDefaults standardUserDefaults] objectForKey:@"id"] isEqual:@""]) {
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"uId"] && ![[[NSUserDefaults standardUserDefaults] objectForKey:@"uId"] isEqual:@""]) {
      
         UIViewController *user=[self.storyboard instantiateViewControllerWithIdentifier:@"RevealHome"];
         [self.navigationController pushViewController:user animated:NO];
