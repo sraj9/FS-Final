@@ -22,8 +22,8 @@
                                                  name:UIKeyboardDidShowNotification
                                                object:nil];
     //getting userID from globle dictionary
-    userId=[[[NSUserDefaults standardUserDefaults] objectForKey:@"id"] integerValue];
-    
+    //userId=[[[NSUserDefaults standardUserDefaults] objectForKey:@"uId"] integerValue];
+    userId=87;
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
