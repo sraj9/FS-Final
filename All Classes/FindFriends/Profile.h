@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "UIImageView+WebCache.h"
+#import "service.h"
+
 
 @interface Profile : UIViewController
 {
+   
+    service *service2;
     
 }
 @property (strong,nonatomic) NSMutableDictionary *profileDetails;
@@ -22,5 +26,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblState;
 @property (weak, nonatomic) IBOutlet UILabel *lblCountry;
 @property (weak, nonatomic) IBOutlet UILabel *lblContact;
+
 
 @end

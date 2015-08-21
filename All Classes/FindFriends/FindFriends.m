@@ -79,10 +79,6 @@
 
    [ self.navigationController pushViewController:pro animated:YES];
     
-    
-        
-        
-  
 }
 
 

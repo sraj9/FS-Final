@@ -56,25 +56,59 @@
          {
              _imgUserProfle.image=image;
          }];
-
-        
-        
+    
+    
+    
         
         
            }else{
+               
+          _imgUserProfle.image= [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"user" ofType:@"png"]];
         
-        
-       _imgUserProfle.image= [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"user" ofType:@"png"]];
-        
-        
-    }
-
-    
-    
-    
+           }
 }
 
 
+
+- (IBAction)btnAddFriendClick:(id)sender {
+    
+    
+    NSString *str2= [[NSString alloc]initWithFormat:@"%@",[_profileDetails   objectForKey:@"id"]];
+         NSLog(@"%@",str2);
+
+    
+    NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
+    [dict setObject:@"87" forKey:@"senderId"];
+    [dict setObject:[NSString stringWithFormat:@"%@",str2] forKey:@"uId"];
+    
+    [dict setObject:@"sendRequest" forKey:@"action"];
+    [dict setObject:@"Please accept requsest" forKey:@"requestMessage"];
+    
+    service2=[service new];
+    [service2 FSPlzcallWebServiceWithURLString: @"FS-host" ArgumentsDictionary:dict];
+    
+    service2.serviceBlock=^(NSMutableDictionary* responce)
+    {
+        if(responce)
+        {
+            NSLog(@"%@",responce);
+            if ([[[responce objectForKey:@"responce"] objectForKey:@"status"] isEqualToString:@"success"]) {
+                [sender setEnabled:NO];
+                [sender setTitle:@"Requested" forState:UIControlStateDisabled];
+                [sender setBackgroundColor:[UIColor colorWithRed:170.0/255 green:170.0/255 blue:170.0/255 alpha:1]];
+                
+            }
+        }
+        
+    };
+
+
+    
+    
+    
+
+
+}
 
 
 
@@ -87,5 +121,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+                            
 @end
