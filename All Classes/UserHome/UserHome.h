@@ -10,6 +10,7 @@
 #import "UIImageView+WebCache.h"
 #import "service.h"
 #import "comments.h"
+#import "TVCellCustom.h"
 
 @interface UserHome : UIViewController
 {
@@ -17,9 +18,9 @@
     service *service1;
     UIRefreshControl *ref;
     int i;
+    NSInteger userId;
 }
 -(void)refreshHome;
-@property NSInteger uId;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (weak, nonatomic) IBOutlet UIView *vcfirstLoad;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityfirstLoad;

@@ -24,11 +24,18 @@
     _btnLogin.layer.cornerRadius=10;
     _btnForgotPassword.layer.cornerRadius=10;
     _lblErrorLogin.hidden=YES;
+    
+    //setting user details in globale dictionary from plist
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithContentsOfFile:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"FS_PList.plist"]];
+    
+    
     if ([dict objectForKey:@"id"] && ![[dict objectForKey:@"id"] isEqual:@""]) {
         
-        UserHome *objHome = [UserHome new];
-        objHome.uId = [[dict objectForKey:@"id"] integerValue];
+        if (![gblAppDel mutDictUserDetails]) {
+            [gblAppDel setMutDictUserDetails:[[NSMutableDictionary alloc]initWithDictionary:dict]];
+        }
+        
+        
         UIViewController *user=[self.storyboard instantiateViewControllerWithIdentifier:@"RevealHome"];
         [self.navigationController pushViewController:user animated:NO];
         

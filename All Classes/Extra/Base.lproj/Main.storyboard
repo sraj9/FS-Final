@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3Z1-6F-Bic">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3Z1-6F-Bic">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -1252,7 +1252,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellone" rowHeight="306" id="29M-yF-96e">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellone" rowHeight="306" id="29M-yF-96e" customClass="TVCellCustom">
                                         <rect key="frame" x="0.0" y="22" width="320" height="306"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="29M-yF-96e" id="aDX-8x-RFp">
@@ -1313,8 +1313,18 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.93098362749999997" blue="0.97403017680000004" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="btnLike" destination="g4M-Hr-mhR" id="Ft1-LP-zaY"/>
+                                            <outlet property="imgActivity" destination="wuo-Aj-7q7" id="B8q-ac-24R"/>
+                                            <outlet property="imgUser" destination="9rA-lE-q5z" id="qVq-Nu-ai1"/>
+                                            <outlet property="lblComments" destination="mek-xG-0U1" id="UV7-dl-xbB"/>
+                                            <outlet property="lblDate" destination="ch2-Tz-w3E" id="100-kS-raN"/>
+                                            <outlet property="lblDiscription" destination="oyJ-nf-Dnp" id="x2B-V7-FLE"/>
+                                            <outlet property="lblLikes" destination="mBs-nm-09g" id="MAd-IO-4D3"/>
+                                            <outlet property="lblUname" destination="FhE-GE-QfO" id="1wF-YN-fby"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="celltwo" rowHeight="138" id="14a-Lj-7xM">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="celltwo" rowHeight="138" id="14a-Lj-7xM" customClass="TVCellCustom">
                                         <rect key="frame" x="0.0" y="328" width="320" height="138"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="14a-Lj-7xM" id="2K4-QO-dbB">
@@ -1371,8 +1381,16 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.93098362749999997" blue="0.97403017680000004" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="btnLike" destination="nGs-tv-geW" id="rNk-4L-RPW"/>
+                                            <outlet property="imgUser" destination="xEW-4v-2G0" id="Dnu-C5-WMk"/>
+                                            <outlet property="lblDate" destination="eAg-ho-QkY" id="xfF-Hg-4La"/>
+                                            <outlet property="lblDiscription" destination="9Vg-Oa-qc5" id="1Gr-1r-CeD"/>
+                                            <outlet property="lblLikes" destination="mcx-pr-4Am" id="ivx-z2-0kJ"/>
+                                            <outlet property="lblUname" destination="PLu-NS-Tu6" id="e2k-6J-Rbk"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="emptyCell" rowHeight="58" id="FEs-VJ-5jq">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="emptyCell" rowHeight="58" id="FEs-VJ-5jq" customClass="TVCellCustom">
                                         <rect key="frame" x="0.0" y="255" width="320" height="58"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FEs-VJ-5jq" id="dwR-us-AtR">

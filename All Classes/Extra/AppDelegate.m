@@ -17,6 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+//    gblAppDel = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     return YES;
 }
 
