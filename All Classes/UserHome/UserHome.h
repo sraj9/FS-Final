@@ -11,6 +11,7 @@
 #import "service.h"
 #import "comments.h"
 #import "TVCellCustom.h"
+#import "TPKeyboardAvoidingTableView.h"
 
 @interface UserHome : UIViewController
 {
@@ -28,6 +29,8 @@
 @property (strong, nonatomic) IBOutlet UIVisualEffectView *bViewNewActivity;
 @property (weak, nonatomic) IBOutlet UITableView *tblViewHome;
 @property (strong, nonatomic) NSMutableDictionary *userdata;
-@property (weak, nonatomic) IBOutlet UILabel *lblComments;
+
+- (IBAction)btnPostAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *txtPost;
 
 @end

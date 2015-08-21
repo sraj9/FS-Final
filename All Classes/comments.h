@@ -23,10 +23,10 @@
 
 
 
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *backButtonBar;
 
 
-- (IBAction)btnBackHandler:(id)sender;
+
 
 @property (nonatomic,strong)NSMutableDictionary *dicMutactivityData;
 

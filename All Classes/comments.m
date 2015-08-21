@@ -19,38 +19,11 @@
     [self loadAllStuffs];
      self.navigationItem.hidesBackButton = YES;
     
-#pragma Start here..
-//   _backButton = [[UIBarButtonItem alloc] initWithImage:(UIImage *) style:<#(UIBarButtonItemStyle)#> target:<#(id)#> action:<#(SEL)#> ];
-//
-//    
-//    backButton.image=[UIImage imageNamed:@"Back.png"];
-//   [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-//    
-//    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
-//                                [UIColor blackColor],
-//                                UITextAttributeTextColor,
-//                                [UIColor clearColor],
-//                                UITextAttributeTextShadowColor,
-//                               
-//                                nil];
-//    
-//    
-//    
-//    [[UIBarButtonItem appearance] setTitleTextAttributes: attributes
-//                                                forState: UIControlStateNormal];
-//    
-//    backButton.title=@"<";
 
-    self.navigationItem.leftBarButtonItem =_backButton;
+    self.navigationItem.leftBarButtonItem =_backButtonBar;
     
 
        }
-
-- (IBAction)Back
-{
-    [self.navigationController popViewControllerAnimated:YES];
-
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -68,8 +41,7 @@
 
 
 
-// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     float f;
@@ -120,10 +92,7 @@
     return cell;
 }
 
-- (IBAction)btnBackHandler:(id)sender {
-   
-    [self.navigationController popViewControllerAnimated:YES];
-}
+
 
 -(void)loadAllStuffs
 {
@@ -182,6 +151,10 @@
     _lblImageDiscription.text=[_dicMutactivityData objectForKey:@"discription"];
     
     
+}
+- (IBAction)backBar:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 /*
