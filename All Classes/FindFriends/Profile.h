@@ -15,6 +15,7 @@
 {
    
     service *service2;
+    NSNumber *uId;
     
 }
 @property (strong,nonatomic) NSMutableDictionary *profileDetails;

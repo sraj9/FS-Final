@@ -16,8 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"profile=%@",_profileDetails);
     [self userProfile];
+    uId=[[NSUserDefaults standardUserDefaults]objectForKey:@"uId"];
    
     
     
@@ -74,11 +74,11 @@
     
     
     NSString *str2= [[NSString alloc]initWithFormat:@"%@",[_profileDetails   objectForKey:@"id"]];
-         NSLog(@"%@",str2);
+      
 
     
     NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
-    [dict setObject:@"87" forKey:@"senderId"];
+    [dict setObject:uId forKey:@"senderId"];
     [dict setObject:[NSString stringWithFormat:@"%@",str2] forKey:@"uId"];
     
     [dict setObject:@"sendRequest" forKey:@"action"];
