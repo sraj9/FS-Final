@@ -161,16 +161,7 @@ NSArray *arrayFieldNames;
         
     
     if([self fieldValidation]){
-        NSLog(@"call the web services");
-        for (int i=0;i<arrayField.count; i++)
-        {
-            UITextField *field=[arrayField objectAtIndex:i];
-            NSLog(@"%@",field.text);
-        }
        
-       
-        
-        NSURL *aURL = [NSURL URLWithString:@"http://friendsgrs.net46.net"];
         
         NSMutableDictionary *aDict = [[NSMutableDictionary alloc]init];
         NSArray *keys=[[NSArray alloc]initWithObjects:@"fname",@"lname",@"contact",@"country",@"state",@"city",@"email",@"uName",@"password",nil];
@@ -184,73 +175,37 @@ NSArray *arrayFieldNames;
          {[aDict setValue:@"Male" forKey:@"gender"];}
          else
          {[aDict setValue:@"Female" forKey:@"gender"];}
-        [aDict setValue:@"singup" forKey:@"action"];
+        [aDict setValue:@"signup" forKey:@"action"];
+        //fname=hello&lname=gfdg&gender=fgf&contact=5365&country=gdfg&state=gdfg&city=gfgf&email=gfg&uName=gfg&password=fggfg&action=signup
         
-        NSData *aData = [NSJSONSerialization dataWithJSONObject:aDict options:NSJSONWritingPrettyPrinted error:nil];
-        
-        NSMutableURLRequest *aMutRequest = [[NSMutableURLRequest alloc]initWithURL:aURL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:20.0];
-        [aMutRequest setHTTPMethod:@"POST"];
-        [aMutRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-        [aMutRequest setHTTPBody:aData];
-        [aMutRequest setValue:[NSString stringWithFormat:@"%lu",(unsigned long)[aData length]] forHTTPHeaderField:@"Content-Length"];
-        
-//        [self.actLoading startAnimating];
-        //Asynchronous WebCall With Blocks
-        
-            [NSURLConnection sendAsynchronousRequest:aMutRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
-             {
-                 if (data.length > 0 && connectionError == nil)
+        service *service1=[service new];
+               [service1 FSPlzcallWebServiceWithURLString: @"FS-host" ArgumentsDictionary:aDict];
+        //
+        [_activitySignup startAnimating];
+        service1.serviceBlock=^(NSMutableDictionary* responce)
+        {
+            if(responce)
+            {
+                NSLog(@"%@",responce);
+                if([[[responce objectForKey:@"responce"] objectForKey:@"status"] isEqual:@"fail"])
                 {
-                    NSDictionary *replay=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-                    NSLog(@"replay=%@",replay);
-                   
-                    
-                    
-                    if([[replay objectForKey:@"status"] isEqual:@"fail"])
-                    {
-                    [self getAlert:[replay objectForKey:@"reson"]];
-                        if ([[replay objectForKey:@"reson"] isEqual:@"Email already exist"]) {
-                            _txtEmail.layer.borderColor=[UIColor redColor].CGColor;
-                        }
-                    }else if([[replay objectForKey:@"status"] isEqual:@"success"]){
-//                        
-//                        UIViewController *loginVC=[self.storyboard            instantiateViewControllerWithIdentifier:@"loginVC"];
-//                        [self.navigationController pushViewController:loginVC animated:YES];
+                    [self getAlert:[responce objectForKey:@"responce"]];
+                    if ([[[responce objectForKey:@"responce"] objectForKey:@"reson"] isEqual:@"Email already exist"]) {
+                        _txtEmail.layer.borderColor=[UIColor redColor].CGColor;
                     }
+                }else if([[[responce objectForKey:@"responce"] objectForKey:@"status"] isEqual:@"success"] || [[[responce objectForKey:@"responce"] objectForKey:@"status"] isEqual:@"Deactivated"]){
                     
-                    
-//                        [self.actLoading stopAnimating];
-                 }
-             }];
+                                            UIViewController *loginVC=[self.storyboard instantiateViewControllerWithIdentifier:@"loginVC"];
+                                            [self.navigationController pushViewController:loginVC animated:YES];
+                }
+            }
+        [_activitySignup stopAnimating];
+        };
+   
+    
    }
 }
 
-//- (IBAction)DoneButtonClicked:(id)sender
-//{
-//    _NumpadView.hidden=true;
-//   
-//    [_txtFname resignFirstResponder];
-//    [_txtLname resignFirstResponder];
-//    [_txtContact resignFirstResponder];
-//    [_txtCountry resignFirstResponder];
-//    [_txtCity resignFirstResponder];
-//    [_txtState resignFirstResponder];
-//    [_txtEmail resignFirstResponder];
-//    [_txtUserName resignFirstResponder];
-//    [_txtPassword resignFirstResponder];
-//    [_txtRpassword resignFirstResponder];
-//}
-//
-//- (void)textFieldDidBeginEditing:(UITextField *)textField
-//{
-//    if (textField.tag == 5)
-//    {
-//        _NumpadView.hidden=false;
-//    }
-//    
-//    
-//}
-//
 
 -(BOOL) NSStringIsValidEmail:(NSString *)checkString
 {

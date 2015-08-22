@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "service.h"
 
 
 @interface SignUp : UIViewController<UITextFieldDelegate>
@@ -29,6 +29,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtUserName;
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;
 @property (weak, nonatomic) IBOutlet UITextField *txtRpassword;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activitySignup;
 
 //-(IBAction)btnSubmitClicked:(id)sender;
 
