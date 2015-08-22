@@ -16,9 +16,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     searchResult=[[NSMutableDictionary alloc]init];
     _searchbar.delegate=self;
  
+    
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.slideBar setTarget: self.revealViewController];
+        [self.slideBar setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {

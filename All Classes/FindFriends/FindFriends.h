@@ -10,6 +10,7 @@
 #import "service.h"
 #import "UIImageView+WebCache.h"
 #import "Profile.h"
+#import "SWRevealViewController.h"
 @interface FindFriends :UIViewController
 {
     service *service1;
@@ -18,6 +19,7 @@
     int u_id;
 }
 @property (weak, nonatomic) IBOutlet UISearchBar *searchbar;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *slideBar;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 //@property (weak, nonatomic) IBOutlet UITableView *cellone;

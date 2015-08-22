@@ -90,12 +90,18 @@
     
     
 }
+
+#pragma Logout
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if(indexPath.row==6)
     {
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"uId"];
+        UIViewController *LoginVC=[self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
+       // [self.navigationController popToViewController:LoginVC animated:YES];
+        [self.navigationController popToRootViewControllerAnimated:YES];
         
-    
     }
 }
 
